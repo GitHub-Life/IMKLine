@@ -11,7 +11,7 @@ import SnapKit
 
 protocol IMKLineScrollViewDelegate: NSObjectProtocol {
     func selectedKline(kline: IMKLine)
-    func hideKlineInfo()
+    func hideKlineInfo(lastKline: IMKLine)
 }
 
 class IMKLineScrollView: UIScrollView {
@@ -149,7 +149,7 @@ extension IMKLineScrollView: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.klineView.draw()
-        self.imDelegate?.hideKlineInfo()
+        self.imDelegate?.hideKlineInfo(lastKline: self.klineView.getKlineGroup().klineArray.last!)
         if scrollView.contentOffset.x <= 0 {
             self.loadMore?()
         }

@@ -62,10 +62,10 @@ class IMKLineVolumeView: UIView {
         if self.klineArray.count == 0 {
             return
         }
-        var maxVolume = self.klineArray[0].vol
+        var maxVolume = self.klineArray[0].volume
         for kline in self.klineArray {
-            if kline.vol > maxVolume {
-                maxVolume = kline.vol
+            if kline.volume > maxVolume {
+                maxVolume = kline.volume
             }
         }
         let minY = CGFloat(0)
@@ -75,7 +75,7 @@ class IMKLineVolumeView: UIView {
             let kline = self.klineArray[index]
             let xPosition = CGFloat(self.klineView.startXPosition) + CGFloat(index) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
             kline.volumePosition.zeroPoint = CGPoint.init(x: xPosition, y: maxY)
-            kline.volumePosition.volumePoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat(kline.vol / unitValue)))
+            kline.volumePosition.volumePoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat(kline.volume / unitValue)))
         }
         
         self.delegate?.updateVolumeRightYRange(min: 0, max: maxVolume)

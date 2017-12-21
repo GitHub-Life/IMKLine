@@ -72,24 +72,26 @@ class IMKLineView: UIView {
         self.superScrollView.volumeView.draw(klineArray: self.needDrawKlineArray, colors: colors)
     }
     
-    var klineGroup = IMKLineGroup() {
-        didSet {
-            self.updateViewWidth()
+    private var klineGroup = IMKLineGroup()
+    func getKlineGroup() -> IMKLineGroup {
+        return klineGroup
+    }
+    
+    func add(klineGroup: IMKLineGroup) {
+        let isFirst = self.klineGroup.klineArray.count == 0
+        self.klineGroup.insert(klineGroup: klineGroup)
+        let offsetX = self.superScrollView.contentOffset.x
+        self.updateViewWidth()
+        if isFirst {
             if self.viewWidth > self.superScrollView.frame.width {
                 self.superScrollView.setContentOffset(CGPoint.init(x: self.viewWidth - self.superScrollView.frame.width, y: 0), animated: false)
             } else {
                 self.superScrollView.setContentOffset(CGPoint.zero, animated: false)
             }
-            self.draw()
+        } else {
+            let addedWidth = CGFloat(klineGroup.klineArray.count) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
+            self.superScrollView.setContentOffset(CGPoint.init(x: addedWidth + offsetX, y: 0), animated: false)
         }
-    }
-    
-    func add(klineGroup: IMKLineGroup) {
-        self.klineGroup.insert(klineGroup: klineGroup)
-        let offsetX = self.superScrollView.contentOffset.x
-        self.updateViewWidth()
-        let addedWidth = CGFloat(klineGroup.klineArray.count) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
-        self.superScrollView.setContentOffset(CGPoint.init(x: addedWidth + offsetX, y: 0), animated: false)
         self.draw()
     }
     
@@ -103,7 +105,6 @@ class IMKLineView: UIView {
     }
     
     var needDrawKlineArray = [IMKLine]()
-//    var pinchStartIndex = -1
     
     func draw() {
         self.extractNeedDrawKlineArray()
@@ -129,12 +130,7 @@ class IMKLineView: UIView {
         let needDrawCount = Int((self.superScrollView.frame.width - klineGap) / (klineWidth + klineGap))
         //起始位置
         let needDrawKlineStartIndex: Int
-//        if(self.pinchStartIndex > 0) {
-//            needDrawKlineStartIndex = self.pinchStartIndex
-//            self.pinchStartIndex = -1
-//        } else {
-            needDrawKlineStartIndex = self.needDrawStartIndex
-//        }
+        needDrawKlineStartIndex = self.needDrawStartIndex
         self.needDrawKlineArray.removeAll()
         if needDrawKlineStartIndex < self.klineGroup.klineArray.count {
             if needDrawKlineStartIndex + needDrawCount < self.klineGroup.klineArray.count {

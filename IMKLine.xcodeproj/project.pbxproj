@@ -86,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B71DCBEB1FEC361700564D09 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B798C84B1FE94BEE00B159B6 /* UIColor+Extension.swift */,
+				B798C84C1FE94BEE00B159B6 /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B72A5ED11FEBA27100FCAC37 /* TimeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +132,7 @@
 		B798C8281FE9354500B159B6 /* IMKLine */ = {
 			isa = PBXGroup;
 			children = (
-				B798C84B1FE94BEE00B159B6 /* UIColor+Extension.swift */,
-				B798C84C1FE94BEE00B159B6 /* UIView+Extension.swift */,
+				B71DCBEB1FEC361700564D09 /* Extension */,
 				B798C83D1FE935C500B159B6 /* IMKLine */,
 				B798C8431FE93E5C00B159B6 /* Resources */,
 				B798C82B1FE9354500B159B6 /* ViewController.swift */,

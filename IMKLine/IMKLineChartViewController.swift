@@ -30,9 +30,9 @@ class IMKLineChartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.getKlineDatas()
-        self.klineContainerView.scrollView.loadMore = { [weak self] in
-            self?.getKlineDatas()
-        }
+//        self.klineContainerView.scrollView.loadMore = { [weak self] in
+////            self?.getKlineDatas()
+//        }
     }
     
     func getKlineDatas() {
@@ -60,11 +60,7 @@ class IMKLineChartViewController: UIViewController {
                 let json = JSON(jsonObj)
                 DispatchQueue.main.async(execute: {
                     let klineGroup = IMKLineGroup.init(datas: json)
-                    if self.klineContainerView.scrollView.klineView.klineGroup.klineArray.count == 0 {
-                        self.klineContainerView.scrollView.klineView.klineGroup = klineGroup
-                    } else {
-                        self.klineContainerView.scrollView.klineView.add(klineGroup: klineGroup)
-                    }
+                    self.klineContainerView.scrollView.klineView.add(klineGroup: klineGroup)
                 })
             } catch {
                 print(error)

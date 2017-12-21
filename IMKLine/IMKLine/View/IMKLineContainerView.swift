@@ -216,8 +216,6 @@ extension IMKLineContainerView {
             maker.centerY.equalTo(point.y)
         }
         
-        self.volumeMAView.update(values: [0:kline.vol])
-        
         self.verticlalLine.alpha = 1
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd HH:mm"
@@ -225,6 +223,14 @@ extension IMKLineContainerView {
         self.verticlalLine.snp.updateConstraints { (maker) in
             maker.centerX.equalTo(point.x)
         }
+        
+        self.showMA(kline: kline)
+    }
+    
+    func showMA(kline: IMKLine) {
+        self.klineMAView.update(values: kline.klineMAs)
+        kline.volumeMAs[0] = kline.volume
+        self.volumeMAView.update(values: kline.volumeMAs)
     }
 }
 
@@ -234,10 +240,12 @@ extension IMKLineContainerView: IMKLineScrollViewDelegate {
         self.showSelectedKlineInfo(kline: kline)
     }
     
-    func hideKlineInfo() {
+    func hideKlineInfo(lastKline: IMKLine) {
         self.klineValueView.alpha = 0
         self.horizontalLine.alpha = 0
         self.verticlalLine.alpha = 0
+        
+        self.showMA(kline: lastKline)
     }
     
 }

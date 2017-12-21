@@ -97,4 +97,7 @@ struct IMKLineConfig {
         return CGFloat(0.2)
     }
     
+    /// 需要显示的 MA值 
+    static let KLineMAs = [7, 15, 30]
+    
 }

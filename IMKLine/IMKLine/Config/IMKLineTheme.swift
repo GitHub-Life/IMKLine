@@ -12,7 +12,7 @@ struct IMKLineTheme {
     
     static let BorderColor = UIColor.init(rgbHex: 0x444444)
     
-    static let KLineValueBgColor = UIColor.init(rgbHex: 0x1E1E1E)
+    static let KLineValueBgColor = UIColor.init(rgbaHex: 0x1E1E1E80)
     
     static let AccessoryTextColor = UIColor.init(rgbHex: 0x9A9A9A)
     

@@ -15,17 +15,27 @@ class IMKLineGroup: NSObject {
     
     convenience init(datas: JSON) {
         self.init()
-        var prevKline = IMKLine()
         for klineJson in datas["data"].arrayValue {
             let kline = IMKLine.init(json: klineJson)
-            kline.prevKline = prevKline
             self.klineArray.insert(kline, at: 0)
-            prevKline = kline
         }
     }
     
     func insert(klineGroup: IMKLineGroup) {
         self.klineArray.insert(contentsOf: klineGroup.klineArray, at: 0)
+        self.enumerateKlines()
     }
     
+    func enumerateKlines() {
+        if self.klineArray.count == 0 {
+            return
+        }
+        var prevKline = self.klineArray[0]
+        prevKline.index = 0
+        for kline in self.klineArray {
+            kline.klineGroup = self
+            kline.reset(prevKline: prevKline)
+            prevKline = kline
+        }
+    }
 }
