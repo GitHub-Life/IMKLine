@@ -39,11 +39,16 @@ class IMKLineVolumeView: UIView {
             return
         }
         
-        // 绘制 成交量柱状线
+        // 绘制 成交量柱状线 / MA线
         let volumePainter = IMKLineVolumePainter.init(context: context)
-        for index in 0..<self.klineArray.count {
-            volumePainter.kline = self.klineArray[index]
+        let volumeMaPainter = IMKLineVolumeMAPainter.init(context: context)
+        var index = 0
+        for kline in self.klineArray {
+            volumePainter.kline = kline
             volumePainter.draw(color: self.colors[index])
+            volumeMaPainter.kline = kline
+            volumeMaPainter.draw()
+            index += 1
         }
     }
     
@@ -76,6 +81,11 @@ class IMKLineVolumeView: UIView {
             let xPosition = CGFloat(self.klineView.startXPosition) + CGFloat(index) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
             kline.volumePosition.zeroPoint = CGPoint.init(x: xPosition, y: maxY)
             kline.volumePosition.volumePoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat(kline.volume / unitValue)))
+            
+            kline.volumeMAPositions.removeAll()
+            for key in kline.volumeMAs.keys.sorted() {
+                kline.volumeMAPositions[key] = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat(kline.volumeMAs[key]! / unitValue)))
+            }
         }
         
         self.delegate?.updateVolumeRightYRange(min: 0, max: maxVolume)

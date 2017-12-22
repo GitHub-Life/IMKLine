@@ -44,28 +44,27 @@ class IMKLine: NSObject {
         self.amount = json["amount"].doubleValue
         self.volume = json["vol"].doubleValue
         self.count = json["count"].doubleValue
-        
-        self.sumLastClose = self.close
-        self.sumLastVolume = self.volume
     }
     
     var prevKline: IMKLine!
     var index = 0
     weak var klineGroup: IMKLineGroup!
     
-    var klinePosition = IMKLinePosition()
-    var volumePosition = IMKLineVolumePosition()
-    
     var sumLastClose = Double(0)
     var sumLastVolume = Double(0)
     var klineMAs = [Int : Double]()
     var volumeMAs = [Int : Double]()
     
+    var klinePosition = IMKLinePosition()
+    var volumePosition = IMKLineVolumePosition()
+    var klineMAPositions = [Int : CGPoint]()
+    var volumeMAPositions = [Int : CGPoint]()
+    
     func reset(prevKline: IMKLine) {
         self.prevKline = prevKline
         self.index = prevKline.index + 1
         self.sumLastClose = self.close + self.prevKline.sumLastClose
-        self.sumLastVolume = self.close + self.prevKline.sumLastVolume
+        self.sumLastVolume = self.volume + self.prevKline.sumLastVolume
         self.klineMAs.removeAll()
         for ma in IMKLineConfig.KLineMAs {
             self.klineMAs[ma] = self.klineMA(num: ma)

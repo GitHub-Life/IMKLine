@@ -150,6 +150,10 @@ class IMKLineContainerView: UIView {
             self.layoutIfNeeded()
         }
     }
+    
+    deinit {
+        IMKLineParamters.reset()
+    }
 }
 
 extension IMKLineContainerView {
@@ -228,9 +232,8 @@ extension IMKLineContainerView {
     }
     
     func showMA(kline: IMKLine) {
-        self.klineMAView.update(values: kline.klineMAs)
-        kline.volumeMAs[0] = kline.volume
-        self.volumeMAView.update(values: kline.volumeMAs)
+        self.klineMAView.update(kline: kline)
+        self.volumeMAView.update(kline: kline)
     }
 }
 

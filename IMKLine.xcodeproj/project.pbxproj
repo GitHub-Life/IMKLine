@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		31A102CF4DBE37F9CD7D780C /* Pods_IMKLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446077E43A084DC806417686 /* Pods_IMKLine.framework */; };
+		B723F59E1FECE9A000672C09 /* IMKLineParamters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723F59D1FECE9A000672C09 /* IMKLineParamters.swift */; };
+		B723F5A21FECF22100672C09 /* IMKLineMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723F5A11FECF22000672C09 /* IMKLineMAPainter.swift */; };
+		B723F5A41FED03C700672C09 /* IMKLineVolumeMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723F5A31FED03C700672C09 /* IMKLineVolumeMAPainter.swift */; };
 		B72A5EB21FEB5D5100FCAC37 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B72A5EB11FEB5D5100FCAC37 /* data.json */; };
 		B72A5ED31FEBA29C00FCAC37 /* IMKLineTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A5ED21FEBA29C00FCAC37 /* IMKLineTimeView.swift */; };
 		B72A5ED51FEBA7A600FCAC37 /* IMKLineVolumePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A5ED41FEBA7A600FCAC37 /* IMKLineVolumePainter.swift */; };
@@ -42,6 +45,9 @@
 		446077E43A084DC806417686 /* Pods_IMKLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMKLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E2CE3DE9ABB00F5656253D /* Pods-IMKLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMKLine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMKLine/Pods-IMKLine.debug.xcconfig"; sourceTree = "<group>"; };
 		A95A2D8D8BDD9CA568483315 /* Pods-IMKLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMKLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMKLine/Pods-IMKLine.release.xcconfig"; sourceTree = "<group>"; };
+		B723F59D1FECE9A000672C09 /* IMKLineParamters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineParamters.swift; sourceTree = "<group>"; };
+		B723F5A11FECF22000672C09 /* IMKLineMAPainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineMAPainter.swift; sourceTree = "<group>"; };
+		B723F5A31FED03C700672C09 /* IMKLineVolumeMAPainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAPainter.swift; sourceTree = "<group>"; };
 		B72A5EB11FEB5D5100FCAC37 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		B72A5ED21FEBA29C00FCAC37 /* IMKLineTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineTimeView.swift; sourceTree = "<group>"; };
 		B72A5ED41FEBA7A600FCAC37 /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
@@ -93,6 +99,24 @@
 				B798C84C1FE94BEE00B159B6 /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B723F59F1FECF1FA00672C09 /* Painter */ = {
+			isa = PBXGroup;
+			children = (
+				B7D17FCF1FEAA39B00E8753C /* IMKLinePainter.swift */,
+				B723F5A11FECF22000672C09 /* IMKLineMAPainter.swift */,
+			);
+			path = Painter;
+			sourceTree = "<group>";
+		};
+		B723F5A01FECF20900672C09 /* Painter */ = {
+			isa = PBXGroup;
+			children = (
+				B72A5ED41FEBA7A600FCAC37 /* IMKLineVolumePainter.swift */,
+				B723F5A31FED03C700672C09 /* IMKLineVolumeMAPainter.swift */,
+			);
+			path = Painter;
 			sourceTree = "<group>";
 		};
 		B72A5ED11FEBA27100FCAC37 /* TimeView */ = {
@@ -185,6 +209,7 @@
 			children = (
 				B798C8491FE94B7B00B159B6 /* IMKLineTheme.swift */,
 				B7D17FCB1FEA952000E8753C /* IMKLineConfig.swift */,
+				B723F59D1FECE9A000672C09 /* IMKLineParamters.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -210,9 +235,9 @@
 		B7D17FBC1FEA247600E8753C /* VolumeView */ = {
 			isa = PBXGroup;
 			children = (
+				B723F5A01FECF20900672C09 /* Painter */,
 				B7D17FC21FEA24B700E8753C /* IMKLineVolumeView.swift */,
 				B7D17FB71FEA12C600E8753C /* IMKLineVolumeMAView.swift */,
-				B72A5ED41FEBA7A600FCAC37 /* IMKLineVolumePainter.swift */,
 			);
 			path = VolumeView;
 			sourceTree = "<group>";
@@ -220,10 +245,10 @@
 		B7D17FBD1FEA247600E8753C /* KLineView */ = {
 			isa = PBXGroup;
 			children = (
+				B723F59F1FECF1FA00672C09 /* Painter */,
 				B798C84F1FE9618700B159B6 /* IMKLineView.swift */,
 				B7D17FB11FEA025F00E8753C /* IMKLineMAView.swift */,
 				B7D17FB31FEA0D5200E8753C /* IMKLineValueView.swift */,
-				B7D17FCF1FEAA39B00E8753C /* IMKLinePainter.swift */,
 			);
 			path = KLineView;
 			sourceTree = "<group>";
@@ -412,10 +437,12 @@
 				B798C84D1FE94BEE00B159B6 /* UIColor+Extension.swift in Sources */,
 				B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */,
 				B7D17FBA1FEA236A00E8753C /* IMKLineContainerView.swift in Sources */,
+				B723F5A41FED03C700672C09 /* IMKLineVolumeMAPainter.swift in Sources */,
 				B798C84E1FE94BEE00B159B6 /* UIView+Extension.swift in Sources */,
 				B7D17FBF1FEA249C00E8753C /* IMKLineAccessoryView.swift in Sources */,
 				B7D17FC11FEA24A800E8753C /* IMKLineAccessoryMAView.swift in Sources */,
 				B7D17FB21FEA025F00E8753C /* IMKLineMAView.swift in Sources */,
+				B723F59E1FECE9A000672C09 /* IMKLineParamters.swift in Sources */,
 				B798C83F1FE9363600B159B6 /* IMKLineChartViewController.swift in Sources */,
 				B798C8501FE9618700B159B6 /* IMKLineView.swift in Sources */,
 				B7D17FCA1FEA8C6B00E8753C /* IMKLineGroup.swift in Sources */,
@@ -425,6 +452,7 @@
 				B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */,
 				B7D17FCC1FEA952000E8753C /* IMKLineConfig.swift in Sources */,
 				B798C8481FE94AAB00B159B6 /* IMKLineRightYView.swift in Sources */,
+				B723F5A21FECF22100672C09 /* IMKLineMAPainter.swift in Sources */,
 				B798C8421FE93E1D00B159B6 /* R.generated.swift in Sources */,
 				B7D17FB81FEA12C600E8753C /* IMKLineVolumeMAView.swift in Sources */,
 				B798C84A1FE94B7B00B159B6 /* IMKLineTheme.swift in Sources */,

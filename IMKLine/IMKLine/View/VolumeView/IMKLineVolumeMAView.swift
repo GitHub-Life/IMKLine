@@ -22,13 +22,12 @@ class IMKLineVolumeMAView: UIView {
         super.init(frame: frame)
     }
     
-    var values = [Int : Double]()
-    
-    func update(values: [Int : Double]) {
-        self.values = values
+    func update(kline: IMKLine) {
         for subv in self.subviews {
             subv.removeFromSuperview()
         }
+        var values = kline.volumeMAs
+        values[0] = kline.volume
         let keys = values.keys.sorted()
         for index in 0..<values.count {
             let label = UILabel()

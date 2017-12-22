@@ -104,7 +104,7 @@ class IMKLineScrollView: UIScrollView {
             if abs(diff) > IMKLineConfig.ZoomScaleLimit {
                 oldScale = pinchGr.scale
                 let startIndex = Int((self.contentOffset.x - IMKLineConfig.KLineGap) / (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth))
-                if IMKLineConfig.changeZoomScale(changeScale: diff > 0 ? IMKLineConfig.ZoomScaleFactor : -IMKLineConfig.ZoomScaleFactor) {
+                if IMKLineParamters.changeZoomScale(changeScale: diff > 0 ? IMKLineConfig.ZoomScaleFactor : -IMKLineConfig.ZoomScaleFactor) {
                     let startKlinePointX = CGFloat(startIndex) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth) + IMKLineConfig.KLineGap
                     self.klineView.updateViewWidth()
                     self.setContentOffset(CGPoint.init(x: startKlinePointX, y: 0), animated: false)

@@ -31,7 +31,7 @@ class IMKLineGroup: NSObject {
             return
         }
         var prevKline = self.klineArray[0]
-        prevKline.index = 0
+        prevKline.index = -1
         for kline in self.klineArray {
             kline.klineGroup = self
             kline.reset(prevKline: prevKline)

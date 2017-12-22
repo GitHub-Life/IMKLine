@@ -32,6 +32,7 @@ class IMKLineView: UIView {
         if self.needDrawKlineArray.count == 0 {
             return
         }
+        
         // 绘制 Y轴参考虚线
         let referenceLineCount = IMKLineConfig.KLineViewRightYCount - 2
         let step = rect.height / CGFloat(referenceLineCount + 1)
@@ -42,14 +43,18 @@ class IMKLineView: UIView {
             context.strokeLineSegments(between: [CGPoint.init(x: 0, y: CGFloat(index) * step), CGPoint.init(x: rect.width, y: CGFloat(index) * step)])
         }
         
+        // 绘制 k线 / MA线
         context.setLineDash(phase: 0, lengths: [])
-        // 绘制 k线
         var colors = [UIColor]()
         let klinePainter = IMKLinePainter.init(context: context)
+        let klineMaPainter = IMKLineMAPainter.init(context: context)
         for kline in self.needDrawKlineArray {
             klinePainter.kline = kline
             colors.append(klinePainter.draw())
+            klineMaPainter.kline = kline
+            klineMaPainter.draw()
         }
+        
         // 绘制 最小值 指示文字
         let lowPoint = self.minKline.klinePosition.lowPoint
         if self.minKline.klinePosition.lowPoint.x - self.superScrollView.contentOffset.x > self.superScrollView.frame.width / 2 {
@@ -172,7 +177,6 @@ class IMKLineView: UIView {
             kline.klinePosition.lowPoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.low - minValue) / unitValue)))
             var openPoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.open - minValue) / unitValue)))
             var closePoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.close - minValue) / unitValue)))
-
             if abs(openPoint.y - closePoint.y) < IMKLineConfig.KLineMinHeight {
                 if openPoint.y > closePoint.y {
                     openPoint.y = closePoint.y + IMKLineConfig.KLineMinHeight
@@ -198,13 +202,14 @@ class IMKLineView: UIView {
             }
             kline.klinePosition.openPoint = openPoint
             kline.klinePosition.closePoint = closePoint
+            
+            kline.klineMAPositions.removeAll()
+            for key in kline.klineMAs.keys.sorted() {
+                kline.klineMAPositions[key] = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.klineMAs[key]! - minValue) / unitValue)))
+            }
         }
         
         self.delegate?.updateKlineRightYRange(min: minValue, max: maxValue)
-    }
-    
-    deinit {
-        IMKLineConfig.setZoomScale(scale: 1)
     }
 }
 

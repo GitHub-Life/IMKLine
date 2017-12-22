@@ -13,9 +13,10 @@ struct IMKLineConfig {
     /// KLine 蜡烛宽度
     static var KLineWidth: CGFloat {
         get {
-            return KLineDefaultWidth * ZoomScale
+            return KLineDefaultWidth * IMKLineParamters.getZoomScale()
         }
     }
+    
     /// KLine 蜡烛初始默认宽度
     static let KLineDefaultWidth = CGFloat(10)
     /// KLine 蜡烛 最小 高度
@@ -25,25 +26,6 @@ struct IMKLineConfig {
     /// KLine 蜡烛间隙
     static let KLineGap = CGFloat(1)
     
-    /// KLine 缩放比
-    private static var ZoomScale = CGFloat(1)
-    static func changeZoomScale(changeScale: CGFloat) -> Bool {
-        let zoomScale = ZoomScale + changeScale
-        if zoomScale > ZoomScaleUpperLimit || zoomScale < ZoomScaleLowerLimit {
-            return false
-        }
-        ZoomScale = zoomScale
-        return true
-    }
-    static func setZoomScale(scale: CGFloat) {
-        if scale > ZoomScaleUpperLimit || scale < ZoomScaleLowerLimit {
-            return
-        }
-        ZoomScale = scale
-    }
-    static func getZoomScale() -> CGFloat {
-        return ZoomScale
-    }
     /// KLine 缩放比 下限
     static let ZoomScaleLowerLimit = CGFloat(0.2)
     /// KLine 缩放比 上线
@@ -53,6 +35,8 @@ struct IMKLineConfig {
     /// KLine 缩放因子
     static let ZoomScaleFactor = CGFloat(0.03)
     
+    /// KLine MA线宽
+    static let MALineWidth = CGFloat(1)
     
     /// K线图 右侧 Y轴视图宽度
     static let RightYViewWidth = CGFloat(50)
