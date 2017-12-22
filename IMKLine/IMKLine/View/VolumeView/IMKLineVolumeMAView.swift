@@ -26,30 +26,33 @@ class IMKLineVolumeMAView: UIView {
         for subv in self.subviews {
             subv.removeFromSuperview()
         }
-        var values = kline.volumeMAs
-        values[0] = kline.volume
-        let keys = values.keys.sorted()
-        for index in 0..<values.count {
-            let label = UILabel()
-            label.textColor = IMKLineTheme.MAColors[index]
-            label.font = UIFont.systemFont(ofSize: IMKLineTheme.AccessoryTextFontSize)
-            let key = keys[index]
-            if key == 0 {
-                label.text = String.init(format: "量:%.2f", values[key]!)
-            } else {
-                label.text = String.init(format: "MA\(key):%.2f", values[key]!)
-            }
-            self.addSubview(label)
-            label.snp.makeConstraints({ [weak self] (maker) in
-                if index == 0 {
-                    maker.leading.equalToSuperview().offset(1)
-                } else {
-                    maker.leading.equalTo((self?.subviews[index - 1].snp.trailing)!).offset(5)
-                }
-                maker.top.equalToSuperview()
-                maker.bottom.equalToSuperview()
-            })
+        
+        let volumeText = String.init(format: "量:%.2f", kline.volume)
+        self.addLabel(index: 0, text: volumeText)
+        
+        var index = 1
+        for key in kline.volumeMAs.keys.sorted() {
+            let text = String.init(format: "MA\(key):%.2f", kline.volumeMAs[key]!)
+            self.addLabel(index: index, text: text)
+            index += 1
         }
+    }
+    
+    func addLabel(index: Int, text: String, offset: Int = 0) {
+        let label = UILabel()
+        label.textColor = IMKLineTheme.MAColors[index + offset]
+        label.font = UIFont.systemFont(ofSize: IMKLineTheme.AccessoryTextFontSize)
+        self.addSubview(label)
+        label.snp.makeConstraints({ [weak self] (maker) in
+            if index == 0 {
+                maker.leading.equalToSuperview().offset(1)
+            } else {
+                maker.leading.equalTo((self?.subviews[index - 1].snp.trailing)!).offset(5)
+            }
+            maker.top.equalToSuperview()
+            maker.bottom.equalToSuperview()
+        })
+        label.text = text
     }
     
 }

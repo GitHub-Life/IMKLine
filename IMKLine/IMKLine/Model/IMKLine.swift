@@ -88,11 +88,11 @@ extension IMKLine {
         self.sumLastClose = self.close + self.prevKline.sumLastClose
         self.sumLastVolume = self.volume + self.prevKline.sumLastVolume
         self.klineMAs.removeAll()
-        for ma in IMKLineConfig.KLineMAs {
+        for ma in IMKLineParamters.KLineMAs {
             self.klineMAs[ma] = self.klineMA(n: ma) ?? Double(-1)
             self.volumeMAs[ma] = self.volumeMA(n: ma) ?? Double(-1)
         }
-        for ema in IMKLineConfig.KLineEMAs {
+        for ema in IMKLineParamters.KLineEMAs {
             self.klineEMAs[ema] = self.klineEMA(n: ema)
         }
         self.calculateKlineBoll()
@@ -140,8 +140,8 @@ extension IMKLine {
 extension IMKLine {
     
     func calculateKlineBoll() {
-        let n = IMKLineConfig.KLineBollPramas["N"]!
-        let p = IMKLineConfig.KLineBollPramas["P"]!
+        let n = IMKLineParamters.KLineBollPramas["N"]!
+        let p = IMKLineParamters.KLineBollPramas["P"]!
         self.calculateSumC_MA_Square(n: n)
         if self.index >= n {
             let MB = self.klineMA(n: n - 1)!
