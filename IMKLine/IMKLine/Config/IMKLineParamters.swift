@@ -12,14 +12,20 @@ enum IMKLineMAType: String {
     case NONE = "", MA = "MA", EMA = "EMA", BOLL = "BOLL"
 }
 
+enum IMKLineAccessoryType: Int {
+    case NONE, MACD, KDJ, RSI
+}
+
 class IMKLineParamters: NSObject {
     
     /// 需要显示的 MA值
-    static let KLineMAs = [7, 15, 30]
+    static var KLineMAs = [7, 15, 30]
     /// 需要显示的 EMS值
-    static let KLineEMAs = [7, 25, 99]
+    static var KLineEMAs = [7, 25, 99]
     /// 需要显示的 BOLL线的参数值
-    static let KLineBollPramas = ["N":20, "P":2]
+    static var KLineBollPramas = ["N":20, "P":2]
+    /// 需要显示的 MACD图的参数值
+    static var KLineMACDPramas = [12, 26, 9]
     
     // MARK: - 缩放比
     /// KLine 缩放比
@@ -44,6 +50,9 @@ class IMKLineParamters: NSObject {
     
     // MARK: - KLine 显示的 MA 类型
     static var klineMAType: IMKLineMAType = .EMA
+    
+    // MARK: - KLine 底部MACD/KDJ图 显示类型
+    static var AccessoryType: IMKLineAccessoryType = .MACD
     
     // MARK: - 复位
     static func reset() {

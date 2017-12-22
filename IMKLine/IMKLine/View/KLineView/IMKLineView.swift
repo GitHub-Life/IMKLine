@@ -46,13 +46,11 @@ class IMKLineView: UIView {
         // 绘制 k线 / MA线
         context.setLineDash(phase: 0, lengths: [])
         var colors = [UIColor]()
-        let klinePainter = IMKLinePainter.init(context: context)
-        let klineMaPainter = IMKLineMAPainter.init(context: context)
+        let klinePainter = IMKLinePainter()
+        let klineMaPainter = IMKLineMAPainter()
         for kline in self.needDrawKlineArray {
-            klinePainter.kline = kline
-            colors.append(klinePainter.draw())
-            klineMaPainter.kline = kline
-            klineMaPainter.draw()
+            colors.append(klinePainter.draw(context: context, kline: kline))
+            klineMaPainter.draw(context: context, kline: kline)
         }
         
         // 绘制 最小值 指示文字
@@ -75,6 +73,7 @@ class IMKLineView: UIView {
         }
         
         self.superScrollView.volumeView.draw(klineArray: self.needDrawKlineArray, colors: colors)
+        self.superScrollView.accessoryView.draw(klineArray: self.needDrawKlineArray)
     }
     
     private var klineGroup = IMKLineGroup()

@@ -10,19 +10,9 @@ import UIKit
 
 class IMKLineVolumePainter: NSObject {
     
-    var kline: IMKLine?
-    var context: CGContext?
-    
-    convenience init(context: CGContext) {
-        self.init()
-        self.context = context
-    }
-    
-    func draw(color: UIColor) {
-        if let kline = self.kline, let context = context {
-            context.setStrokeColor(color.cgColor)
-            context.setLineWidth(IMKLineConfig.KLineWidth)
-            context.strokeLineSegments(between: [kline.volumePosition.zeroPoint, kline.volumePosition.volumePoint])
-        }
+    func draw(context: CGContext, kline: IMKLine, color: UIColor) {
+        context.setStrokeColor(color.cgColor)
+        context.setLineWidth(IMKLineConfig.KLineWidth)
+        context.strokeLineSegments(between: [kline.volumePosition.zeroPoint, kline.volumePosition.volumePoint])
     }
 }
