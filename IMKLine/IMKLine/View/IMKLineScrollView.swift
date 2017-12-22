@@ -74,6 +74,7 @@ class IMKLineScrollView: UIScrollView {
         }
         
         self.addSubview(self.accessoryView)
+        self.accessoryView.klineView = self.klineView
         self.accessoryView.snp.makeConstraints { [weak self] (maker) in
             maker.top.equalTo((self?.volumeView.snp.bottom)!).offset(17)
             maker.leading.equalToSuperview()

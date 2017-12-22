@@ -49,7 +49,6 @@ struct IMKLineConfig {
     static let AccessoryViewRightYCount = 3
     
     
-    
     /// K线图 占 K线图+成交量图+底部MACD/KDJ图总高度 之比
     ///
     /// - Parameter showAccessory: 是否显示 底部MACD/KDJ图
@@ -80,12 +79,5 @@ struct IMKLineConfig {
     static func AccessoryViewHeightRate() -> CGFloat {
         return CGFloat(0.2)
     }
-    
-    /// 需要显示的 MA值 
-    static let KLineMAs = [7, 15, 30]
-    /// 需要显示的 EMS值
-    static let KLineEMAs = [7, 25, 99]
-    /// 需要显示的 BOLL线的参数值
-    static let KLineBollPramas = ["N":20, "P":2]
     
 }

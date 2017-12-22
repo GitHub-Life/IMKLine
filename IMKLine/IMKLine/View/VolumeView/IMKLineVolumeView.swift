@@ -40,14 +40,12 @@ class IMKLineVolumeView: UIView {
         }
         
         // 绘制 成交量柱状线 / MA线
-        let volumePainter = IMKLineVolumePainter.init(context: context)
-        let volumeMaPainter = IMKLineVolumeMAPainter.init(context: context)
+        let volumePainter = IMKLineVolumePainter()
+        let volumeMaPainter = IMKLineVolumeMAPainter()
         var index = 0
         for kline in self.klineArray {
-            volumePainter.kline = kline
-            volumePainter.draw(color: self.colors[index])
-            volumeMaPainter.kline = kline
-            volumeMaPainter.draw()
+            volumePainter.draw(context: context, kline: kline, color: self.colors[index])
+            volumeMaPainter.draw(context: context, kline: kline)
             index += 1
         }
     }

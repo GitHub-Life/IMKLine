@@ -26,23 +26,50 @@ class IMKLineMAView: UIView {
         for subv in self.subviews {
             subv.removeFromSuperview()
         }
-        let values = kline.klineMAs
-        let keys = values.keys.sorted()
-        for index in 0..<values.count {
-            let label = UILabel()
-            label.textColor = IMKLineTheme.MAColors[index + 1]
-            label.font = UIFont.systemFont(ofSize: IMKLineTheme.AccessoryTextFontSize)
-            label.text = String.init(format: "MA\(keys[index]):%.2f", values[keys[index]]!)
-            self.addSubview(label)
-            label.snp.makeConstraints({ [weak self] (maker) in
-                if index == 0 {
-                    maker.leading.equalToSuperview().offset(1)
-                } else {
-                    maker.leading.equalTo((self?.subviews[index - 1].snp.trailing)!).offset(5)
-                }
-                maker.top.equalToSuperview()
-                maker.bottom.equalToSuperview()
-            })
+        switch IMKLineParamters.klineMAType {
+        case .MA:
+            var index = 0
+            for key in kline.klineMAs.keys.sorted() {
+                let text = String.init(format: "MA\(key):%.2f", kline.klineMAs[key]!)
+                self.addLabel(index: index, text: text, offset: 1)
+                index += 1
+            }
+        case .EMA:
+            var index = 0
+            for key in kline.klineEMAs.keys.sorted() {
+                let text = String.init(format: "EMA\(key):%.2f", kline.klineEMAs[key]!)
+                self.addLabel(index: index, text: text, offset: 1)
+                index += 1
+            }
+        case .BOLL:
+            let bollText = "BOLL(\(IMKLineParamters.KLineBollPramas["N"]!), \(IMKLineParamters.KLineBollPramas["P"]!))"
+            self.addLabel(index: 0, text: bollText)
+            if let klineBoll = kline.klineBoll {
+                let midText = String.init(format: "MID:%.3f", klineBoll.MB)
+                self.addLabel(index: 1, text: midText)
+                let upperText = String.init(format: "UPPER:%.3f", klineBoll.UP)
+                self.addLabel(index: 2, text: upperText)
+                let lowerText = String.init(format: "LOWER:%.3f", klineBoll.DN)
+                self.addLabel(index: 3, text: lowerText)
+            }
+        default: break
         }
+    }
+    
+    func addLabel(index: Int, text: String, offset: Int = 0) {
+        let label = UILabel()
+        label.textColor = IMKLineTheme.MAColors[index + offset]
+        label.font = UIFont.systemFont(ofSize: IMKLineTheme.AccessoryTextFontSize)
+        self.addSubview(label)
+        label.snp.makeConstraints({ [weak self] (maker) in
+            if index == 0 {
+                maker.leading.equalToSuperview().offset(1)
+            } else {
+                maker.leading.equalTo((self?.subviews[index - 1].snp.trailing)!).offset(5)
+            }
+            maker.top.equalToSuperview()
+            maker.bottom.equalToSuperview()
+        })
+        label.text = text
     }
 }

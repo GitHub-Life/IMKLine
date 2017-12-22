@@ -124,16 +124,7 @@ class IMKLineContainerView: UIView {
         
         self.scrollView.klineView.delegate = self
         self.scrollView.volumeView.delegate = self
-        
-//        self.klineMAView.update(values: [7:15738.872, 15:15612.543, 30:15550.8769, 5:15738.872, 20:15612.543, 60:15550.8769])
-//        self.beginTimeLabel.text = "12-19 18:00"
-//        self.endTimeLabel.text = "12-19 19:05"
-//        self.klineValueView.update(values: [16100, 16199.35, 16100, 16196.52, 0.6])
-//        self.volumeMAView.update(values: [0:33.68, 7:24.76, 15:26.16, 30:26.36, 6:24.76, 20:26.16, 60:26.36])
-//        self.accessoryMAView.update(values: ["MACD(12,26,9)", "DIFF:33,040", "DEA:77.544", "MACD:-89.008", "MACD(12,26,9)", "DIFF:33,040", "DEA:77.544", "MACD:-89.008"])
-//        self.klineRightYView.set(max: 18344.94, min: 16284.78, segment: 5, decimals: 3)
-//        self.volumeRightYView.set(max: 74.014, min: 0, segment: 3, decimals: 3)
-//        self.accessoryRightYView.set(max: 100.00, min: 0, segment: 3, decimals: 2)
+        self.scrollView.accessoryView.delegate = self
     }
     
     var showAccessory: Bool = true {
@@ -203,6 +194,14 @@ extension IMKLineContainerView: IMKLineVolumeViewDelegate {
     
 }
 
+extension IMKLineContainerView: IMKLineAccessoryViewDelegate {
+    
+    func updateAccessoryRightYRange(min: Double, max: Double) {
+        self.accessoryRightYView.set(max: max, min: min, segment: IMKLineConfig.VolumeViewRightYCount, decimals: 3)
+    }
+    
+}
+
 extension IMKLineContainerView {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -234,6 +233,7 @@ extension IMKLineContainerView {
     func showMA(kline: IMKLine) {
         self.klineMAView.update(kline: kline)
         self.volumeMAView.update(kline: kline)
+        self.accessoryMAView.update(kline: kline)
     }
 }
 
