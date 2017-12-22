@@ -83,5 +83,7 @@ struct IMKLineConfig {
     
     /// 需要显示的 MA值 
     static let KLineMAs = [7, 15, 30]
+    /// 需要显示的 EMS值
+    static let KLineEMAs = [7, 25, 99]
     
 }

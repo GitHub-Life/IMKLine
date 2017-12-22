@@ -23,7 +23,8 @@ class IMKLineMAPainter: NSObject {
             var positions = [Int : CGPoint]()
             var prevPositions = [Int : CGPoint]()
             if IMKLineParamters.klineMAType == .EMA {
-                
+                positions = kline.klineEMAPositions
+                prevPositions = kline.prevKline.klineEMAPositions
             } else {
                 positions = kline.klineMAPositions
                 prevPositions = kline.prevKline.klineMAPositions
@@ -32,7 +33,7 @@ class IMKLineMAPainter: NSObject {
             var index = 0
             for ma in positions.keys.sorted() {
                 if let prevPosition = prevPositions[ma] {
-                    if kline.prevKline.klineMAs[ma]! < 0 {
+                    if IMKLineParamters.klineMAType == .MA && kline.prevKline.klineMAs[ma]! < 0 {
                         continue
                     }
                     context.setStrokeColor(IMKLineTheme.MAColors[index + 1].cgColor)

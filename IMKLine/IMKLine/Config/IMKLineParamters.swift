@@ -36,7 +36,7 @@ class IMKLineParamters: NSObject {
     }
     
     // MARK: - KLine 显示的 MA 类型
-    static var klineMAType: IMKLineMAType = .MA
+    static var klineMAType: IMKLineMAType = .EMA
     
     // MARK: - 复位
     static func reset() {

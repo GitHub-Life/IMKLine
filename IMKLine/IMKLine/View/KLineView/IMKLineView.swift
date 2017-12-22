@@ -207,6 +207,11 @@ class IMKLineView: UIView {
             for key in kline.klineMAs.keys.sorted() {
                 kline.klineMAPositions[key] = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.klineMAs[key]! - minValue) / unitValue)))
             }
+            
+            kline.klineEMAPositions.removeAll()
+            for key in kline.klineEMAs.keys.sorted() {
+                kline.klineEMAPositions[key] = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.klineEMAs[key]! - minValue) / unitValue)))
+            }
         }
         
         self.delegate?.updateKlineRightYRange(min: minValue, max: maxValue)

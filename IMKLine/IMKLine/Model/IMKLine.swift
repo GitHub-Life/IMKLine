@@ -54,11 +54,13 @@ class IMKLine: NSObject {
     var sumLastVolume = Double(0)
     var klineMAs = [Int : Double]()
     var volumeMAs = [Int : Double]()
+    var klineEMAs = [Int : Double]()
     
     var klinePosition = IMKLinePosition()
     var volumePosition = IMKLineVolumePosition()
     var klineMAPositions = [Int : CGPoint]()
     var volumeMAPositions = [Int : CGPoint]()
+    var klineEMAPositions = [Int : CGPoint]()
     
     func reset(prevKline: IMKLine) {
         self.prevKline = prevKline
@@ -67,26 +69,40 @@ class IMKLine: NSObject {
         self.sumLastVolume = self.volume + self.prevKline.sumLastVolume
         self.klineMAs.removeAll()
         for ma in IMKLineConfig.KLineMAs {
-            self.klineMAs[ma] = self.klineMA(num: ma)
-            self.volumeMAs[ma] = self.volumeMA(num: ma)
+            self.klineMAs[ma] = self.klineMA(n: ma)
+            self.volumeMAs[ma] = self.volumeMA(n: ma)
+        }
+        for ema in IMKLineConfig.KLineEMAs {
+            self.klineEMAs[ema] = self.klineEMA(n: ema)
         }
     }
     
-    func klineMA(num: Int) -> Double {
-        if self.index > num - 1 {
-            return (self.sumLastClose - self.klineGroup.klineArray[self.index - num].sumLastClose) / Double(num)
-        } else if self.index == num - 1 {
-            return self.sumLastClose / Double(num)
+    func klineMA(n: Int) -> Double {
+        if self.index > n - 1 {
+            return (self.sumLastClose - self.klineGroup.klineArray[self.index - n].sumLastClose) / Double(n)
+        } else if self.index == n - 1 {
+            return self.sumLastClose / Double(n)
         }
         return Double(-1)
     }
     
-    func volumeMA(num: Int) -> Double {
-        if self.index > num - 1 {
-            return (self.sumLastVolume - self.klineGroup.klineArray[self.index - num].sumLastVolume) / Double(num)
-        } else if self.index == num - 1 {
-            return self.sumLastVolume / Double(num)
+    func volumeMA(n: Int) -> Double {
+        if self.index > n - 1 {
+            return (self.sumLastVolume - self.klineGroup.klineArray[self.index - n].sumLastVolume) / Double(n)
+        } else if self.index == n - 1 {
+            return self.sumLastVolume / Double(n)
         }
         return Double(-1)
+    }
+    
+    // EMA(today) = α * Price(today) + (1 - α) * EMA(yesterday)
+    // α = 2 / (N + 1)
+    // EMA(today) = α * (Price(today) - EMA(yesterday)) + EMA(yesterday);
+    func klineEMA(n: Int) -> Double {
+        if self.index > 0 {
+            return Double(2) / Double(n + 1) * (self.close - self.prevKline.klineEMAs[n]!) + self.prevKline.klineEMAs[n]!
+        } else {
+            return self.close
+        }
     }
 }
