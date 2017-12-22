@@ -19,7 +19,13 @@ class IMKLineAccessoryPainter: NSObject {
             context.strokeLineSegments(between: [kline.prevKline.klineMACD.DEAPoint, kline.klineMACD.DEAPoint])
             context.setStrokeColor(kline.klineMACD.BAR > 0 ? IMKLineTheme.RiseColor.cgColor : IMKLineTheme.DownColor.cgColor)
             context.strokeLineSegments(between: [kline.klineMACD.zeroPoint, kline.klineMACD.BARPoint])
-//        case .KDJ:
+        case .KDJ:
+            context.setStrokeColor(IMKLineTheme.MAColors[1].cgColor)
+            context.strokeLineSegments(between: [kline.prevKline.klineKDJ.kPoint, kline.klineKDJ.kPoint])
+            context.setStrokeColor(IMKLineTheme.MAColors[2].cgColor)
+            context.strokeLineSegments(between: [kline.prevKline.klineKDJ.dPoint, kline.klineKDJ.dPoint])
+            context.setStrokeColor(IMKLineTheme.MAColors[3].cgColor)
+            context.strokeLineSegments(between: [kline.prevKline.klineKDJ.jPoint, kline.klineKDJ.jPoint])
 //        case .RSI:
         default: break
         }

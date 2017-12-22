@@ -54,4 +54,6 @@ class IMKLine: NSObject {
     var sumC_MA_Square = Double(0)
     
     var klineMACD = IMKLineMACD()
+    
+    var klineKDJ = IMKLineKDJ()
 }

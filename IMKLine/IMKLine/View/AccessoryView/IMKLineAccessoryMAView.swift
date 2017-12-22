@@ -34,17 +34,25 @@ class IMKLineAccessoryMAView: UIView {
             self.addLabel(index: 1, text: text1)
             let text2 = String.init(format: "DEA:%.3f", kline.klineMACD.DEA)
             self.addLabel(index: 2, text: text2)
-            let text3 = String.init(format: "MACD:%.3f", kline.klineMACD.BAR)
+            let text3 = String.init(format: "MACD:%.3f", abs(kline.klineMACD.BAR))
+            self.addLabel(index: 3, text: text3, textColor: kline.klineMACD.BAR > 0 ? IMKLineTheme.RiseColor : IMKLineTheme.DownColor)
+        case .KDJ:
+            let text0 = "KDJ(\(IMKLineParamters.KLineKDJPramas[0]),\(IMKLineParamters.KLineKDJPramas[1]),\(IMKLineParamters.KLineKDJPramas[2]))"
+            self.addLabel(index: 0, text: text0)
+            let text1 = String.init(format: "K:%.3f", kline.klineKDJ.k)
+            self.addLabel(index: 1, text: text1)
+            let text2 = String.init(format: "D:%.3f", kline.klineKDJ.d)
+            self.addLabel(index: 2, text: text2)
+            let text3 = String.init(format: "J:%.3f", kline.klineKDJ.j)
             self.addLabel(index: 3, text: text3)
-//        case .KDJ:
 //        case .RSI:
         default: break
         }
     }
     
-    func addLabel(index: Int, text: String, offset: Int = 0) {
+    func addLabel(index: Int, text: String, offset: Int = 0, textColor: UIColor? = nil) {
         let label = UILabel()
-        label.textColor = IMKLineTheme.MAColors[index + offset]
+        label.textColor = textColor ?? IMKLineTheme.MAColors[index + offset]
         label.font = UIFont.systemFont(ofSize: IMKLineTheme.AccessoryTextFontSize)
         self.addSubview(label)
         label.snp.makeConstraints({ [weak self] (maker) in

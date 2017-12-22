@@ -46,3 +46,12 @@ struct IMKLineMACD {
     var DEAPoint = CGPoint.zero
     var BARPoint = CGPoint.zero
 }
+
+struct IMKLineKDJ {
+    var k = Double(50)
+    var d = Double(50)
+    var j = Double(0)
+    var kPoint = CGPoint.zero
+    var dPoint = CGPoint.zero
+    var jPoint = CGPoint.zero
+}

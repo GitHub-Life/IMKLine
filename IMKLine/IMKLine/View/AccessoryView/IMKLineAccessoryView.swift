@@ -55,38 +55,47 @@ class IMKLineAccessoryView: UIView {
         if self.klineArray.count == 0 {
             return
         }
-        var maxValue = self.klineArray[0].klineMACD.BAR
-        var minValue = self.klineArray[0].klineMACD.BAR
-        for kline in self.klineArray {
-            if kline.klineMACD.BAR > maxValue {
-                maxValue = kline.klineMACD.BAR
-            }
-            if kline.klineMACD.DIFF > maxValue {
-                maxValue = kline.klineMACD.DIFF
-            }
-            if kline.klineMACD.DEA > maxValue {
-                maxValue = kline.klineMACD.DEA
-            }
-            if kline.klineMACD.BAR < minValue {
-                minValue = kline.klineMACD.BAR
-            }
-            if kline.klineMACD.DIFF < minValue {
-                minValue = kline.klineMACD.DIFF
-            }
-            if kline.klineMACD.DEA < minValue {
-                minValue = kline.klineMACD.DEA
-            }
-        }
+        
+        var maxValue = Double(0)
+        var minValue = Double(0)
         let minY = CGFloat(0)
         let maxY = self.frame.height
-        let unitValue = (maxValue - minValue) / Double(maxY - minY)
-        for index in 0..<self.klineArray.count {
-            let kline = self.klineArray[index]
-            let xPosition = CGFloat(self.klineView.startXPosition) + CGFloat(index) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
-            kline.klineMACD.zeroPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat(abs(minValue / unitValue)))
-            kline.klineMACD.DIFFPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineMACD.DIFF - minValue) / unitValue))
-            kline.klineMACD.DEAPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineMACD.DEA - minValue) / unitValue))
-            kline.klineMACD.BARPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineMACD.BAR - minValue) / unitValue))
+        switch IMKLineParamters.AccessoryType {
+        case .MACD:
+            let firstKline = self.klineArray[0]
+            maxValue = max(firstKline.klineMACD.BAR, firstKline.klineMACD.DIFF, firstKline.klineMACD.DEA)
+            minValue = min(firstKline.klineMACD.BAR, firstKline.klineMACD.DIFF, firstKline.klineMACD.DEA)
+            for kline in self.klineArray {
+                maxValue = max(kline.klineMACD.BAR, kline.klineMACD.DIFF, kline.klineMACD.DEA, maxValue)
+                minValue = min(kline.klineMACD.BAR, kline.klineMACD.DIFF, kline.klineMACD.DEA, minValue)
+            }
+            let unitValue = (maxValue - minValue) / Double(maxY - minY)
+            for index in 0..<self.klineArray.count {
+                let kline = self.klineArray[index]
+                let xPosition = CGFloat(self.klineView.startXPosition) + CGFloat(index) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
+                kline.klineMACD.zeroPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat(abs(minValue / unitValue)))
+                kline.klineMACD.DIFFPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineMACD.DIFF - minValue) / unitValue))
+                kline.klineMACD.DEAPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineMACD.DEA - minValue) / unitValue))
+                kline.klineMACD.BARPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineMACD.BAR - minValue) / unitValue))
+            }
+        case .KDJ:
+            let firstKline = self.klineArray[0]
+            maxValue = max(firstKline.klineKDJ.k, firstKline.klineKDJ.d, firstKline.klineKDJ.j)
+            minValue = min(firstKline.klineKDJ.k, firstKline.klineKDJ.d, firstKline.klineKDJ.j)
+            for kline in self.klineArray {
+                maxValue = max(kline.klineKDJ.k, kline.klineKDJ.d, kline.klineKDJ.j, maxValue)
+                minValue = min(kline.klineKDJ.k, kline.klineKDJ.d, kline.klineKDJ.j, minValue)
+            }
+            let unitValue = (maxValue - minValue) / Double(maxY - minY)
+            for index in 0..<self.klineArray.count {
+                let kline = self.klineArray[index]
+                let xPosition = CGFloat(self.klineView.startXPosition) + CGFloat(index) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
+                kline.klineKDJ.kPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineKDJ.k - minValue) / unitValue))
+                kline.klineKDJ.dPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineKDJ.d - minValue) / unitValue))
+                kline.klineKDJ.jPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineKDJ.j - minValue) / unitValue))
+            }
+//        case .RSI:
+        default: break
         }
     
         self.delegate?.updateAccessoryRightYRange(min: minValue, max: maxValue)

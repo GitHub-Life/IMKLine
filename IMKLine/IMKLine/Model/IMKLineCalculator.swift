@@ -25,6 +25,7 @@ extension IMKLine {
         }
         self.calculateKlineBoll()
         self.calculateKlineMACD()
+        self.calculateKlineKDJ()
     }
 }
 
@@ -92,7 +93,6 @@ extension IMKLine {
 
 // MARK: - MACD值计算
 extension IMKLine {
-    
     func calculateKlineMACD() {
         self.klineMACD.EMA1 = self.klineMACD_EMA1(n: IMKLineParamters.KLineMACDPramas[0])
         self.klineMACD.EMA2 = self.klineMACD_EMA2(n: IMKLineParamters.KLineMACDPramas[1])
@@ -126,5 +126,36 @@ extension IMKLine {
         } else {
             return self.close
         }
+    }
+}
+
+extension IMKLine {
+    func calculateKlineKDJ() {
+        let k = Double(IMKLineParamters.KLineKDJPramas[0])
+        let d = Double(IMKLineParamters.KLineKDJPramas[1])
+        let j = IMKLineParamters.KLineKDJPramas[2]
+        let lowHigh = self.beforeMin(n: j)
+        let rsv = (self.close - lowHigh.low) / (lowHigh.high - lowHigh.low) * 100
+        self.klineKDJ.k = (rsv + (k - 1) * self.prevKline.klineKDJ.k) / k
+        self.klineKDJ.d = (self.klineKDJ.k + (d - 1) * self.prevKline.klineKDJ.d) / d
+        self.klineKDJ.j = 3 * self.klineKDJ.k - 2 * self.klineKDJ.d
+    }
+    
+    func beforeMin(n: Int) -> (low: Double, high: Double) {
+        var minIndex = self.index - (n - 1)
+        if minIndex < 0 {
+            minIndex = 0
+        }
+        var low = self.low
+        var high = self.high
+        for index in minIndex..<self.index {
+            if self.klineGroup.klineArray[index].low < low {
+                low = self.klineGroup.klineArray[index].low
+            }
+            if self.klineGroup.klineArray[index].high > high {
+                high = self.klineGroup.klineArray[index].high
+            }
+        }
+        return (low, high)
     }
 }

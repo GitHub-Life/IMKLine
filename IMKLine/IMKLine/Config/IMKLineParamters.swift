@@ -26,6 +26,8 @@ class IMKLineParamters: NSObject {
     static var KLineBollPramas = ["N":20, "P":2]
     /// 需要显示的 MACD图的参数值
     static var KLineMACDPramas = [12, 26, 9]
+    /// 需要显示的 KDJ图的参数值
+    static var KLineKDJPramas = [3, 3, 9]
     
     // MARK: - 缩放比
     /// KLine 缩放比
@@ -52,12 +54,13 @@ class IMKLineParamters: NSObject {
     static var klineMAType: IMKLineMAType = .EMA
     
     // MARK: - KLine 底部MACD/KDJ图 显示类型
-    static var AccessoryType: IMKLineAccessoryType = .MACD
+    static var AccessoryType: IMKLineAccessoryType = .KDJ
     
     // MARK: - 复位
     static func reset() {
         ZoomScale = CGFloat(1)
         klineMAType = .MA
+        AccessoryType = .MACD
     }
     
 }
