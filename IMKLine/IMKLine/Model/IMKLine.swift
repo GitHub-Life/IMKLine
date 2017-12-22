@@ -10,15 +10,30 @@ import UIKit
 import SwiftyJSON
 
 struct IMKLinePosition {
-    var openPoint: CGPoint = CGPoint.zero
-    var closePoint: CGPoint = CGPoint.zero
-    var highPoint: CGPoint = CGPoint.zero
-    var lowPoint: CGPoint = CGPoint.zero
+    var openPoint = CGPoint.zero
+    var closePoint = CGPoint.zero
+    var highPoint = CGPoint.zero
+    var lowPoint = CGPoint.zero
 }
 
 struct IMKLineVolumePosition {
-    var zeroPoint: CGPoint = CGPoint.zero
-    var volumePoint: CGPoint = CGPoint.zero
+    var zeroPoint = CGPoint.zero
+    var volumePoint = CGPoint.zero
+}
+
+struct IMKLineBoll {
+    var MB: Double = Double(0)
+    var UP: Double = Double(0)
+    var DN: Double = Double(0)
+    var MBPoint = CGPoint.zero
+    var UPPoint = CGPoint.zero
+    var DNPoint = CGPoint.zero
+    
+    init(MB: Double, UP: Double, DN: Double) {
+        self.MB = MB
+        self.UP = UP
+        self.DN = DN
+    }
 }
 
 class IMKLine: NSObject {
@@ -62,6 +77,11 @@ class IMKLine: NSObject {
     var volumeMAPositions = [Int : CGPoint]()
     var klineEMAPositions = [Int : CGPoint]()
     
+    var klineBoll: IMKLineBoll?
+    var sumC_MA_Square = Double(0)
+}
+
+extension IMKLine {
     func reset(prevKline: IMKLine) {
         self.prevKline = prevKline
         self.index = prevKline.index + 1
@@ -69,31 +89,40 @@ class IMKLine: NSObject {
         self.sumLastVolume = self.volume + self.prevKline.sumLastVolume
         self.klineMAs.removeAll()
         for ma in IMKLineConfig.KLineMAs {
-            self.klineMAs[ma] = self.klineMA(n: ma)
-            self.volumeMAs[ma] = self.volumeMA(n: ma)
+            self.klineMAs[ma] = self.klineMA(n: ma) ?? Double(-1)
+            self.volumeMAs[ma] = self.volumeMA(n: ma) ?? Double(-1)
         }
         for ema in IMKLineConfig.KLineEMAs {
             self.klineEMAs[ema] = self.klineEMA(n: ema)
         }
+        self.calculateKlineBoll()
     }
-    
-    func klineMA(n: Int) -> Double {
+}
+
+// MARK: - 普通均值计算
+extension IMKLine {
+    /// KLine MA
+    func klineMA(n: Int) -> Double? {
         if self.index > n - 1 {
             return (self.sumLastClose - self.klineGroup.klineArray[self.index - n].sumLastClose) / Double(n)
         } else if self.index == n - 1 {
             return self.sumLastClose / Double(n)
         }
-        return Double(-1)
+        return nil
     }
-    
-    func volumeMA(n: Int) -> Double {
+    /// Volume MA
+    func volumeMA(n: Int) -> Double? {
         if self.index > n - 1 {
             return (self.sumLastVolume - self.klineGroup.klineArray[self.index - n].sumLastVolume) / Double(n)
         } else if self.index == n - 1 {
             return self.sumLastVolume / Double(n)
         }
-        return Double(-1)
+        return nil
     }
+}
+
+// MARK: - EMA值计算
+extension IMKLine {
     
     // EMA(today) = α * Price(today) + (1 - α) * EMA(yesterday)
     // α = 2 / (N + 1)
@@ -105,4 +134,30 @@ class IMKLine: NSObject {
             return self.close
         }
     }
+}
+
+// MARK: - BOLL值计算
+extension IMKLine {
+    
+    func calculateKlineBoll() {
+        let n = IMKLineConfig.KLineBollPramas["N"]!
+        let p = IMKLineConfig.KLineBollPramas["P"]!
+        self.calculateSumC_MA_Square(n: n)
+        if self.index >= n {
+            let MB = self.klineMA(n: n - 1)!
+            let MD = sqrt((self.sumC_MA_Square - self.klineGroup.klineArray[self.index - n].sumC_MA_Square) / Double(n))
+            let UP = MB + Double(p) * MD
+            let DN = MB - Double(p) * MD
+            self.klineBoll = IMKLineBoll.init(MB: MB, UP: UP, DN: DN)
+        }
+    }
+    
+    func calculateSumC_MA_Square(n: Int) {
+        if let MA = self.klineMA(n: n) {
+            let C_MA = self.close - MA
+            let C_MA_Square = C_MA * C_MA
+            self.sumC_MA_Square = C_MA_Square + self.prevKline.sumC_MA_Square
+        }
+    }
+    
 }

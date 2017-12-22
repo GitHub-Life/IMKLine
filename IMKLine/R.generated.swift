@@ -21,14 +21,38 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 1 files.
+  /// This `R.file` struct is generated, and contains static references to 4 files.
   struct file {
+    /// Resource file `KDJ介绍.md`.
+    static let kdj介绍Md = Rswift.FileResource(bundle: R.hostingBundle, name: "KDJ介绍", pathExtension: "md")
+    /// Resource file `MA-EMA-MACD介绍.md`.
+    static let maemamacd介绍Md = Rswift.FileResource(bundle: R.hostingBundle, name: "MA-EMA-MACD介绍", pathExtension: "md")
     /// Resource file `data.json`.
     static let dataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "data", pathExtension: "json")
+    /// Resource file `指标公式.md`.
+    static let 指标公式Md = Rswift.FileResource(bundle: R.hostingBundle, name: "指标公式", pathExtension: "md")
+    
+    /// `bundle.url(forResource: "KDJ介绍", withExtension: "md")`
+    static func kdj介绍Md(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.kdj介绍Md
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "MA-EMA-MACD介绍", withExtension: "md")`
+    static func maemamacd介绍Md(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.maemamacd介绍Md
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "data", withExtension: "json")`
     static func dataJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.dataJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "指标公式", withExtension: "md")`
+    static func 指标公式Md(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.指标公式Md
       return fileResource.bundle.url(forResource: fileResource)
     }
     
