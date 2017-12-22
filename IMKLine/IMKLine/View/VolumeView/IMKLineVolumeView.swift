@@ -80,11 +80,11 @@ class IMKLineVolumeView: UIView {
             let kline = self.klineArray[index]
             let xPosition = CGFloat(self.klineView.startXPosition) + CGFloat(index) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
             kline.volumePosition.zeroPoint = CGPoint.init(x: xPosition, y: maxY)
-            kline.volumePosition.volumePoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat(kline.volume / unitValue)))
+            kline.volumePosition.volumePoint = CGPoint.init(x: xPosition, y: maxY - CGFloat(kline.volume / unitValue))
             
             kline.volumeMAPositions.removeAll()
             for key in kline.volumeMAs.keys.sorted() {
-                kline.volumeMAPositions[key] = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat(kline.volumeMAs[key]! / unitValue)))
+                kline.volumeMAPositions[key] = CGPoint.init(x: xPosition, y: maxY - CGFloat(kline.volumeMAs[key]! / unitValue))
             }
         }
         

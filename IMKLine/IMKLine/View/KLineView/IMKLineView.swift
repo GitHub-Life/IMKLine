@@ -173,10 +173,11 @@ class IMKLineView: UIView {
         for index in 0..<self.needDrawKlineArray.count {
             let kline = self.needDrawKlineArray[index]
             let xPosition = self.startXPosition + CGFloat(index) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
-            kline.klinePosition.highPoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.high - minValue) / unitValue)))
-            kline.klinePosition.lowPoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.low - minValue) / unitValue)))
-            var openPoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.open - minValue) / unitValue)))
-            var closePoint = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.close - minValue) / unitValue)))
+            
+            kline.klinePosition.highPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.high - minValue) / unitValue))
+            kline.klinePosition.lowPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.low - minValue) / unitValue))
+            var openPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.open - minValue) / unitValue))
+            var closePoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.close - minValue) / unitValue))
             if abs(openPoint.y - closePoint.y) < IMKLineConfig.KLineMinHeight {
                 if openPoint.y > closePoint.y {
                     openPoint.y = closePoint.y + IMKLineConfig.KLineMinHeight
@@ -205,7 +206,19 @@ class IMKLineView: UIView {
             
             kline.klineMAPositions.removeAll()
             for key in kline.klineMAs.keys.sorted() {
-                kline.klineMAPositions[key] = CGPoint.init(x: xPosition, y: abs(maxY - CGFloat((kline.klineMAs[key]! - minValue) / unitValue)))
+                kline.klineMAPositions[key] = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineMAs[key]! - minValue) / unitValue))
+            }
+            
+            kline.klineEMAPositions.removeAll()
+            for key in kline.klineEMAs.keys.sorted() {
+                kline.klineEMAPositions[key] = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineEMAs[key]! - minValue) / unitValue))
+            }
+            
+            if var klineBoll = kline.klineBoll {
+                klineBoll.MBPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((klineBoll.MB - minValue) / unitValue))
+                klineBoll.UPPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((klineBoll.UP - minValue) / unitValue))
+                klineBoll.DNPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((klineBoll.DN - minValue) / unitValue))
+                kline.klineBoll = klineBoll
             }
         }
         

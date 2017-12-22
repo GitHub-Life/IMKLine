@@ -9,7 +9,7 @@
 import UIKit
 
 enum IMKLineMAType: String {
-    case NONE = "", MA = "MA", EMA = "EMA"
+    case NONE = "", MA = "MA", EMA = "EMA", BOLL = "BOLL"
 }
 
 class IMKLineParamters: NSObject {
@@ -36,7 +36,7 @@ class IMKLineParamters: NSObject {
     }
     
     // MARK: - KLine 显示的 MA 类型
-    static var klineMAType: IMKLineMAType = .MA
+    static var klineMAType: IMKLineMAType = .BOLL
     
     // MARK: - 复位
     static func reset() {
