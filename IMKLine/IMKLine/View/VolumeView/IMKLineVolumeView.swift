@@ -45,9 +45,13 @@ class IMKLineVolumeView: UIView {
         var index = 0
         for kline in self.klineArray {
             volumePainter.draw(context: context, kline: kline, color: self.colors[index])
-            volumeMaPainter.draw(context: context, kline: kline)
+            if IMKLineParamters.KLineMAType != .NONE {
+                volumeMaPainter.draw(context: context, kline: kline)
+            }
             index += 1
         }
+        
+        self.klineView.superScrollView.accessoryView.draw(klineArray: self.klineArray)
     }
     
     var colors = [UIColor]()

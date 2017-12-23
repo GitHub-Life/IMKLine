@@ -52,16 +52,38 @@ class IMKLineParamters: NSObject {
         return ZoomScale
     }
     
-    // MARK: - KLine 显示的 MA 类型
-    static var klineMAType: IMKLineMAType = .EMA
+    /// KLine 显示的 MA 类型
+    static var KLineMAType: IMKLineMAType = .NONE {
+        willSet {
+            klineMATypeChanged =  newValue != KLineMAType
+        }
+        didSet {
+            if klineMATypeChanged {
+                NotificationCenter.default.post(name: IMKLineMATypeChanged, object: nil)
+            }
+        }
+    }
+    private static var klineMATypeChanged = false
+    static let IMKLineMATypeChanged = NSNotification.Name.init("IMKLineMATypeChanged")
     
-    // MARK: - KLine 底部MACD/KDJ图 显示类型
-    static var AccessoryType: IMKLineAccessoryType = .RSI
+    /// KLine 底部MACD/KDJ图 显示类型
+    static var AccessoryType: IMKLineAccessoryType = .RSI {
+        willSet {
+            accessoryTypeChanged =  newValue != AccessoryType
+        }
+        didSet {
+            if accessoryTypeChanged {
+                NotificationCenter.default.post(name: IMKLineAccessoryTypeChanged, object: nil)
+            }
+        }
+    }
+    private static var accessoryTypeChanged = false
+    static let IMKLineAccessoryTypeChanged = NSNotification.Name.init("IMKLineAccessoryTypeChanged")
     
     // MARK: - 复位
     static func reset() {
         ZoomScale = CGFloat(1)
-        klineMAType = .MA
+        KLineMAType = .MA
         AccessoryType = .MACD
     }
     

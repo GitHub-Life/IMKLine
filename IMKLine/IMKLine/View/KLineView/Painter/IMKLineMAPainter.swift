@@ -12,7 +12,7 @@ class IMKLineMAPainter: NSObject {
     
     func draw(context: CGContext, kline: IMKLine) {
         context.setLineWidth(IMKLineConfig.MALineWidth)
-        switch IMKLineParamters.klineMAType {
+        switch IMKLineParamters.KLineMAType {
         case .MA:
             let positions = kline.klineMAPositions
             let prevPositions = kline.prevKline.klineMAPositions
@@ -33,7 +33,7 @@ class IMKLineMAPainter: NSObject {
             var index = 0
             for ma in positions.keys.sorted() {
                 if let prevPosition = prevPositions[ma] {
-                    if IMKLineParamters.klineMAType == .MA && kline.prevKline.klineMAs[ma]! < 0 {
+                    if IMKLineParamters.KLineMAType == .MA && kline.prevKline.klineMAs[ma]! < 0 {
                         continue
                     }
                     context.setStrokeColor(IMKLineTheme.MAColors[index + 1].cgColor)

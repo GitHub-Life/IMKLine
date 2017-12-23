@@ -35,6 +35,8 @@ class IMKLineContainerView: UIView {
     // -------- 15 ----
     
     override func awakeFromNib() {
+        self.registerOrResignNotificationObserver(isRegister: true)
+        self.backgroundColor = IMKLineTheme.KLineChartBgColor
         
         self.addSubview(self.klineMAView)
         self.klineMAView.snp.makeConstraints { (maker) in
@@ -127,6 +129,15 @@ class IMKLineContainerView: UIView {
         self.scrollView.accessoryView.delegate = self
     }
     
+    @objc func klineMATypeChanged() {
+        if self.showAccessory && IMKLineParamters.KLineMAType == .NONE {
+            self.showAccessory = false
+        } else if !self.showAccessory && IMKLineParamters.KLineMAType != .NONE {
+            self.showAccessory = true
+            self.scrollView.klineView.draw()
+        }
+    }
+    
     var showAccessory: Bool = true {
         didSet {
             self.klineRightYView.snp.remakeConstraints { [weak self] (maker) in
@@ -142,8 +153,23 @@ class IMKLineContainerView: UIView {
         }
     }
     
+    @objc func accessoryTypeChanged() {
+        self.scrollView.accessoryView.draw(klineArray: self.scrollView.klineView.needDrawKlineArray)
+    }
+    
+    func registerOrResignNotificationObserver(isRegister: Bool) {
+        if isRegister {
+            NotificationCenter.default.addObserver(self, selector: #selector(klineMATypeChanged), name: IMKLineParamters.IMKLineMATypeChanged, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(accessoryTypeChanged), name: IMKLineParamters.IMKLineAccessoryTypeChanged, object: nil)
+        } else {
+            NotificationCenter.default.removeObserver(self, name: IMKLineParamters.IMKLineMATypeChanged, object: nil)
+            NotificationCenter.default.removeObserver(self, name: IMKLineParamters.IMKLineAccessoryTypeChanged, object: nil)
+        }
+    }
+    
     deinit {
         IMKLineParamters.reset()
+        self.registerOrResignNotificationObserver(isRegister: false)
     }
 }
 
