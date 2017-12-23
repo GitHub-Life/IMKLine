@@ -130,12 +130,7 @@ class IMKLineContainerView: UIView {
     }
     
     @objc func klineMATypeChanged() {
-        if self.showAccessory && IMKLineParamters.KLineMAType == .NONE {
-            self.showAccessory = false
-        } else if !self.showAccessory && IMKLineParamters.KLineMAType != .NONE {
-            self.showAccessory = true
-            self.scrollView.klineView.draw()
-        }
+        self.scrollView.klineView.draw()
     }
     
     var showAccessory: Bool = true {
@@ -149,12 +144,20 @@ class IMKLineContainerView: UIView {
             self.accessoryMAView.alpha = showAccessory ? 1 : 0
             self.accessoryRightYView.alpha = showAccessory ? 1 : 0
             self.scrollView.showAccessory = showAccessory
-            self.layoutIfNeeded()
         }
     }
     
     @objc func accessoryTypeChanged() {
-        self.scrollView.accessoryView.draw(klineArray: self.scrollView.klineView.needDrawKlineArray)
+        if IMKLineParamters.AccessoryType == .NONE {
+            if self.showAccessory {
+                self.showAccessory = false
+            }
+        } else {
+            if !self.showAccessory {
+                self.showAccessory = true
+            }
+            self.scrollView.accessoryView.draw(klineArray: self.scrollView.klineView.needDrawKlineArray)
+        }
     }
     
     func registerOrResignNotificationObserver(isRegister: Bool) {

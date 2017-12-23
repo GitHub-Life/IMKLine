@@ -32,7 +32,8 @@ class ViewController: UIViewController {
                 let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 let json = JSON(jsonObj)
                 DispatchQueue.main.async(execute: {
-                    let klineGroup = IMKLineGroup.init(datas: json)
+                    let klineGroup = IMKLineGroup()
+                    klineGroup.klineArray = IMKLineGroup.klineArray(datas: json)
                     self.klineContainerView.scrollView.klineView.add(klineGroup: klineGroup)
                 })
             } catch {

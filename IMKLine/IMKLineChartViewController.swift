@@ -30,9 +30,9 @@ class IMKLineChartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.getKlineDatas()
-//        self.klineContainerView.scrollView.loadMore = { [weak self] in
-////            self?.getKlineDatas()
-//        }
+        self.klineContainerView.scrollView.loadMore = { [weak self] in
+            self?.getKlineDatas()
+        }
     }
     
     func getKlineDatas() {
@@ -52,14 +52,15 @@ class IMKLineChartViewController: UIViewController {
 //                }
 //            }
 //        }
-        DispatchQueue.global().async {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
             let dataJsonPath = Bundle.main.path(forResource: "data", ofType: "json")!
             let data = FileManager.default.contents(atPath: dataJsonPath)!
             do {
                 let jsonObj = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves)
                 let json = JSON(jsonObj)
                 DispatchQueue.main.async(execute: {
-                    let klineGroup = IMKLineGroup.init(datas: json)
+                    let klineGroup = IMKLineGroup()
+                    klineGroup.klineArray = IMKLineGroup.klineArray(datas: json)
                     self.klineContainerView.scrollView.klineView.add(klineGroup: klineGroup)
                 })
             } catch {
@@ -68,7 +69,31 @@ class IMKLineChartViewController: UIViewController {
         }
     }
     
+    @IBAction func klineMABtnClick() {
+        switch IMKLineParamters.KLineMAType {
+        case .MA:
+            IMKLineParamters.KLineMAType = .EMA
+        case .EMA:
+            IMKLineParamters.KLineMAType = .BOLL
+        case .BOLL:
+            IMKLineParamters.KLineMAType = .NONE
+        case .NONE:
+            IMKLineParamters.KLineMAType = .MA
+        }
+    }
     
+    @IBAction func clickAccessoryBtn() {
+        switch IMKLineParamters.AccessoryType {
+        case .MACD:
+            IMKLineParamters.AccessoryType = .KDJ
+        case .KDJ:
+            IMKLineParamters.AccessoryType = .RSI
+        case .RSI:
+            IMKLineParamters.AccessoryType = .NONE
+        case .NONE:
+            IMKLineParamters.AccessoryType = .MACD
+        }
+    }
     
 
     

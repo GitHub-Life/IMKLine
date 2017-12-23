@@ -53,7 +53,7 @@ class IMKLineParamters: NSObject {
     }
     
     /// KLine 显示的 MA 类型
-    static var KLineMAType: IMKLineMAType = .NONE {
+    static var KLineMAType: IMKLineMAType = .MA {
         willSet {
             klineMATypeChanged =  newValue != KLineMAType
         }
@@ -67,7 +67,7 @@ class IMKLineParamters: NSObject {
     static let IMKLineMATypeChanged = NSNotification.Name.init("IMKLineMATypeChanged")
     
     /// KLine 底部MACD/KDJ图 显示类型
-    static var AccessoryType: IMKLineAccessoryType = .RSI {
+    static var AccessoryType: IMKLineAccessoryType = .MACD {
         willSet {
             accessoryTypeChanged =  newValue != AccessoryType
         }

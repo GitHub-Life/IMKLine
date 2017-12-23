@@ -83,6 +83,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                         <state key="normal" title="MA"/>
+                                        <connections>
+                                            <action selector="klineMABtnClick" destination="e0s-Aa-2tL" eventType="touchUpInside" id="QhP-Qd-epp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04G-PV-YZc">
                                         <rect key="frame" x="0.0" y="80" width="50" height="40"/>
@@ -92,7 +95,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                         <state key="normal" title="KDJ"/>
                                         <connections>
-                                            <action selector="accessoryBtnClick" destination="e0s-Aa-2tL" eventType="touchUpInside" id="Xl0-df-ldw"/>
+                                            <action selector="clickAccessoryBtn" destination="e0s-Aa-2tL" eventType="touchUpInside" id="EdJ-03-zxd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfe-lb-ruN">

@@ -13,12 +13,21 @@ class IMKLineGroup: NSObject {
 
     var klineArray = [IMKLine]()
     
-    convenience init(datas: JSON) {
-        self.init()
+//    convenience init(datas: JSON) {
+//        self.init()
+//        for klineJson in datas["data"].arrayValue {
+//            let kline = IMKLine.init(json: klineJson)
+//            self.klineArray.insert(kline, at: 0)
+//        }
+//    }
+    
+    static func klineArray(datas: JSON) -> [IMKLine] {
+        var klineArray = [IMKLine]()
         for klineJson in datas["data"].arrayValue {
             let kline = IMKLine.init(json: klineJson)
-            self.klineArray.insert(kline, at: 0)
+            klineArray.insert(kline, at: 0)
         }
+        return klineArray
     }
     
     func insert(klineGroup: IMKLineGroup) {
