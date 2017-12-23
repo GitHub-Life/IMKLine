@@ -94,7 +94,26 @@ class IMKLineAccessoryView: UIView {
                 kline.klineKDJ.dPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineKDJ.d - minValue) / unitValue))
                 kline.klineKDJ.jPoint = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineKDJ.j - minValue) / unitValue))
             }
-//        case .RSI:
+        case .RSI:
+            var bothValues = self.klineArray[0].klineRSI.bothRSI
+            for kline in self.klineArray {
+                if let both = bothValues {
+                    bothValues = (min(both.low, (kline.klineRSI.bothRSI?.low)!), max(both.high, (kline.klineRSI.bothRSI?.high)!))
+                }
+            }
+            if let bothValues = bothValues {
+                minValue = bothValues.low
+                maxValue = bothValues.high
+                let unitValue = (maxValue - minValue) / Double(maxY - minY)
+                for index in 0..<self.klineArray.count {
+                    let xPosition = CGFloat(self.klineView.startXPosition) + CGFloat(index) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth)
+                    let kline = self.klineArray[index]
+                    kline.klineRSI.klineRSIPositions.removeAll()
+                    for key in kline.klineRSI.klineRSIs.keys.sorted() {
+                        kline.klineRSI.klineRSIPositions[key] = CGPoint.init(x: xPosition, y: maxY - CGFloat((kline.klineRSI.klineRSIs[key]! - minValue) / unitValue))
+                    }
+                }
+            }
         default: break
         }
     

@@ -27,12 +27,12 @@ class IMKLineVolumeMAView: UIView {
             subv.removeFromSuperview()
         }
         
-        let volumeText = String.init(format: "量:%.2f", kline.volume)
+        let volumeText = String.init(format: "量:%.3f", kline.volume)
         self.addLabel(index: 0, text: volumeText)
         
         var index = 1
         for key in kline.volumeMAs.keys.sorted() {
-            let text = String.init(format: "MA\(key):%.2f", kline.volumeMAs[key]!)
+            let text = String.init(format: "MA\(key):%.3f", kline.volumeMAs[key]!)
             self.addLabel(index: index, text: text)
             index += 1
         }

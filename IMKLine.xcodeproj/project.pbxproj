@@ -13,7 +13,7 @@
 		B723F5A41FED03C700672C09 /* IMKLineVolumeMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723F5A31FED03C700672C09 /* IMKLineVolumeMAPainter.swift */; };
 		B723F5A81FED30DB00672C09 /* KDJ介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B723F5A51FED30DA00672C09 /* KDJ介绍.md */; };
 		B723F5A91FED30DB00672C09 /* MA-EMA-MACD介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B723F5A61FED30DA00672C09 /* MA-EMA-MACD介绍.md */; };
-		B723F5AA1FED30DB00672C09 /* 指标公式.md in Resources */ = {isa = PBXBuildFile; fileRef = B723F5A71FED30DA00672C09 /* 指标公式.md */; };
+		B723F5AA1FED30DB00672C09 /* BOLL介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B723F5A71FED30DA00672C09 /* BOLL介绍.md */; };
 		B723F5AC1FED591E00672C09 /* IMKLineCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723F5AB1FED591E00672C09 /* IMKLineCalculator.swift */; };
 		B723F5AE1FED5A9600672C09 /* IMKLineSubStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723F5AD1FED5A9600672C09 /* IMKLineSubStruct.swift */; };
 		B723F5B11FED64E700672C09 /* IMKLineAccessoryPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B723F5B01FED64E700672C09 /* IMKLineAccessoryPainter.swift */; };
@@ -21,6 +21,7 @@
 		B72A5ED31FEBA29C00FCAC37 /* IMKLineTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A5ED21FEBA29C00FCAC37 /* IMKLineTimeView.swift */; };
 		B72A5ED51FEBA7A600FCAC37 /* IMKLineVolumePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A5ED41FEBA7A600FCAC37 /* IMKLineVolumePainter.swift */; };
 		B72A5ED81FEBD78A00FCAC37 /* IMKLineCrossLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A5ED71FEBD78A00FCAC37 /* IMKLineCrossLine.swift */; };
+		B751C9531FEE3398006025B1 /* RSI介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B751C9521FEE3398006025B1 /* RSI介绍.md */; };
 		B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C8291FE9354500B159B6 /* AppDelegate.swift */; };
 		B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C82B1FE9354500B159B6 /* ViewController.swift */; };
 		B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B798C82D1FE9354500B159B6 /* Main.storyboard */; };
@@ -56,7 +57,7 @@
 		B723F5A31FED03C700672C09 /* IMKLineVolumeMAPainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAPainter.swift; sourceTree = "<group>"; };
 		B723F5A51FED30DA00672C09 /* KDJ介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "KDJ介绍.md"; sourceTree = "<group>"; };
 		B723F5A61FED30DA00672C09 /* MA-EMA-MACD介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "MA-EMA-MACD介绍.md"; sourceTree = "<group>"; };
-		B723F5A71FED30DA00672C09 /* 指标公式.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "指标公式.md"; sourceTree = "<group>"; };
+		B723F5A71FED30DA00672C09 /* BOLL介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "BOLL介绍.md"; sourceTree = "<group>"; };
 		B723F5AB1FED591E00672C09 /* IMKLineCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineCalculator.swift; sourceTree = "<group>"; };
 		B723F5AD1FED5A9600672C09 /* IMKLineSubStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineSubStruct.swift; sourceTree = "<group>"; };
 		B723F5B01FED64E700672C09 /* IMKLineAccessoryPainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryPainter.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		B72A5ED21FEBA29C00FCAC37 /* IMKLineTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineTimeView.swift; sourceTree = "<group>"; };
 		B72A5ED41FEBA7A600FCAC37 /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
 		B72A5ED71FEBD78A00FCAC37 /* IMKLineCrossLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineCrossLine.swift; sourceTree = "<group>"; };
+		B751C9521FEE3398006025B1 /* RSI介绍.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "RSI介绍.md"; sourceTree = "<group>"; };
 		B798C8261FE9354500B159B6 /* IMKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B798C8291FE9354500B159B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B798C82B1FE9354500B159B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -237,9 +239,10 @@
 		B798C8461FE94A4500B159B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B723F5A71FED30DA00672C09 /* 指标公式.md */,
+				B723F5A71FED30DA00672C09 /* BOLL介绍.md */,
 				B723F5A51FED30DA00672C09 /* KDJ介绍.md */,
 				B723F5A61FED30DA00672C09 /* MA-EMA-MACD介绍.md */,
+				B751C9521FEE3398006025B1 /* RSI介绍.md */,
 				B7D17FC71FEA899700E8753C /* IMKLine.swift */,
 				B723F5AB1FED591E00672C09 /* IMKLineCalculator.swift */,
 				B723F5AD1FED5A9600672C09 /* IMKLineSubStruct.swift */,
@@ -369,9 +372,10 @@
 			files = (
 				B798C8341FE9354500B159B6 /* LaunchScreen.storyboard in Resources */,
 				B798C8311FE9354500B159B6 /* Assets.xcassets in Resources */,
-				B723F5AA1FED30DB00672C09 /* 指标公式.md in Resources */,
+				B723F5AA1FED30DB00672C09 /* BOLL介绍.md in Resources */,
 				B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */,
 				B723F5A81FED30DB00672C09 /* KDJ介绍.md in Resources */,
+				B751C9531FEE3398006025B1 /* RSI介绍.md in Resources */,
 				B72A5EB21FEB5D5100FCAC37 /* data.json in Resources */,
 				B723F5A91FED30DB00672C09 /* MA-EMA-MACD介绍.md in Resources */,
 			);

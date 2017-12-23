@@ -73,7 +73,6 @@ class IMKLineView: UIView {
         }
         
         self.superScrollView.volumeView.draw(klineArray: self.needDrawKlineArray, colors: colors)
-        self.superScrollView.accessoryView.draw(klineArray: self.needDrawKlineArray)
     }
     
     private var klineGroup = IMKLineGroup()

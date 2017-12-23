@@ -56,4 +56,6 @@ class IMKLine: NSObject {
     var klineMACD = IMKLineMACD()
     
     var klineKDJ = IMKLineKDJ()
+    
+    var klineRSI = IMKLineRSI()
 }

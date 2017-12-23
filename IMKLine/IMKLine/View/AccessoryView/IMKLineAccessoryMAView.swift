@@ -45,7 +45,18 @@ class IMKLineAccessoryMAView: UIView {
             self.addLabel(index: 2, text: text2)
             let text3 = String.init(format: "J:%.3f", kline.klineKDJ.j)
             self.addLabel(index: 3, text: text3)
-//        case .RSI:
+        case .RSI:
+            let text0 = NSMutableString.init(string: "RSI(")
+            for n in IMKLineParamters.KLineRSIPramas {
+                text0.append("\(n),")
+            }
+            self.addLabel(index: 0, text: text0.substring(to: text0.length - 1) + ")")
+            var index = 1
+            for n in IMKLineParamters.KLineRSIPramas {
+                let text = String.init(format: "RSI\(n):%.3f", kline.klineRSI.klineRSIs[n] ?? "0")
+                self.addLabel(index: index, text: text)
+                index += 1
+            }
         default: break
         }
     }

@@ -10,6 +10,8 @@ import UIKit
 
 struct IMKLineTheme {
     
+    static let KLineChartBgColor = UIColor.init(rgbHex: 0x000000)
+    
     static let BorderColor = UIColor.init(rgbHex: 0x444444)
     
     static let KLineValueBgColor = UIColor.init(rgbaHex: 0x1E1E1E80)

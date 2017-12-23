@@ -26,18 +26,18 @@ class IMKLineMAView: UIView {
         for subv in self.subviews {
             subv.removeFromSuperview()
         }
-        switch IMKLineParamters.klineMAType {
+        switch IMKLineParamters.KLineMAType {
         case .MA:
             var index = 0
             for key in kline.klineMAs.keys.sorted() {
-                let text = String.init(format: "MA\(key):%.2f", kline.klineMAs[key]!)
+                let text = String.init(format: "MA\(key):%.3f", kline.klineMAs[key]!)
                 self.addLabel(index: index, text: text, offset: 1)
                 index += 1
             }
         case .EMA:
             var index = 0
             for key in kline.klineEMAs.keys.sorted() {
-                let text = String.init(format: "EMA\(key):%.2f", kline.klineEMAs[key]!)
+                let text = String.init(format: "EMA\(key):%.3f", kline.klineEMAs[key]!)
                 self.addLabel(index: index, text: text, offset: 1)
                 index += 1
             }
