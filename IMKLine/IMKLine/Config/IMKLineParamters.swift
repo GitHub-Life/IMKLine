@@ -28,6 +28,8 @@ class IMKLineParamters: NSObject {
     static var KLineMACDPramas = [12, 26, 9]
     /// 需要显示的 KDJ图的参数值
     static var KLineKDJPramas = [3, 3, 9]
+    /// 需要显示的 RSI图的参数值
+    static var KLineRSIPramas = [6, 12, 24]
     
     // MARK: - 缩放比
     /// KLine 缩放比
@@ -54,7 +56,7 @@ class IMKLineParamters: NSObject {
     static var klineMAType: IMKLineMAType = .EMA
     
     // MARK: - KLine 底部MACD/KDJ图 显示类型
-    static var AccessoryType: IMKLineAccessoryType = .KDJ
+    static var AccessoryType: IMKLineAccessoryType = .RSI
     
     // MARK: - 复位
     static func reset() {

@@ -55,3 +55,9 @@ struct IMKLineKDJ {
     var dPoint = CGPoint.zero
     var jPoint = CGPoint.zero
 }
+
+struct IMKLineRSI {
+    var klineRSIs = [Int : Double]()
+    var bothRSI: (low: Double, high: Double)?
+    var klineRSIPositions = [Int : CGPoint]()
+}

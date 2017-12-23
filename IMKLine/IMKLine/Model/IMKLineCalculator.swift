@@ -26,6 +26,7 @@ extension IMKLine {
         self.calculateKlineBoll()
         self.calculateKlineMACD()
         self.calculateKlineKDJ()
+        self.calculateKlineRSI()
     }
 }
 
@@ -129,6 +130,7 @@ extension IMKLine {
     }
 }
 
+// MARK: - KDJ值计算
 extension IMKLine {
     func calculateKlineKDJ() {
         let k = Double(IMKLineParamters.KLineKDJPramas[0])
@@ -158,4 +160,52 @@ extension IMKLine {
         }
         return (low, high)
     }
+}
+
+// MARK: - RSI值计算
+extension IMKLine {
+    func calculateKlineRSI() {
+        for n in IMKLineParamters.KLineRSIPramas {
+            if let RSI = self.calculateRSI(n: n) {
+                self.klineRSI.klineRSIs[n] = RSI
+            }
+        }
+        if self.klineRSI.klineRSIs.count > 0 {
+            let values = self.klineRSI.klineRSIs.values.sorted()
+            self.klineRSI.bothRSI = (values.first!, values.last!)
+        }
+    }
+    
+    func calculateRSI(n: Int) -> Double? {
+        if let RS = self.calculateRS(n: n) {
+            return RS < 0 ? 100 : 100 * RS / (1 + RS)
+        }
+        return nil
+    }
+    
+    func calculateRS(n: Int) -> Double? {
+        if self.index >= n - 1 {
+            let beginIndex = self.index + 1 - n
+            var sumUp = Double(0)
+            var sumDn = Double(0)
+            for index in beginIndex...self.index {
+                let kline = self.klineGroup.klineArray[index]
+                let diff = kline.close - kline.prevKline.close
+                if diff < 0 {
+                    sumDn += diff
+                } else {
+                    sumUp += diff
+                }
+            }
+            return sumDn == 0 ? Double(-1) : sumUp / abs(sumDn)
+        }
+        return nil
+    }
+    
+    func maxRange(range1: (Double, Double), range2: (Double, Double)) -> (low: Double, high: Double) {
+        let minValue = min(range1.0, range2.0)
+        let maxValue = max(range1.1, range2.1)
+        return (minValue, maxValue)
+    }
+    
 }

@@ -26,7 +26,15 @@ class IMKLineAccessoryPainter: NSObject {
             context.strokeLineSegments(between: [kline.prevKline.klineKDJ.dPoint, kline.klineKDJ.dPoint])
             context.setStrokeColor(IMKLineTheme.MAColors[3].cgColor)
             context.strokeLineSegments(between: [kline.prevKline.klineKDJ.jPoint, kline.klineKDJ.jPoint])
-//        case .RSI:
+        case .RSI:
+            var index = 0
+            for key in kline.klineRSI.klineRSIPositions.keys.sorted() {
+                if let prevPoint = kline.prevKline.klineRSI.klineRSIPositions[key] {
+                    context.setStrokeColor(IMKLineTheme.MAColors[index + 1].cgColor)
+                    context.strokeLineSegments(between: [prevPoint, kline.klineRSI.klineRSIPositions[key]!])
+                }
+                index += 1
+            }
         default: break
         }
     }
