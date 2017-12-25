@@ -161,8 +161,9 @@ extension IMKLineScrollView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let point = touches.first!.location(in: self.klineView)
-        let selectedKline = self.klineView.getSelectedKline(touchPoint: point)
-        self.imDelegate?.selectedKline(kline: selectedKline)
+        if let selectedKline = self.klineView.getSelectedKline(touchPoint: point) {
+            self.imDelegate?.selectedKline(kline: selectedKline)
+        }
     }
     
 }

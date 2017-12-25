@@ -234,8 +234,9 @@ extension IMKLineContainerView: IMKLineAccessoryViewDelegate {
 extension IMKLineContainerView {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let selectedKline = self.scrollView.klineView.getSelectedKline(touchPoint: touches.first!.location(in: self.scrollView.klineView))
-        self.showSelectedKlineInfo(kline: selectedKline)
+        if let selectedKline = self.scrollView.klineView.getSelectedKline(touchPoint: touches.first!.location(in: self.scrollView.klineView)) {
+            self.showSelectedKlineInfo(kline: selectedKline)
+        }
     }
     
     func showSelectedKlineInfo(kline: IMKLine) {

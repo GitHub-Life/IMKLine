@@ -14,7 +14,7 @@ struct IMKLineTheme {
     
     static let BorderColor = UIColor.init(rgbHex: 0x444444)
     
-    static let KLineValueBgColor = UIColor.init(rgbaHex: 0x1E1E1E80)
+    static let KLineValueBgColor = UIColor.init(rgbaHex: 0x1E1E1EAA)
     
     static let AccessoryTextColor = UIColor.init(rgbHex: 0x9A9A9A)
     
@@ -25,6 +25,14 @@ struct IMKLineTheme {
     static let TipBgColor = UIColor.init(rgbHex: 0x1E1E1E)
     
     static let TipTextFontSize = CGFloat(10)
+    
+    static let IndexSetBgColor = UIColor.init(rgbHex: 0x101010)
+    
+    static let BtnNormalColor = UIColor.init(rgbHex: 0x888888)
+    
+    static let BtnSelectedColor = UIColor.init(rgbHex: 0x2880F0)
+    
+    static let BtnFontSize = CGFloat(10)
     
     static let MAColors = [
         UIColor.init(rgbHex: 0xFFFFFF),

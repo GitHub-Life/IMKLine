@@ -226,13 +226,16 @@ class IMKLineView: UIView {
 
 extension IMKLineView {
     
-    func getSelectedKline(touchPoint: CGPoint) -> IMKLine {
+    func getSelectedKline(touchPoint: CGPoint) -> IMKLine? {
         var index = Int((touchPoint.x - IMKLineConfig.KLineGap) / (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth))
         if index < 0 {
             index = 0
         }
         if index > self.klineGroup.klineArray.count - 1 {
             index = self.klineGroup.klineArray.count - 1
+        }
+        if index < 0 || index > self.klineGroup.klineArray.count {
+            return nil
         }
         let selectedKline = self.klineGroup.klineArray[index]
         return selectedKline

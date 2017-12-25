@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  IMKLine
+
+  Created by 万涛 on 2017/12/23.
+  Copyright © 2017年 iMoon. All rights reserved.
+*/
+
+"Opening" = "Opening";
+"Closing" = "Closing";
+"Low" = "Low";
+"High" = "High";
+"Percent" = "Percent";
+"Volume" = "Volume";
+
+"minute" = "min";
+"minutes" = "min";
+"hour" = "h";
+"hours" = "h";
+"day" = "day";
+"days" = "days";
+"week" = "week";

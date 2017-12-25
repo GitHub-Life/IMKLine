@@ -10,6 +10,8 @@ import UIKit
 
 struct IMKLineConfig {
     
+    /// KLine 蜡烛初始默认宽度
+    static let KLineDefaultWidth = CGFloat(10)
     /// KLine 蜡烛宽度
     static var KLineWidth: CGFloat {
         get {
@@ -17,8 +19,6 @@ struct IMKLineConfig {
         }
     }
     
-    /// KLine 蜡烛初始默认宽度
-    static let KLineDefaultWidth = CGFloat(10)
     /// KLine 蜡烛 最小 高度
     static let KLineMinHeight = CGFloat(1)
     /// KLine 蜡烛影线宽度
@@ -37,6 +37,14 @@ struct IMKLineConfig {
     
     /// KLine MA线宽
     static let MALineWidth = CGFloat(1)
+    /// MACD 柱状初始默认宽度
+    static let MACDDefaultWidth = CGFloat(5)
+    /// MACD 柱状宽度
+    static var MACDWidth: CGFloat {
+        get {
+            return MACDDefaultWidth * IMKLineParamters.getZoomScale()
+        }
+    }
     
     /// K线图 右侧 Y轴视图宽度
     static let RightYViewWidth = CGFloat(50)
@@ -79,5 +87,26 @@ struct IMKLineConfig {
     static func AccessoryViewHeightRate() -> CGFloat {
         return CGFloat(0.2)
     }
+    
+    /// KLine 时段默认设置选项
+    static let KLineMATimeFrames = [
+        "1 \(R.string.localizable.minute())",
+        "5 \(R.string.localizable.minute())",
+        "15 \(R.string.localizable.minute())",
+        "30 \(R.string.localizable.minute())",
+        "1 \(R.string.localizable.hour())",
+        "2 \(R.string.localizable.hours())",
+        "4 \(R.string.localizable.hours())",
+        "1 \(R.string.localizable.day())",
+        "3 \(R.string.localizable.days())",
+        "5 \(R.string.localizable.days())",
+        "1 \(R.string.localizable.week())"
+    ]
+    
+//    /// KLine MA 类型设置选项
+//    static let KLineMATypes = ["MA", "EMA", "BOLL", "Close"]
+//    /// KLine 底部MACD/KDJ图 类型设置选项
+//    static let KLineAccessoryTypes = ["MACD", "KDJ", "RSI", "Close"]
+    
     
 }

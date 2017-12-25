@@ -35,7 +35,7 @@ class IMKLineValueView: UIView {
                 if index == 0 {
                     maker.leading.equalToSuperview().offset(1)
                 } else {
-                    maker.leading.equalTo((self?.subviews[index - 1].snp.trailing)!).offset(15)
+                    maker.leading.equalTo((self?.subviews[index - 1].snp.trailing)!).offset(5)
                 }
                 maker.top.equalToSuperview()
                 maker.bottom.equalToSuperview()
@@ -43,7 +43,7 @@ class IMKLineValueView: UIView {
         }
     }
     //
-    let valueTips = ["开 ", "高 ", "低 ", "收 ", "幅 "]
+    let valueTips = ["\(R.string.localizable.opening()) ", "\(R.string.localizable.high()) ", "\(R.string.localizable.low()) ", "\(R.string.localizable.closing()) ", "\(R.string.localizable.percent()) "]
     var kline = IMKLine()
     
     func update(kline: IMKLine) {
