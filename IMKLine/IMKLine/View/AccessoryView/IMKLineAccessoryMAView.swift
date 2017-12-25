@@ -10,18 +10,6 @@ import UIKit
 
 class IMKLineAccessoryMAView: UIView {
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    convenience init() {
-        self.init(frame: CGRect.zero)
-    }
-    
-    private override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
     func update(kline: IMKLine) {
         for subv in self.subviews {
             subv.removeFromSuperview()

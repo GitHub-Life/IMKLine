@@ -22,6 +22,11 @@
 		B72A5ED51FEBA7A600FCAC37 /* IMKLineVolumePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A5ED41FEBA7A600FCAC37 /* IMKLineVolumePainter.swift */; };
 		B72A5ED81FEBD78A00FCAC37 /* IMKLineCrossLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A5ED71FEBD78A00FCAC37 /* IMKLineCrossLine.swift */; };
 		B751C9531FEE3398006025B1 /* RSI介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B751C9521FEE3398006025B1 /* RSI介绍.md */; };
+		B751C9A71FEEAAD6006025B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B751C9A91FEEAAD6006025B1 /* Localizable.strings */; };
+		B751C9AC1FEEB082006025B1 /* IMKLineTimeFrameSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751C9AB1FEEB082006025B1 /* IMKLineTimeFrameSetView.swift */; };
+		B751C9AE1FEEB0AA006025B1 /* IMKLineMASetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751C9AD1FEEB0AA006025B1 /* IMKLineMASetView.swift */; };
+		B751C9B01FEEB0C1006025B1 /* IMKLineAccessorySetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B751C9AF1FEEB0C1006025B1 /* IMKLineAccessorySetView.swift */; };
+		B77BA9B11FF08E34007862D1 /* IMKLineIndexSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77BA9B01FF08E34007862D1 /* IMKLineIndexSetContainerView.swift */; };
 		B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C8291FE9354500B159B6 /* AppDelegate.swift */; };
 		B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C82B1FE9354500B159B6 /* ViewController.swift */; };
 		B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B798C82D1FE9354500B159B6 /* Main.storyboard */; };
@@ -66,6 +71,14 @@
 		B72A5ED41FEBA7A600FCAC37 /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
 		B72A5ED71FEBD78A00FCAC37 /* IMKLineCrossLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineCrossLine.swift; sourceTree = "<group>"; };
 		B751C9521FEE3398006025B1 /* RSI介绍.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "RSI介绍.md"; sourceTree = "<group>"; };
+		B751C9A31FEEAABD006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B751C9A41FEEAABD006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		B751C9A81FEEAAD6006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B751C9AA1FEEAAD8006025B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B751C9AB1FEEB082006025B1 /* IMKLineTimeFrameSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineTimeFrameSetView.swift; sourceTree = "<group>"; };
+		B751C9AD1FEEB0AA006025B1 /* IMKLineMASetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineMASetView.swift; sourceTree = "<group>"; };
+		B751C9AF1FEEB0C1006025B1 /* IMKLineAccessorySetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineAccessorySetView.swift; sourceTree = "<group>"; };
+		B77BA9B01FF08E34007862D1 /* IMKLineIndexSetContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineIndexSetContainerView.swift; sourceTree = "<group>"; };
 		B798C8261FE9354500B159B6 /* IMKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B798C8291FE9354500B159B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B798C82B1FE9354500B159B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +170,17 @@
 			path = CrossLine;
 			sourceTree = "<group>";
 		};
+		B751C9A21FEEA771006025B1 /* IndexSetView */ = {
+			isa = PBXGroup;
+			children = (
+				B751C9AB1FEEB082006025B1 /* IMKLineTimeFrameSetView.swift */,
+				B751C9AD1FEEB0AA006025B1 /* IMKLineMASetView.swift */,
+				B751C9AF1FEEB0C1006025B1 /* IMKLineAccessorySetView.swift */,
+				B77BA9B01FF08E34007862D1 /* IMKLineIndexSetContainerView.swift */,
+			);
+			path = IndexSetView;
+			sourceTree = "<group>";
+		};
 		B798C81D1FE9354500B159B6 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +231,7 @@
 				B798C8301FE9354500B159B6 /* Assets.xcassets */,
 				B798C8321FE9354500B159B6 /* LaunchScreen.storyboard */,
 				B798C8351FE9354500B159B6 /* Info.plist */,
+				B751C9A91FEEAAD6006025B1 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -214,6 +239,7 @@
 		B798C8441FE94A4500B159B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B751C9A21FEEA771006025B1 /* IndexSetView */,
 				B72A5ED61FEBD77300FCAC37 /* CrossLine */,
 				B72A5ED11FEBA27100FCAC37 /* TimeView */,
 				B7D17FC41FEA57DC00E8753C /* RightYView */,
@@ -374,6 +400,7 @@
 				B798C8311FE9354500B159B6 /* Assets.xcassets in Resources */,
 				B723F5AA1FED30DB00672C09 /* BOLL介绍.md in Resources */,
 				B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */,
+				B751C9A71FEEAAD6006025B1 /* Localizable.strings in Resources */,
 				B723F5A81FED30DB00672C09 /* KDJ介绍.md in Resources */,
 				B751C9531FEE3398006025B1 /* RSI介绍.md in Resources */,
 				B72A5EB21FEB5D5100FCAC37 /* data.json in Resources */,
@@ -480,17 +507,21 @@
 				B798C8501FE9618700B159B6 /* IMKLineView.swift in Sources */,
 				B7D17FCA1FEA8C6B00E8753C /* IMKLineGroup.swift in Sources */,
 				B723F5B11FED64E700672C09 /* IMKLineAccessoryPainter.swift in Sources */,
+				B751C9AE1FEEB0AA006025B1 /* IMKLineMASetView.swift in Sources */,
 				B723F5AE1FED5A9600672C09 /* IMKLineSubStruct.swift in Sources */,
 				B72A5ED81FEBD78A00FCAC37 /* IMKLineCrossLine.swift in Sources */,
 				B7D17FB41FEA0D5200E8753C /* IMKLineValueView.swift in Sources */,
 				B7D17FB01FEA004600E8753C /* IMKLineScrollView.swift in Sources */,
 				B723F5AC1FED591E00672C09 /* IMKLineCalculator.swift in Sources */,
 				B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */,
+				B751C9B01FEEB0C1006025B1 /* IMKLineAccessorySetView.swift in Sources */,
 				B7D17FCC1FEA952000E8753C /* IMKLineConfig.swift in Sources */,
 				B798C8481FE94AAB00B159B6 /* IMKLineRightYView.swift in Sources */,
 				B723F5A21FECF22100672C09 /* IMKLineMAPainter.swift in Sources */,
 				B798C8421FE93E1D00B159B6 /* R.generated.swift in Sources */,
 				B7D17FB81FEA12C600E8753C /* IMKLineVolumeMAView.swift in Sources */,
+				B77BA9B11FF08E34007862D1 /* IMKLineIndexSetContainerView.swift in Sources */,
+				B751C9AC1FEEB082006025B1 /* IMKLineTimeFrameSetView.swift in Sources */,
 				B798C84A1FE94B7B00B159B6 /* IMKLineTheme.swift in Sources */,
 				B7D17FC81FEA899800E8753C /* IMKLine.swift in Sources */,
 				B7D17FD01FEAA39B00E8753C /* IMKLinePainter.swift in Sources */,
@@ -501,10 +532,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B751C9A91FEEAAD6006025B1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B751C9A81FEEAAD6006025B1 /* zh-Hans */,
+				B751C9AA1FEEAAD8006025B1 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B798C82D1FE9354500B159B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B798C82E1FE9354500B159B6 /* Base */,
+				B751C9A41FEEAABD006025B1 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -513,6 +554,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B798C8331FE9354500B159B6 /* Base */,
+				B751C9A31FEEAABD006025B1 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -524,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -581,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

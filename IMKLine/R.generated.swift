@@ -141,8 +141,201 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 0 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
   struct string {
+    /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
+    struct launchScreen {
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
+    struct localizable {
+      /// zh-Hans translation: 低
+      /// 
+      /// Locales: zh-Hans, en
+      static let low = Rswift.StringResource(key: "Low", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 分
+      /// 
+      /// Locales: zh-Hans, en
+      static let minute = Rswift.StringResource(key: "minute", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 分
+      /// 
+      /// Locales: zh-Hans, en
+      static let minutes = Rswift.StringResource(key: "minutes", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 周
+      /// 
+      /// Locales: zh-Hans, en
+      static let week = Rswift.StringResource(key: "week", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 天
+      /// 
+      /// Locales: zh-Hans, en
+      static let day = Rswift.StringResource(key: "day", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 天
+      /// 
+      /// Locales: zh-Hans, en
+      static let days = Rswift.StringResource(key: "days", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 小时
+      /// 
+      /// Locales: zh-Hans, en
+      static let hour = Rswift.StringResource(key: "hour", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 小时
+      /// 
+      /// Locales: zh-Hans, en
+      static let hours = Rswift.StringResource(key: "hours", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 幅
+      /// 
+      /// Locales: zh-Hans, en
+      static let percent = Rswift.StringResource(key: "Percent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 开
+      /// 
+      /// Locales: zh-Hans, en
+      static let opening = Rswift.StringResource(key: "Opening", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 收
+      /// 
+      /// Locales: zh-Hans, en
+      static let closing = Rswift.StringResource(key: "Closing", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 量
+      /// 
+      /// Locales: zh-Hans, en
+      static let volume = Rswift.StringResource(key: "Volume", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 高
+      /// 
+      /// Locales: zh-Hans, en
+      static let high = Rswift.StringResource(key: "High", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      
+      /// zh-Hans translation: 低
+      /// 
+      /// Locales: zh-Hans, en
+      static func low(_: Void = ()) -> String {
+        return NSLocalizedString("Low", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 分
+      /// 
+      /// Locales: zh-Hans, en
+      static func minute(_: Void = ()) -> String {
+        return NSLocalizedString("minute", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 分
+      /// 
+      /// Locales: zh-Hans, en
+      static func minutes(_: Void = ()) -> String {
+        return NSLocalizedString("minutes", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 周
+      /// 
+      /// Locales: zh-Hans, en
+      static func week(_: Void = ()) -> String {
+        return NSLocalizedString("week", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 天
+      /// 
+      /// Locales: zh-Hans, en
+      static func day(_: Void = ()) -> String {
+        return NSLocalizedString("day", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 天
+      /// 
+      /// Locales: zh-Hans, en
+      static func days(_: Void = ()) -> String {
+        return NSLocalizedString("days", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 小时
+      /// 
+      /// Locales: zh-Hans, en
+      static func hour(_: Void = ()) -> String {
+        return NSLocalizedString("hour", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 小时
+      /// 
+      /// Locales: zh-Hans, en
+      static func hours(_: Void = ()) -> String {
+        return NSLocalizedString("hours", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 幅
+      /// 
+      /// Locales: zh-Hans, en
+      static func percent(_: Void = ()) -> String {
+        return NSLocalizedString("Percent", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 开
+      /// 
+      /// Locales: zh-Hans, en
+      static func opening(_: Void = ()) -> String {
+        return NSLocalizedString("Opening", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 收
+      /// 
+      /// Locales: zh-Hans, en
+      static func closing(_: Void = ()) -> String {
+        return NSLocalizedString("Closing", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 量
+      /// 
+      /// Locales: zh-Hans, en
+      static func volume(_: Void = ()) -> String {
+        return NSLocalizedString("Volume", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 高
+      /// 
+      /// Locales: zh-Hans, en
+      static func high(_: Void = ()) -> String {
+        return NSLocalizedString("High", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
+    /// This `R.string.main` struct is generated, and contains static references to 3 localization keys.
+    struct main {
+      /// zh-Hans translation: 1min
+      /// 
+      /// Locales: zh-Hans
+      static let rrgAiJ5ONormalTitle = Rswift.StringResource(key: "Rrg-ai-j5O.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["zh-Hans"], comment: nil)
+      /// zh-Hans translation: KDJ
+      /// 
+      /// Locales: zh-Hans
+      static let gpvyZcNormalTitle = Rswift.StringResource(key: "04G-PV-YZc.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["zh-Hans"], comment: nil)
+      /// zh-Hans translation: MA
+      /// 
+      /// Locales: zh-Hans
+      static let uxTLmCENNormalTitle = Rswift.StringResource(key: "UxT-lm-cEN.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["zh-Hans"], comment: nil)
+      
+      /// zh-Hans translation: 1min
+      /// 
+      /// Locales: zh-Hans
+      static func rrgAiJ5ONormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("Rrg-ai-j5O.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: KDJ
+      /// 
+      /// Locales: zh-Hans
+      static func gpvyZcNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("04G-PV-YZc.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: MA
+      /// 
+      /// Locales: zh-Hans
+      static func uxTLmCENNormalTitle(_: Void = ()) -> String {
+        return NSLocalizedString("UxT-lm-cEN.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
@@ -183,7 +376,7 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = IMKLineChartViewController
+      typealias InitialController = ViewController
       
       let bundle = R.hostingBundle
       let imkLineChartViewController = StoryboardViewControllerResource<IMKLineChartViewController>(identifier: "IMKLineChartViewController")

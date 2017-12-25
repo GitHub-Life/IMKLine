@@ -17,11 +17,18 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var klineContainerView: IMKLineContainerView!
-    
+    @IBOutlet weak var indexSetContainerView: IMKLineIndexSetContainerView!
+    @IBOutlet weak var timeFrameSetBtn: UIButton!
+    @IBOutlet weak var MASetBtn: UIButton!
+    @IBOutlet weak var accessorySetBtn: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.getKlineDatas()
+        self.indexSetContainerView.delegate = self
+        self.indexSetContainerView.timeFrameSetViewOrigin = CGPoint.init(x: 0, y: 40)
+        self.indexSetContainerView.maSetViewOrigin = CGPoint.init(x: 0, y: 40)
+        self.indexSetContainerView.accessorySetViewOrigin = CGPoint.init(x: 0, y: 40)
     }
     
     func getKlineDatas() {
@@ -41,5 +48,38 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func timeFrameSetBtnClick(sender: UIButton) {
+        self.indexSetContainerView.showIndexSetView(indexSetType: .TimeFrame, selectedIndex: sender.tag)
+    }
+    
+    @IBAction func MASetBtnClick(sender: UIButton) {
+        self.indexSetContainerView.showIndexSetView(indexSetType: .MA, selectedIndex: sender.tag)
+    }
+    
+    @IBAction func accessorySetBtnClick(sender: UIButton) {
+        self.indexSetContainerView.showIndexSetView(indexSetType: .Accessory, selectedIndex: sender.tag)
+    }
+    
+}
+
+extension ViewController: IMKLineIndexSetContainerViewDelegate {
+    
+    func setBtnClick(indexSetType: IndexSetType, selectedIndex: Int) {
+        switch indexSetType {
+        case .TimeFrame:
+            self.timeFrameSetBtn.tag = selectedIndex
+            self.timeFrameSetBtn.setTitle(IMKLineParamters.KLineMATimeFrames[selectedIndex], for: .normal)
+        case .MA:
+            self.MASetBtn.tag = selectedIndex
+            self.MASetBtn.setTitle(IMKLineMAType.RawValues[selectedIndex], for: .normal)
+            IMKLineParamters.KLineMAType = IMKLineMAType.enumValue(index: selectedIndex)
+        case .Accessory:
+            self.accessorySetBtn.tag = selectedIndex
+            self.accessorySetBtn.setTitle(IMKLineAccessoryType.RawValues[selectedIndex], for: .normal)
+            IMKLineParamters.AccessoryType = IMKLineAccessoryType.enumValue(index: selectedIndex)
+        }
+    }
+    
 }
 

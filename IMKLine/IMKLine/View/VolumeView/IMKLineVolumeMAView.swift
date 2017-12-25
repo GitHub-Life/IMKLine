@@ -10,24 +10,12 @@ import UIKit
 
 class IMKLineVolumeMAView: UIView {
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    convenience init() {
-        self.init(frame: CGRect.zero)
-    }
-    
-    private override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
     func update(kline: IMKLine) {
         for subv in self.subviews {
             subv.removeFromSuperview()
         }
         
-        let volumeText = String.init(format: "量:%.3f", kline.volume)
+        let volumeText = String.init(format: "\(R.string.localizable.volume()):%.3f", kline.volume)
         self.addLabel(index: 0, text: volumeText)
         
         var index = 1

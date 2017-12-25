@@ -13,10 +13,12 @@ class IMKLineAccessoryPainter: NSObject {
     func draw(context: CGContext, kline: IMKLine) {
         switch IMKLineParamters.AccessoryType {
         case .MACD:
+            context.setLineWidth(IMKLineConfig.MALineWidth)
             context.setStrokeColor(IMKLineTheme.MAColors[1].cgColor)
             context.strokeLineSegments(between: [kline.prevKline.klineMACD.DIFFPoint, kline.klineMACD.DIFFPoint])
             context.setStrokeColor(IMKLineTheme.MAColors[2].cgColor)
             context.strokeLineSegments(between: [kline.prevKline.klineMACD.DEAPoint, kline.klineMACD.DEAPoint])
+            context.setLineWidth(IMKLineConfig.MACDWidth)
             context.setStrokeColor(kline.klineMACD.BAR > 0 ? IMKLineTheme.RiseColor.cgColor : IMKLineTheme.DownColor.cgColor)
             context.strokeLineSegments(between: [kline.klineMACD.zeroPoint, kline.klineMACD.BARPoint])
         case .KDJ:

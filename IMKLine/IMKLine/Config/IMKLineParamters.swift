@@ -8,12 +8,22 @@
 
 import UIKit
 
+/// KLine MA 类型设置选项
 enum IMKLineMAType: String {
-    case NONE = "", MA = "MA", EMA = "EMA", BOLL = "BOLL"
+    case NONE = "Close", MA = "MA", EMA = "EMA", BOLL = "BOLL"
+    static let RawValues = ["MA", "EMA", "BOLL", "Close"]
+    static func enumValue(index: Int) -> IMKLineMAType {
+        return IMKLineMAType.init(rawValue: RawValues[index])!
+    }
 }
 
-enum IMKLineAccessoryType: Int {
-    case NONE, MACD, KDJ, RSI
+/// KLine 底部MACD/KDJ图 类型设置选项
+enum IMKLineAccessoryType: String {
+    case NONE = "Close", MACD = "MACD", KDJ = "KDJ", RSI = "RSI"
+    static let RawValues = ["MACD", "KDJ", "RSI", "Close"]
+    static func enumValue(index: Int) -> IMKLineAccessoryType {
+        return IMKLineAccessoryType.init(rawValue: RawValues[index])!
+    }
 }
 
 class IMKLineParamters: NSObject {
@@ -79,6 +89,8 @@ class IMKLineParamters: NSObject {
     }
     private static var accessoryTypeChanged = false
     static let IMKLineAccessoryTypeChanged = NSNotification.Name.init("IMKLineAccessoryTypeChanged")
+    
+    static var KLineMATimeFrames = IMKLineConfig.KLineMATimeFrames
     
     // MARK: - 复位
     static func reset() {

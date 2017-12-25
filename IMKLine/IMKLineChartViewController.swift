@@ -21,15 +21,18 @@ class IMKLineChartViewController: UIViewController {
     }
     
     @IBOutlet weak var klineContainerView: IMKLineContainerView!
-    
-    @IBAction func accessoryBtnClick() {
-        self.klineContainerView.showAccessory = !self.klineContainerView.showAccessory
-        self.klineContainerView.scrollView.klineView.draw()
-    }
+    @IBOutlet weak var indexSetContainerView: IMKLineIndexSetContainerView!
+    @IBOutlet weak var timeFrameSetBtn: UIButton!
+    @IBOutlet weak var MASetBtn: UIButton!
+    @IBOutlet weak var accessorySetBtn: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.getKlineDatas()
+        self.indexSetContainerView.delegate = self
+        self.indexSetContainerView.timeFrameSetViewOrigin = CGPoint.init(x: 50, y: 0)
+        self.indexSetContainerView.maSetViewOrigin = CGPoint.init(x: 50, y: 40)
+        self.indexSetContainerView.accessorySetViewOrigin = CGPoint.init(x: 50, y: 80)
         self.klineContainerView.scrollView.loadMore = { [weak self] in
             self?.getKlineDatas()
         }
@@ -69,44 +72,41 @@ class IMKLineChartViewController: UIViewController {
         }
     }
     
-    @IBAction func klineMABtnClick() {
-        switch IMKLineParamters.KLineMAType {
-        case .MA:
-            IMKLineParamters.KLineMAType = .EMA
-        case .EMA:
-            IMKLineParamters.KLineMAType = .BOLL
-        case .BOLL:
-            IMKLineParamters.KLineMAType = .NONE
-        case .NONE:
-            IMKLineParamters.KLineMAType = .MA
-        }
+    @IBAction func timeFrameSetBtnClick(sender: UIButton) {
+        self.indexSetContainerView.showIndexSetView(indexSetType: .TimeFrame, selectedIndex: sender.tag)
     }
     
-    @IBAction func clickAccessoryBtn() {
-        switch IMKLineParamters.AccessoryType {
-        case .MACD:
-            IMKLineParamters.AccessoryType = .KDJ
-        case .KDJ:
-            IMKLineParamters.AccessoryType = .RSI
-        case .RSI:
-            IMKLineParamters.AccessoryType = .NONE
-        case .NONE:
-            IMKLineParamters.AccessoryType = .MACD
-        }
+    @IBAction func MASetBtnClick(sender: UIButton) {
+        self.indexSetContainerView.showIndexSetView(indexSetType: .MA, selectedIndex: sender.tag)
     }
     
-
-    
-    
-    
-    
-    
-    
-    
+    @IBAction func accessorySetBtnClick(sender: UIButton) {
+        self.indexSetContainerView.showIndexSetView(indexSetType: .Accessory, selectedIndex: sender.tag)
+    }
     
     @IBAction func back() {
         (UIApplication.shared.delegate as! AppDelegate).interfaceOrientation = .portrait
         self.dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension IMKLineChartViewController: IMKLineIndexSetContainerViewDelegate {
+    
+    func setBtnClick(indexSetType: IndexSetType, selectedIndex: Int) {
+        switch indexSetType {
+        case .TimeFrame:
+            self.timeFrameSetBtn.tag = selectedIndex
+            self.timeFrameSetBtn.setTitle(IMKLineParamters.KLineMATimeFrames[selectedIndex], for: .normal)
+        case .MA:
+            self.MASetBtn.tag = selectedIndex
+            self.MASetBtn.setTitle(IMKLineMAType.RawValues[selectedIndex], for: .normal)
+            IMKLineParamters.KLineMAType = IMKLineMAType.enumValue(index: selectedIndex)
+        case .Accessory:
+            self.accessorySetBtn.tag = selectedIndex
+            self.accessorySetBtn.setTitle(IMKLineAccessoryType.RawValues[selectedIndex], for: .normal)
+            IMKLineParamters.AccessoryType = IMKLineAccessoryType.enumValue(index: selectedIndex)
+        }
     }
     
 }
