@@ -148,12 +148,16 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 15 localization keys.
     struct localizable {
+      /// zh-Hans translation: 买
+      /// 
+      /// Locales: zh-Hans, en
+      static let buy = Rswift.StringResource(key: "buy", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 低
       /// 
       /// Locales: zh-Hans, en
-      static let low = Rswift.StringResource(key: "Low", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let low = Rswift.StringResource(key: "low", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 分
       /// 
       /// Locales: zh-Hans, en
@@ -162,6 +166,10 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: zh-Hans, en
       static let minutes = Rswift.StringResource(key: "minutes", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      /// zh-Hans translation: 卖
+      /// 
+      /// Locales: zh-Hans, en
+      static let sell = Rswift.StringResource(key: "sell", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 周
       /// 
       /// Locales: zh-Hans, en
@@ -185,29 +193,36 @@ struct R: Rswift.Validatable {
       /// zh-Hans translation: 幅
       /// 
       /// Locales: zh-Hans, en
-      static let percent = Rswift.StringResource(key: "Percent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let percent = Rswift.StringResource(key: "percent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 开
       /// 
       /// Locales: zh-Hans, en
-      static let opening = Rswift.StringResource(key: "Opening", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let opening = Rswift.StringResource(key: "opening", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 收
       /// 
       /// Locales: zh-Hans, en
-      static let closing = Rswift.StringResource(key: "Closing", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let closing = Rswift.StringResource(key: "closing", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 量
       /// 
       /// Locales: zh-Hans, en
-      static let volume = Rswift.StringResource(key: "Volume", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let volume = Rswift.StringResource(key: "volume", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 高
       /// 
       /// Locales: zh-Hans, en
-      static let high = Rswift.StringResource(key: "High", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let high = Rswift.StringResource(key: "high", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      
+      /// zh-Hans translation: 买
+      /// 
+      /// Locales: zh-Hans, en
+      static func buy(_: Void = ()) -> String {
+        return NSLocalizedString("buy", bundle: R.hostingBundle, comment: "")
+      }
       
       /// zh-Hans translation: 低
       /// 
       /// Locales: zh-Hans, en
       static func low(_: Void = ()) -> String {
-        return NSLocalizedString("Low", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("low", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 分
@@ -222,6 +237,13 @@ struct R: Rswift.Validatable {
       /// Locales: zh-Hans, en
       static func minutes(_: Void = ()) -> String {
         return NSLocalizedString("minutes", bundle: R.hostingBundle, comment: "")
+      }
+      
+      /// zh-Hans translation: 卖
+      /// 
+      /// Locales: zh-Hans, en
+      static func sell(_: Void = ()) -> String {
+        return NSLocalizedString("sell", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 周
@@ -263,35 +285,35 @@ struct R: Rswift.Validatable {
       /// 
       /// Locales: zh-Hans, en
       static func percent(_: Void = ()) -> String {
-        return NSLocalizedString("Percent", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("percent", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 开
       /// 
       /// Locales: zh-Hans, en
       static func opening(_: Void = ()) -> String {
-        return NSLocalizedString("Opening", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("opening", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 收
       /// 
       /// Locales: zh-Hans, en
       static func closing(_: Void = ()) -> String {
-        return NSLocalizedString("Closing", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("closing", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 量
       /// 
       /// Locales: zh-Hans, en
       static func volume(_: Void = ()) -> String {
-        return NSLocalizedString("Volume", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("volume", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 高
       /// 
       /// Locales: zh-Hans, en
       static func high(_: Void = ()) -> String {
-        return NSLocalizedString("High", bundle: R.hostingBundle, comment: "")
+        return NSLocalizedString("high", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
