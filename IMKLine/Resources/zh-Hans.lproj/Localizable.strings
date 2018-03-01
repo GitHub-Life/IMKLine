@@ -7,20 +7,18 @@
 */
 
 // KLine
-"opening" = "开";
-"closing" = "收";
-"low" = "低";
-"high" = "高";
-"percent" = "幅";
-"volume" = "量";
-"buy" = "买";
-"sell" = "卖";
+"kline_opening" = "开";
+"kline_closing" = "收";
+"kline_low" = "低";
+"kline_high" = "高";
+"kline_percent" = "幅";
+"kline_volume" = "量";
 
-"minute" = "分";
-"minutes" = "分";
-"hour" = "小时";
-"hours" = "小时";
-"day" = "天";
-"days" = "天";
-"week" = "周";
+"kline_minute" = "分";
+"kline_minutes" = "分";
+"kline_hour" = "小时";
+"kline_hours" = "小时";
+"kline_day" = "天";
+"kline_days" = "天";
+"kline_week" = "周";
 

@@ -28,7 +28,7 @@ struct IMKLineTheme {
     
     static let TipTextFontSize = CGFloat(10)
     
-    static let HLTextColor = UIColor.init(rgbHex: 0x000000)
+    static let HLTextColor = UIColor.init(rgbHex: 0xFFFFFF)
     
     static let IndexSetBgColor = UIColor.init(rgbHex: 0x101010)
     
@@ -39,7 +39,7 @@ struct IMKLineTheme {
     static let BtnFontSize = CGFloat(10)
     
     static let MAColors = [
-        UIColor.init(rgbHex: 0x000000),
+        UIColor.init(rgbHex: 0xFFFFFF),
         UIColor.init(rgbHex: 0x9A9A9A),
         UIColor.init(rgbHex: 0xF09632),
         UIColor.init(rgbHex: 0x115Bf2),

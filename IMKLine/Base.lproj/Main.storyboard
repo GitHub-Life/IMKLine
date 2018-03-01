@@ -216,7 +216,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NBI-nY-ar8" firstAttribute="trailing" secondItem="slw-eC-lR7" secondAttribute="trailing" id="65o-ZD-ZNb"/>
                             <constraint firstItem="K22-Uc-GLX" firstAttribute="leading" secondItem="NBI-nY-ar8" secondAttribute="leading" id="6cg-dd-cuY"/>
