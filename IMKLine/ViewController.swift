@@ -40,8 +40,8 @@ class ViewController: UIViewController {
                 let json = JSON(jsonObj)
                 DispatchQueue.main.async(execute: {
                     let klineGroup = IMKLineGroup()
-                    klineGroup.klineArray = IMKLineGroup.klineArray(datas: json)
-                    self.klineContainerView.scrollView.klineView.add(klineGroup: klineGroup)
+                    klineGroup.klineArray = IMKLineGroup.klineArray(klineJsonArray: json["data"].arrayValue)
+                    self.klineContainerView.appendData(klineArray: klineGroup.klineArray)
                 })
             } catch {
                 print(error)
@@ -69,7 +69,7 @@ extension ViewController: IMKLineIndexSetContainerViewDelegate {
         switch indexSetType {
         case .TimeFrame:
             self.timeFrameSetBtn.tag = selectedIndex
-            self.timeFrameSetBtn.setTitle(IMKLineParamters.KLineMATimeFrames[selectedIndex], for: .normal)
+            self.timeFrameSetBtn.setTitle(IMKLineParamters.KLineTimeFrames[selectedIndex], for: .normal)
         case .MA:
             self.MASetBtn.tag = selectedIndex
             self.MASetBtn.setTitle(IMKLineMAType.RawValues[selectedIndex], for: .normal)

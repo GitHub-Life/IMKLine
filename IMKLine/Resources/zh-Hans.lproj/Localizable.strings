@@ -6,12 +6,15 @@
   Copyright © 2017年 iMoon. All rights reserved.
 */
 
-"Opening" = "开";
-"Closing" = "收";
-"Low" = "低";
-"High" = "高";
-"Percent" = "幅";
-"Volume" = "量";
+// KLine
+"opening" = "开";
+"closing" = "收";
+"low" = "低";
+"high" = "高";
+"percent" = "幅";
+"volume" = "量";
+"buy" = "买";
+"sell" = "卖";
 
 "minute" = "分";
 "minutes" = "分";
@@ -20,3 +23,4 @@
 "day" = "天";
 "days" = "天";
 "week" = "周";
+

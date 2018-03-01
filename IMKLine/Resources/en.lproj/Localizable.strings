@@ -6,12 +6,15 @@
   Copyright © 2017年 iMoon. All rights reserved.
 */
 
-"Opening" = "Opening";
-"Closing" = "Closing";
-"Low" = "Low";
-"High" = "High";
-"Percent" = "Percent";
-"Volume" = "Volume";
+// KLine
+"opening" = "Opening";
+"closing" = "Closing";
+"low" = "Low";
+"high" = "High";
+"percent" = "Percent";
+"volume" = "Volume";
+"buy" = "Buy";
+"sell" = "Sell";
 
 "minute" = "min";
 "minutes" = "min";
