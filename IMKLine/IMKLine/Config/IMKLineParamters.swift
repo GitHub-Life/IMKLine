@@ -96,7 +96,7 @@ class IMKLineParamters: NSObject {
     static let IMKLineAccessoryTypeChanged = NSNotification.Name.init("IMKLineAccessoryTypeChanged")
     
     /// KLine 显示风格
-    static var KLineStyle: IMKLineStyle = .standard {
+    static var KLineStyle: IMKLineStyle = .curve {
         willSet {
             kLineStyleChanged =  newValue != KLineStyle
         }

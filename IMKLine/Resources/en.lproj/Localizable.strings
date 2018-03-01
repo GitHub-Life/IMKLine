@@ -7,19 +7,17 @@
 */
 
 // KLine
-"opening" = "Opening";
-"closing" = "Closing";
-"low" = "Low";
-"high" = "High";
-"percent" = "Percent";
-"volume" = "Volume";
-"buy" = "Buy";
-"sell" = "Sell";
+"kline_opening" = "Opening";
+"kline_closing" = "Closing";
+"kline_low" = "Low";
+"kline_high" = "High";
+"kline_percent" = "Percent";
+"kline_volume" = "Volume";
 
-"minute" = "min";
-"minutes" = "min";
-"hour" = "h";
-"hours" = "h";
-"day" = "day";
-"days" = "days";
-"week" = "week";
+"kline_minute" = "min";
+"kline_minutes" = "min";
+"kline_hour" = "h";
+"kline_hours" = "h";
+"kline_day" = "day";
+"kline_days" = "days";
+"kline_week" = "week";

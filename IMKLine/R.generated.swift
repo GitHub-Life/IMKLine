@@ -148,172 +148,150 @@ struct R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    /// This `R.string.localizable` struct is generated, and contains static references to 15 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
     struct localizable {
-      /// zh-Hans translation: 买
-      /// 
-      /// Locales: zh-Hans, en
-      static let buy = Rswift.StringResource(key: "buy", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 低
       /// 
       /// Locales: zh-Hans, en
-      static let low = Rswift.StringResource(key: "low", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_low = Rswift.StringResource(key: "kline_low", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 分
       /// 
       /// Locales: zh-Hans, en
-      static let minute = Rswift.StringResource(key: "minute", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_minute = Rswift.StringResource(key: "kline_minute", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 分
       /// 
       /// Locales: zh-Hans, en
-      static let minutes = Rswift.StringResource(key: "minutes", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
-      /// zh-Hans translation: 卖
-      /// 
-      /// Locales: zh-Hans, en
-      static let sell = Rswift.StringResource(key: "sell", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_minutes = Rswift.StringResource(key: "kline_minutes", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 周
       /// 
       /// Locales: zh-Hans, en
-      static let week = Rswift.StringResource(key: "week", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_week = Rswift.StringResource(key: "kline_week", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 天
       /// 
       /// Locales: zh-Hans, en
-      static let day = Rswift.StringResource(key: "day", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_day = Rswift.StringResource(key: "kline_day", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 天
       /// 
       /// Locales: zh-Hans, en
-      static let days = Rswift.StringResource(key: "days", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_days = Rswift.StringResource(key: "kline_days", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 小时
       /// 
       /// Locales: zh-Hans, en
-      static let hour = Rswift.StringResource(key: "hour", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_hour = Rswift.StringResource(key: "kline_hour", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 小时
       /// 
       /// Locales: zh-Hans, en
-      static let hours = Rswift.StringResource(key: "hours", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_hours = Rswift.StringResource(key: "kline_hours", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 幅
       /// 
       /// Locales: zh-Hans, en
-      static let percent = Rswift.StringResource(key: "percent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_percent = Rswift.StringResource(key: "kline_percent", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 开
       /// 
       /// Locales: zh-Hans, en
-      static let opening = Rswift.StringResource(key: "opening", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_opening = Rswift.StringResource(key: "kline_opening", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 收
       /// 
       /// Locales: zh-Hans, en
-      static let closing = Rswift.StringResource(key: "closing", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_closing = Rswift.StringResource(key: "kline_closing", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 量
       /// 
       /// Locales: zh-Hans, en
-      static let volume = Rswift.StringResource(key: "volume", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
+      static let kline_volume = Rswift.StringResource(key: "kline_volume", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       /// zh-Hans translation: 高
       /// 
       /// Locales: zh-Hans, en
-      static let high = Rswift.StringResource(key: "high", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
-      
-      /// zh-Hans translation: 买
-      /// 
-      /// Locales: zh-Hans, en
-      static func buy(_: Void = ()) -> String {
-        return NSLocalizedString("buy", bundle: R.hostingBundle, comment: "")
-      }
+      static let kline_high = Rswift.StringResource(key: "kline_high", tableName: "Localizable", bundle: R.hostingBundle, locales: ["zh-Hans", "en"], comment: nil)
       
       /// zh-Hans translation: 低
       /// 
       /// Locales: zh-Hans, en
-      static func low(_: Void = ()) -> String {
-        return NSLocalizedString("low", bundle: R.hostingBundle, comment: "")
+      static func kline_low(_: Void = ()) -> String {
+        return NSLocalizedString("kline_low", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 分
       /// 
       /// Locales: zh-Hans, en
-      static func minute(_: Void = ()) -> String {
-        return NSLocalizedString("minute", bundle: R.hostingBundle, comment: "")
+      static func kline_minute(_: Void = ()) -> String {
+        return NSLocalizedString("kline_minute", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 分
       /// 
       /// Locales: zh-Hans, en
-      static func minutes(_: Void = ()) -> String {
-        return NSLocalizedString("minutes", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// zh-Hans translation: 卖
-      /// 
-      /// Locales: zh-Hans, en
-      static func sell(_: Void = ()) -> String {
-        return NSLocalizedString("sell", bundle: R.hostingBundle, comment: "")
+      static func kline_minutes(_: Void = ()) -> String {
+        return NSLocalizedString("kline_minutes", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 周
       /// 
       /// Locales: zh-Hans, en
-      static func week(_: Void = ()) -> String {
-        return NSLocalizedString("week", bundle: R.hostingBundle, comment: "")
+      static func kline_week(_: Void = ()) -> String {
+        return NSLocalizedString("kline_week", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 天
       /// 
       /// Locales: zh-Hans, en
-      static func day(_: Void = ()) -> String {
-        return NSLocalizedString("day", bundle: R.hostingBundle, comment: "")
+      static func kline_day(_: Void = ()) -> String {
+        return NSLocalizedString("kline_day", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 天
       /// 
       /// Locales: zh-Hans, en
-      static func days(_: Void = ()) -> String {
-        return NSLocalizedString("days", bundle: R.hostingBundle, comment: "")
+      static func kline_days(_: Void = ()) -> String {
+        return NSLocalizedString("kline_days", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 小时
       /// 
       /// Locales: zh-Hans, en
-      static func hour(_: Void = ()) -> String {
-        return NSLocalizedString("hour", bundle: R.hostingBundle, comment: "")
+      static func kline_hour(_: Void = ()) -> String {
+        return NSLocalizedString("kline_hour", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 小时
       /// 
       /// Locales: zh-Hans, en
-      static func hours(_: Void = ()) -> String {
-        return NSLocalizedString("hours", bundle: R.hostingBundle, comment: "")
+      static func kline_hours(_: Void = ()) -> String {
+        return NSLocalizedString("kline_hours", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 幅
       /// 
       /// Locales: zh-Hans, en
-      static func percent(_: Void = ()) -> String {
-        return NSLocalizedString("percent", bundle: R.hostingBundle, comment: "")
+      static func kline_percent(_: Void = ()) -> String {
+        return NSLocalizedString("kline_percent", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 开
       /// 
       /// Locales: zh-Hans, en
-      static func opening(_: Void = ()) -> String {
-        return NSLocalizedString("opening", bundle: R.hostingBundle, comment: "")
+      static func kline_opening(_: Void = ()) -> String {
+        return NSLocalizedString("kline_opening", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 收
       /// 
       /// Locales: zh-Hans, en
-      static func closing(_: Void = ()) -> String {
-        return NSLocalizedString("closing", bundle: R.hostingBundle, comment: "")
+      static func kline_closing(_: Void = ()) -> String {
+        return NSLocalizedString("kline_closing", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 量
       /// 
       /// Locales: zh-Hans, en
-      static func volume(_: Void = ()) -> String {
-        return NSLocalizedString("volume", bundle: R.hostingBundle, comment: "")
+      static func kline_volume(_: Void = ()) -> String {
+        return NSLocalizedString("kline_volume", bundle: R.hostingBundle, comment: "")
       }
       
       /// zh-Hans translation: 高
       /// 
       /// Locales: zh-Hans, en
-      static func high(_: Void = ()) -> String {
-        return NSLocalizedString("high", bundle: R.hostingBundle, comment: "")
+      static func kline_high(_: Void = ()) -> String {
+        return NSLocalizedString("kline_high", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
