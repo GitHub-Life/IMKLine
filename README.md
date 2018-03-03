@@ -15,6 +15,9 @@
 ## 分时图 + 成交量柱状图
 ![分时图 + 成交量柱状图](https://github.com/GitHub-Life/IMKLine/raw/imoon/picture/screen_shot3.png)
 ---
+## 综合演示
+![综合演示](https://github.com/GitHub-Life/IMKLine/raw/imoon/picture/composite_demo.gif)
+---
 注：图中右上角有选择时间段的按钮，我在Demo中的数据是本地的数据文件，不是网络获取的，所以尚未使用此功能。但这并不影响您学习K线的绘制，因为时间段的选择只是改变数据的数量，不会影响数据格式及计算。
 
 ### 欢迎加群讨论更多：83766186😊
