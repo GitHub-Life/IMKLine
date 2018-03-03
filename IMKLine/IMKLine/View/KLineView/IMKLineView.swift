@@ -66,19 +66,23 @@ class IMKLineView: UIView {
             let lowPoint = self.minKline.klinePosition.lowPoint
             if self.minKline.klinePosition.lowPoint.x - self.superScrollView.contentOffset.x > self.superScrollView.frame.width / 2 {
                 let ocStr = "\(self.minKline.low)→" as NSString
-                let textW = ocStr.size(withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize)]).width
-                ocStr.draw(at: CGPoint.init(x: lowPoint.x - textW, y: lowPoint.y - IMKLineTheme.TipTextFontSize - 2), withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize), NSAttributedStringKey.foregroundColor:IMKLineTheme.HLTextColor])
+                let textSize = ocStr.size(withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize)])
+                ocStr.draw(at: CGPoint.init(x: lowPoint.x - textSize.width, y: lowPoint.y - textSize.height / 2), withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize), NSAttributedStringKey.foregroundColor:IMKLineTheme.HLTextColor])
             } else {
-                ("←\(self.minKline.low)" as NSString).draw(at: CGPoint.init(x: lowPoint.x, y: lowPoint.y - IMKLineTheme.TipTextFontSize - 2), withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize), NSAttributedStringKey.foregroundColor:IMKLineTheme.HLTextColor])
+                let ocStr = "←\(self.minKline.low)" as NSString
+                let textSize = ocStr.size(withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize)])
+                ocStr.draw(at: CGPoint.init(x: lowPoint.x, y: lowPoint.y - textSize.height / 2), withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize), NSAttributedStringKey.foregroundColor:IMKLineTheme.HLTextColor])
             }
             // 绘制 最大值 指示文字
             let highPoint = self.maxKline.klinePosition.highPoint
             if self.maxKline.klinePosition.lowPoint.x - self.superScrollView.contentOffset.x > self.superScrollView.frame.width / 2 {
                 let ocStr = "\(self.maxKline.high)→" as NSString
-                let textW = ocStr.size(withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize)]).width
-                ocStr.draw(at: CGPoint.init(x: highPoint.x - textW, y: 0), withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize), NSAttributedStringKey.foregroundColor:IMKLineTheme.HLTextColor])
+                let textSize = ocStr.size(withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize)])
+                ocStr.draw(at: CGPoint.init(x: highPoint.x - textSize.width, y: highPoint.y - textSize.height / 2), withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize), NSAttributedStringKey.foregroundColor:IMKLineTheme.HLTextColor])
             } else {
-                ("←\(self.maxKline.high)" as NSString).draw(at: CGPoint.init(x: highPoint.x, y: 0), withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize), NSAttributedStringKey.foregroundColor:IMKLineTheme.HLTextColor])
+                let ocStr = "←\(self.maxKline.high)" as NSString
+                let textSize = ocStr.size(withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize)])
+                ocStr.draw(at: CGPoint.init(x: highPoint.x, y: highPoint.y - textSize.height / 2), withAttributes: [NSAttributedStringKey.font:UIFont.systemFont(ofSize: IMKLineTheme.TipTextFontSize), NSAttributedStringKey.foregroundColor:IMKLineTheme.HLTextColor])
             }
         }
         
@@ -146,17 +150,86 @@ class IMKLineView: UIView {
         }
         self.minKline = self.needDrawKlineArray[0]
         self.maxKline = self.needDrawKlineArray[0]
-        for kline in self.needDrawKlineArray {
-            if kline.high > self.maxKline.high {
-                self.maxKline = kline
+        var maxValue = self.maxKline.high
+        var minValue = self.minKline.low
+        
+        switch IMKLineParamters.KLineMAType {
+        case .MA:
+            for kline in self.needDrawKlineArray {
+                if kline.high > self.maxKline.high {
+                    self.maxKline = kline
+                }
+                if kline.low < self.minKline.low {
+                    self.minKline = kline
+                }
+                let maxMA = kline.maxMA
+                if maxMA < 0 {
+                    maxValue = max(maxValue, kline.high)
+                } else {
+                    maxValue = max(maxValue, kline.high, maxMA)
+                }
+                let minMA = kline.minMA
+                if minMA < 0 {
+                    minValue = min(minValue, kline.low)
+                } else {
+                    minValue = min(minValue, kline.low, minMA)
+                }
             }
-            if kline.low < self.minKline.low {
-                self.minKline = kline
+        case .EMA:
+            for kline in self.needDrawKlineArray {
+                if kline.high > self.maxKline.high {
+                    self.maxKline = kline
+                }
+                if kline.low < self.minKline.low {
+                    self.minKline = kline
+                }
+                maxValue = max(maxValue, kline.high, kline.maxEMA)
+                minValue = min(minValue, kline.low, kline.minEMA)
+                
+                let maxEMA = kline.maxEMA
+                if maxEMA < 0 {
+                    maxValue = max(maxValue, kline.high)
+                } else {
+                    maxValue = max(maxValue, kline.high, maxEMA)
+                }
+                let minEMA = kline.minEMA
+                if minEMA < 0 {
+                    minValue = min(minValue, kline.low)
+                } else {
+                    minValue = min(minValue, kline.low, minEMA)
+                }
             }
+        case .BOLL:
+            for kline in self.needDrawKlineArray {
+                if kline.high > self.maxKline.high {
+                    self.maxKline = kline
+                }
+                if kline.low < self.minKline.low {
+                    self.minKline = kline
+                }
+                if let boll = kline.klineBoll {
+                    maxValue = max(maxValue, kline.high, boll.UP)
+                    minValue = min(minValue, kline.low, boll.DN)
+                } else {
+                    maxValue = max(maxValue, kline.high)
+                    minValue = min(minValue, kline.low)
+                }
+            }
+        case .NONE:
+            for kline in self.needDrawKlineArray {
+                if kline.high > self.maxKline.high {
+                    self.maxKline = kline
+                }
+                if kline.low < self.minKline.low {
+                    self.minKline = kline
+                }
+            }
+            maxValue = self.maxKline.high
+            minValue = self.minKline.low
         }
         // 上下留点margin
-        let maxValue = self.maxKline.high * 1.001
-        let minValue = self.minKline.low * 0.999
+        maxValue *= 1.001
+        minValue *= 0.999
         IMKLineParamters.setKLineDataDecimals(maxValue, minValue)
         let minY = CGFloat(0)
         let maxY = self.frame.height

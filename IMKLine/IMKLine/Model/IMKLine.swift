@@ -18,6 +18,7 @@ class IMKLine: NSObject {
     var high: Double = Double(0)
     var volume: Double = Double(0)
     
+    /* 此方法在项目中根据返回的数据结构实现
     convenience init(json: JSON) {
         self.init()
         self.timeStamp = json["timestamp"].doubleValue
@@ -27,6 +28,7 @@ class IMKLine: NSObject {
         self.high = json["high"].doubleValue
         self.volume = json["volume"].doubleValue
     }
+     */
     
     var prevKline: IMKLine!
     var index = 0

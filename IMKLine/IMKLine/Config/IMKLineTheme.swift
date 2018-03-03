@@ -64,7 +64,7 @@ struct IMKLineTheme {
 //    }
     
     static let RiseColor = UIColor.red
-    
+
     static let DownColor = UIColor.green
     
     static var CrossLineColor = UIColor.init(rgbHex: 0x888888)
