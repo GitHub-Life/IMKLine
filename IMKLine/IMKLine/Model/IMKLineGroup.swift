@@ -13,6 +13,7 @@ class IMKLineGroup: NSObject {
 
     var klineArray = [IMKLine]()
     
+    /* 此方法在项目中根据返回的数据结构实现
     static func klineArray(klineJsonArray: [JSON]) -> [IMKLine] {
         var klineArray = [IMKLine]()
         for klineJson in klineJsonArray {
@@ -21,6 +22,7 @@ class IMKLineGroup: NSObject {
         }
         return klineArray
     }
+     */
     
     func insert(klineArray: [IMKLine]) {
         self.klineArray = klineArray + self.klineArray

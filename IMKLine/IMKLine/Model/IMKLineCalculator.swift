@@ -207,5 +207,48 @@ extension IMKLine {
         let maxValue = max(range1.1, range2.1)
         return (minValue, maxValue)
     }
+}
+
+// MARK: - MA/EMA指标的最大/小值，在遍历查找数据最大/小值的时候使用
+extension IMKLine {
     
+    var maxMA: Double {
+        get {
+            var maxMA = (self.klineMAs.first?.value)!
+            for maKey in self.klineMAs.keys.sorted() {
+                maxMA = max(maxMA, self.klineMAs[maKey]!)
+            }
+            return maxMA
+        }
+    }
+    
+    var minMA: Double {
+        get {
+            var minMA = (self.klineMAs.first?.value)!
+            for maKey in self.klineMAs.keys.sorted() {
+                minMA = min(minMA, self.klineMAs[maKey]!)
+            }
+            return minMA
+        }
+    }
+    
+    var maxEMA: Double {
+        get {
+            var maxEMA = (self.klineEMAs.first?.value)!
+            for emaKey in self.klineEMAs.keys.sorted() {
+                maxEMA = max(maxEMA, self.klineEMAs[emaKey]!)
+            }
+            return maxEMA
+        }
+    }
+    
+    var minEMA: Double {
+        get {
+            var minEMA = (self.klineEMAs.first?.value)!
+            for emaKey in self.klineEMAs.keys.sorted() {
+                minEMA = min(minEMA, self.klineEMAs[emaKey]!)
+            }
+            return minEMA
+        }
+    }
 }

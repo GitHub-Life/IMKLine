@@ -8,40 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		31A102CF4DBE37F9CD7D780C /* Pods_IMKLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446077E43A084DC806417686 /* Pods_IMKLine.framework */; };
+		B7063BF6204AA3BF00D3585E /* IMKLineConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BC8204AA3BF00D3585E /* IMKLineConfig.swift */; };
+		B7063BF7204AA3BF00D3585E /* IMKLineParamters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BC9204AA3BF00D3585E /* IMKLineParamters.swift */; };
+		B7063BF8204AA3BF00D3585E /* IMKLineTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BCA204AA3BF00D3585E /* IMKLineTheme.swift */; };
+		B7063BF9204AA3BF00D3585E /* BOLL介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B7063BCC204AA3BF00D3585E /* BOLL介绍.md */; };
+		B7063BFA204AA3BF00D3585E /* IMKLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BCD204AA3BF00D3585E /* IMKLine.swift */; };
+		B7063BFB204AA3BF00D3585E /* IMKLineCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BCE204AA3BF00D3585E /* IMKLineCalculator.swift */; };
+		B7063BFC204AA3BF00D3585E /* IMKLineGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BCF204AA3BF00D3585E /* IMKLineGroup.swift */; };
+		B7063BFD204AA3BF00D3585E /* IMKLineSubStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BD0204AA3BF00D3585E /* IMKLineSubStruct.swift */; };
+		B7063BFE204AA3BF00D3585E /* KDJ介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B7063BD1204AA3BF00D3585E /* KDJ介绍.md */; };
+		B7063BFF204AA3BF00D3585E /* MA-EMA-MACD介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B7063BD2204AA3BF00D3585E /* MA-EMA-MACD介绍.md */; };
+		B7063C00204AA3BF00D3585E /* RSI介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B7063BD3204AA3BF00D3585E /* RSI介绍.md */; };
+		B7063C01204AA3BF00D3585E /* IMKLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BD5204AA3BF00D3585E /* IMKLineTool.swift */; };
+		B7063C02204AA3BF00D3585E /* IMKLineAccessoryMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BD8204AA3BF00D3585E /* IMKLineAccessoryMAView.swift */; };
+		B7063C03204AA3BF00D3585E /* IMKLineAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BD9204AA3BF00D3585E /* IMKLineAccessoryView.swift */; };
+		B7063C04204AA3BF00D3585E /* IMKLineAccessoryPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BDB204AA3BF00D3585E /* IMKLineAccessoryPainter.swift */; };
+		B7063C05204AA3BF00D3585E /* IMKLineCrossLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BDD204AA3BF00D3585E /* IMKLineCrossLine.swift */; };
+		B7063C06204AA3BF00D3585E /* IMKLineContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BDE204AA3BF00D3585E /* IMKLineContainerView.swift */; };
+		B7063C07204AA3BF00D3585E /* IMKLineScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BDF204AA3BF00D3585E /* IMKLineScrollView.swift */; };
+		B7063C08204AA3BF00D3585E /* IMKLineAccessorySetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BE1204AA3BF00D3585E /* IMKLineAccessorySetView.swift */; };
+		B7063C09204AA3BF00D3585E /* IMKLineIndexSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BE2204AA3BF00D3585E /* IMKLineIndexSetContainerView.swift */; };
+		B7063C0A204AA3BF00D3585E /* IMKLineMASetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BE3204AA3BF00D3585E /* IMKLineMASetView.swift */; };
+		B7063C0B204AA3BF00D3585E /* IMKLineTimeFrameSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BE4204AA3BF00D3585E /* IMKLineTimeFrameSetView.swift */; };
+		B7063C0C204AA3BF00D3585E /* IMKLineMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BE6204AA3BF00D3585E /* IMKLineMAView.swift */; };
+		B7063C0D204AA3BF00D3585E /* IMKLineValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BE7204AA3BF00D3585E /* IMKLineValueView.swift */; };
+		B7063C0E204AA3BF00D3585E /* IMKLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BE8204AA3BF00D3585E /* IMKLineView.swift */; };
+		B7063C0F204AA3BF00D3585E /* IMKLineMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BEA204AA3BF00D3585E /* IMKLineMAPainter.swift */; };
+		B7063C10204AA3BF00D3585E /* IMKLinePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BEB204AA3BF00D3585E /* IMKLinePainter.swift */; };
+		B7063C11204AA3BF00D3585E /* IMKLineRightYView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BED204AA3BF00D3585E /* IMKLineRightYView.swift */; };
+		B7063C12204AA3BF00D3585E /* IMKLineTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BEF204AA3BF00D3585E /* IMKLineTimeView.swift */; };
+		B7063C13204AA3BF00D3585E /* IMKLineVolumeMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BF1204AA3BF00D3585E /* IMKLineVolumeMAView.swift */; };
+		B7063C14204AA3BF00D3585E /* IMKLineVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BF2204AA3BF00D3585E /* IMKLineVolumeView.swift */; };
+		B7063C15204AA3BF00D3585E /* IMKLineVolumeMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BF4204AA3BF00D3585E /* IMKLineVolumeMAPainter.swift */; };
+		B7063C16204AA3BF00D3585E /* IMKLineVolumePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063BF5204AA3BF00D3585E /* IMKLineVolumePainter.swift */; };
+		B7063C18204AA42F00D3585E /* IMKLineDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063C17204AA42F00D3585E /* IMKLineDataParser.swift */; };
 		B72A5EB21FEB5D5100FCAC37 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B72A5EB11FEB5D5100FCAC37 /* data.json */; };
-		B7308DF32047FA1E00875341 /* IMKLineConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DC52047FA1E00875341 /* IMKLineConfig.swift */; };
-		B7308DF42047FA1E00875341 /* IMKLineParamters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DC62047FA1E00875341 /* IMKLineParamters.swift */; };
-		B7308DF52047FA1E00875341 /* IMKLineTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DC72047FA1E00875341 /* IMKLineTheme.swift */; };
-		B7308DF62047FA1E00875341 /* BOLL介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B7308DC92047FA1E00875341 /* BOLL介绍.md */; };
-		B7308DF72047FA1E00875341 /* IMKLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DCA2047FA1E00875341 /* IMKLine.swift */; };
-		B7308DF82047FA1E00875341 /* IMKLineCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DCB2047FA1E00875341 /* IMKLineCalculator.swift */; };
-		B7308DF92047FA1E00875341 /* IMKLineGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DCC2047FA1E00875341 /* IMKLineGroup.swift */; };
-		B7308DFA2047FA1E00875341 /* IMKLineSubStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DCD2047FA1E00875341 /* IMKLineSubStruct.swift */; };
-		B7308DFB2047FA1E00875341 /* KDJ介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B7308DCE2047FA1E00875341 /* KDJ介绍.md */; };
-		B7308DFC2047FA1E00875341 /* MA-EMA-MACD介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B7308DCF2047FA1E00875341 /* MA-EMA-MACD介绍.md */; };
-		B7308DFD2047FA1E00875341 /* RSI介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B7308DD02047FA1E00875341 /* RSI介绍.md */; };
-		B7308DFE2047FA1E00875341 /* IMKLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DD22047FA1E00875341 /* IMKLineTool.swift */; };
-		B7308DFF2047FA1E00875341 /* IMKLineAccessoryMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DD52047FA1E00875341 /* IMKLineAccessoryMAView.swift */; };
-		B7308E002047FA1E00875341 /* IMKLineAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DD62047FA1E00875341 /* IMKLineAccessoryView.swift */; };
-		B7308E012047FA1E00875341 /* IMKLineAccessoryPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DD82047FA1E00875341 /* IMKLineAccessoryPainter.swift */; };
-		B7308E022047FA1E00875341 /* IMKLineCrossLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DDA2047FA1E00875341 /* IMKLineCrossLine.swift */; };
-		B7308E032047FA1E00875341 /* IMKLineContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DDB2047FA1E00875341 /* IMKLineContainerView.swift */; };
-		B7308E042047FA1E00875341 /* IMKLineScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DDC2047FA1E00875341 /* IMKLineScrollView.swift */; };
-		B7308E052047FA1E00875341 /* IMKLineAccessorySetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DDE2047FA1E00875341 /* IMKLineAccessorySetView.swift */; };
-		B7308E062047FA1E00875341 /* IMKLineIndexSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DDF2047FA1E00875341 /* IMKLineIndexSetContainerView.swift */; };
-		B7308E072047FA1E00875341 /* IMKLineMASetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DE02047FA1E00875341 /* IMKLineMASetView.swift */; };
-		B7308E082047FA1E00875341 /* IMKLineTimeFrameSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DE12047FA1E00875341 /* IMKLineTimeFrameSetView.swift */; };
-		B7308E092047FA1E00875341 /* IMKLineMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DE32047FA1E00875341 /* IMKLineMAView.swift */; };
-		B7308E0A2047FA1E00875341 /* IMKLineValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DE42047FA1E00875341 /* IMKLineValueView.swift */; };
-		B7308E0B2047FA1E00875341 /* IMKLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DE52047FA1E00875341 /* IMKLineView.swift */; };
-		B7308E0C2047FA1E00875341 /* IMKLineMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DE72047FA1E00875341 /* IMKLineMAPainter.swift */; };
-		B7308E0D2047FA1E00875341 /* IMKLinePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DE82047FA1E00875341 /* IMKLinePainter.swift */; };
-		B7308E0E2047FA1E00875341 /* IMKLineRightYView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DEA2047FA1E00875341 /* IMKLineRightYView.swift */; };
-		B7308E0F2047FA1E00875341 /* IMKLineTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DEC2047FA1E00875341 /* IMKLineTimeView.swift */; };
-		B7308E102047FA1E00875341 /* IMKLineVolumeMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DEE2047FA1E00875341 /* IMKLineVolumeMAView.swift */; };
-		B7308E112047FA1E00875341 /* IMKLineVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DEF2047FA1E00875341 /* IMKLineVolumeView.swift */; };
-		B7308E122047FA1E00875341 /* IMKLineVolumeMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DF12047FA1E00875341 /* IMKLineVolumeMAPainter.swift */; };
-		B7308E132047FA1E00875341 /* IMKLineVolumePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7308DF22047FA1E00875341 /* IMKLineVolumePainter.swift */; };
 		B751C9A71FEEAAD6006025B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B751C9A91FEEAAD6006025B1 /* Localizable.strings */; };
 		B7737B8320463F7500F137C4 /* LangHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7737B7820463F7400F137C4 /* LangHelper.swift */; };
 		B7737B8420463F7500F137C4 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7737B7920463F7400F137C4 /* Math.swift */; };
@@ -61,40 +62,41 @@
 		446077E43A084DC806417686 /* Pods_IMKLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMKLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E2CE3DE9ABB00F5656253D /* Pods-IMKLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMKLine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMKLine/Pods-IMKLine.debug.xcconfig"; sourceTree = "<group>"; };
 		A95A2D8D8BDD9CA568483315 /* Pods-IMKLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMKLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMKLine/Pods-IMKLine.release.xcconfig"; sourceTree = "<group>"; };
+		B7063BC8204AA3BF00D3585E /* IMKLineConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineConfig.swift; sourceTree = "<group>"; };
+		B7063BC9204AA3BF00D3585E /* IMKLineParamters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineParamters.swift; sourceTree = "<group>"; };
+		B7063BCA204AA3BF00D3585E /* IMKLineTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTheme.swift; sourceTree = "<group>"; };
+		B7063BCC204AA3BF00D3585E /* BOLL介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "BOLL介绍.md"; sourceTree = "<group>"; };
+		B7063BCD204AA3BF00D3585E /* IMKLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLine.swift; sourceTree = "<group>"; };
+		B7063BCE204AA3BF00D3585E /* IMKLineCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineCalculator.swift; sourceTree = "<group>"; };
+		B7063BCF204AA3BF00D3585E /* IMKLineGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineGroup.swift; sourceTree = "<group>"; };
+		B7063BD0204AA3BF00D3585E /* IMKLineSubStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineSubStruct.swift; sourceTree = "<group>"; };
+		B7063BD1204AA3BF00D3585E /* KDJ介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "KDJ介绍.md"; sourceTree = "<group>"; };
+		B7063BD2204AA3BF00D3585E /* MA-EMA-MACD介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "MA-EMA-MACD介绍.md"; sourceTree = "<group>"; };
+		B7063BD3204AA3BF00D3585E /* RSI介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "RSI介绍.md"; sourceTree = "<group>"; };
+		B7063BD5204AA3BF00D3585E /* IMKLineTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTool.swift; sourceTree = "<group>"; };
+		B7063BD8204AA3BF00D3585E /* IMKLineAccessoryMAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryMAView.swift; sourceTree = "<group>"; };
+		B7063BD9204AA3BF00D3585E /* IMKLineAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryView.swift; sourceTree = "<group>"; };
+		B7063BDB204AA3BF00D3585E /* IMKLineAccessoryPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryPainter.swift; sourceTree = "<group>"; };
+		B7063BDD204AA3BF00D3585E /* IMKLineCrossLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineCrossLine.swift; sourceTree = "<group>"; };
+		B7063BDE204AA3BF00D3585E /* IMKLineContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineContainerView.swift; sourceTree = "<group>"; };
+		B7063BDF204AA3BF00D3585E /* IMKLineScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineScrollView.swift; sourceTree = "<group>"; };
+		B7063BE1204AA3BF00D3585E /* IMKLineAccessorySetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessorySetView.swift; sourceTree = "<group>"; };
+		B7063BE2204AA3BF00D3585E /* IMKLineIndexSetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineIndexSetContainerView.swift; sourceTree = "<group>"; };
+		B7063BE3204AA3BF00D3585E /* IMKLineMASetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineMASetView.swift; sourceTree = "<group>"; };
+		B7063BE4204AA3BF00D3585E /* IMKLineTimeFrameSetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTimeFrameSetView.swift; sourceTree = "<group>"; };
+		B7063BE6204AA3BF00D3585E /* IMKLineMAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineMAView.swift; sourceTree = "<group>"; };
+		B7063BE7204AA3BF00D3585E /* IMKLineValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineValueView.swift; sourceTree = "<group>"; };
+		B7063BE8204AA3BF00D3585E /* IMKLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineView.swift; sourceTree = "<group>"; };
+		B7063BEA204AA3BF00D3585E /* IMKLineMAPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineMAPainter.swift; sourceTree = "<group>"; };
+		B7063BEB204AA3BF00D3585E /* IMKLinePainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLinePainter.swift; sourceTree = "<group>"; };
+		B7063BED204AA3BF00D3585E /* IMKLineRightYView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineRightYView.swift; sourceTree = "<group>"; };
+		B7063BEF204AA3BF00D3585E /* IMKLineTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTimeView.swift; sourceTree = "<group>"; };
+		B7063BF1204AA3BF00D3585E /* IMKLineVolumeMAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAView.swift; sourceTree = "<group>"; };
+		B7063BF2204AA3BF00D3585E /* IMKLineVolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeView.swift; sourceTree = "<group>"; };
+		B7063BF4204AA3BF00D3585E /* IMKLineVolumeMAPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAPainter.swift; sourceTree = "<group>"; };
+		B7063BF5204AA3BF00D3585E /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
+		B7063C17204AA42F00D3585E /* IMKLineDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineDataParser.swift; sourceTree = "<group>"; };
 		B72A5EB11FEB5D5100FCAC37 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		B7308DC52047FA1E00875341 /* IMKLineConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineConfig.swift; sourceTree = "<group>"; };
-		B7308DC62047FA1E00875341 /* IMKLineParamters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineParamters.swift; sourceTree = "<group>"; };
-		B7308DC72047FA1E00875341 /* IMKLineTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTheme.swift; sourceTree = "<group>"; };
-		B7308DC92047FA1E00875341 /* BOLL介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "BOLL介绍.md"; sourceTree = "<group>"; };
-		B7308DCA2047FA1E00875341 /* IMKLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLine.swift; sourceTree = "<group>"; };
-		B7308DCB2047FA1E00875341 /* IMKLineCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineCalculator.swift; sourceTree = "<group>"; };
-		B7308DCC2047FA1E00875341 /* IMKLineGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineGroup.swift; sourceTree = "<group>"; };
-		B7308DCD2047FA1E00875341 /* IMKLineSubStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineSubStruct.swift; sourceTree = "<group>"; };
-		B7308DCE2047FA1E00875341 /* KDJ介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "KDJ介绍.md"; sourceTree = "<group>"; };
-		B7308DCF2047FA1E00875341 /* MA-EMA-MACD介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "MA-EMA-MACD介绍.md"; sourceTree = "<group>"; };
-		B7308DD02047FA1E00875341 /* RSI介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "RSI介绍.md"; sourceTree = "<group>"; };
-		B7308DD22047FA1E00875341 /* IMKLineTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTool.swift; sourceTree = "<group>"; };
-		B7308DD52047FA1E00875341 /* IMKLineAccessoryMAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryMAView.swift; sourceTree = "<group>"; };
-		B7308DD62047FA1E00875341 /* IMKLineAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryView.swift; sourceTree = "<group>"; };
-		B7308DD82047FA1E00875341 /* IMKLineAccessoryPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryPainter.swift; sourceTree = "<group>"; };
-		B7308DDA2047FA1E00875341 /* IMKLineCrossLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineCrossLine.swift; sourceTree = "<group>"; };
-		B7308DDB2047FA1E00875341 /* IMKLineContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineContainerView.swift; sourceTree = "<group>"; };
-		B7308DDC2047FA1E00875341 /* IMKLineScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineScrollView.swift; sourceTree = "<group>"; };
-		B7308DDE2047FA1E00875341 /* IMKLineAccessorySetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessorySetView.swift; sourceTree = "<group>"; };
-		B7308DDF2047FA1E00875341 /* IMKLineIndexSetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineIndexSetContainerView.swift; sourceTree = "<group>"; };
-		B7308DE02047FA1E00875341 /* IMKLineMASetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineMASetView.swift; sourceTree = "<group>"; };
-		B7308DE12047FA1E00875341 /* IMKLineTimeFrameSetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTimeFrameSetView.swift; sourceTree = "<group>"; };
-		B7308DE32047FA1E00875341 /* IMKLineMAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineMAView.swift; sourceTree = "<group>"; };
-		B7308DE42047FA1E00875341 /* IMKLineValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineValueView.swift; sourceTree = "<group>"; };
-		B7308DE52047FA1E00875341 /* IMKLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineView.swift; sourceTree = "<group>"; };
-		B7308DE72047FA1E00875341 /* IMKLineMAPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineMAPainter.swift; sourceTree = "<group>"; };
-		B7308DE82047FA1E00875341 /* IMKLinePainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLinePainter.swift; sourceTree = "<group>"; };
-		B7308DEA2047FA1E00875341 /* IMKLineRightYView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineRightYView.swift; sourceTree = "<group>"; };
-		B7308DEC2047FA1E00875341 /* IMKLineTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTimeView.swift; sourceTree = "<group>"; };
-		B7308DEE2047FA1E00875341 /* IMKLineVolumeMAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAView.swift; sourceTree = "<group>"; };
-		B7308DEF2047FA1E00875341 /* IMKLineVolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeView.swift; sourceTree = "<group>"; };
-		B7308DF12047FA1E00875341 /* IMKLineVolumeMAPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAPainter.swift; sourceTree = "<group>"; };
-		B7308DF22047FA1E00875341 /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
 		B751C9A31FEEAABD006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B751C9A81FEEAAD6006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B751C9AA1FEEAAD8006025B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -126,6 +128,158 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7063BC6204AA3BF00D3585E /* IMKLine */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BC7204AA3BF00D3585E /* Config */,
+				B7063BCB204AA3BF00D3585E /* Model */,
+				B7063BD4204AA3BF00D3585E /* Tool */,
+				B7063BD6204AA3BF00D3585E /* View */,
+			);
+			path = IMKLine;
+			sourceTree = "<group>";
+		};
+		B7063BC7204AA3BF00D3585E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BC8204AA3BF00D3585E /* IMKLineConfig.swift */,
+				B7063BC9204AA3BF00D3585E /* IMKLineParamters.swift */,
+				B7063BCA204AA3BF00D3585E /* IMKLineTheme.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B7063BCB204AA3BF00D3585E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BCC204AA3BF00D3585E /* BOLL介绍.md */,
+				B7063BCD204AA3BF00D3585E /* IMKLine.swift */,
+				B7063BCE204AA3BF00D3585E /* IMKLineCalculator.swift */,
+				B7063BCF204AA3BF00D3585E /* IMKLineGroup.swift */,
+				B7063BD0204AA3BF00D3585E /* IMKLineSubStruct.swift */,
+				B7063BD1204AA3BF00D3585E /* KDJ介绍.md */,
+				B7063BD2204AA3BF00D3585E /* MA-EMA-MACD介绍.md */,
+				B7063BD3204AA3BF00D3585E /* RSI介绍.md */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B7063BD4204AA3BF00D3585E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BD5204AA3BF00D3585E /* IMKLineTool.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		B7063BD6204AA3BF00D3585E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BD7204AA3BF00D3585E /* AccessoryView */,
+				B7063BDC204AA3BF00D3585E /* CrossLine */,
+				B7063BDE204AA3BF00D3585E /* IMKLineContainerView.swift */,
+				B7063BDF204AA3BF00D3585E /* IMKLineScrollView.swift */,
+				B7063BE0204AA3BF00D3585E /* IndexSetView */,
+				B7063BE5204AA3BF00D3585E /* KLineView */,
+				B7063BEC204AA3BF00D3585E /* RightYView */,
+				B7063BEE204AA3BF00D3585E /* TimeView */,
+				B7063BF0204AA3BF00D3585E /* VolumeView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7063BD7204AA3BF00D3585E /* AccessoryView */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BD8204AA3BF00D3585E /* IMKLineAccessoryMAView.swift */,
+				B7063BD9204AA3BF00D3585E /* IMKLineAccessoryView.swift */,
+				B7063BDA204AA3BF00D3585E /* Painter */,
+			);
+			path = AccessoryView;
+			sourceTree = "<group>";
+		};
+		B7063BDA204AA3BF00D3585E /* Painter */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BDB204AA3BF00D3585E /* IMKLineAccessoryPainter.swift */,
+			);
+			path = Painter;
+			sourceTree = "<group>";
+		};
+		B7063BDC204AA3BF00D3585E /* CrossLine */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BDD204AA3BF00D3585E /* IMKLineCrossLine.swift */,
+			);
+			path = CrossLine;
+			sourceTree = "<group>";
+		};
+		B7063BE0204AA3BF00D3585E /* IndexSetView */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BE1204AA3BF00D3585E /* IMKLineAccessorySetView.swift */,
+				B7063BE2204AA3BF00D3585E /* IMKLineIndexSetContainerView.swift */,
+				B7063BE3204AA3BF00D3585E /* IMKLineMASetView.swift */,
+				B7063BE4204AA3BF00D3585E /* IMKLineTimeFrameSetView.swift */,
+			);
+			path = IndexSetView;
+			sourceTree = "<group>";
+		};
+		B7063BE5204AA3BF00D3585E /* KLineView */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BE6204AA3BF00D3585E /* IMKLineMAView.swift */,
+				B7063BE7204AA3BF00D3585E /* IMKLineValueView.swift */,
+				B7063BE8204AA3BF00D3585E /* IMKLineView.swift */,
+				B7063BE9204AA3BF00D3585E /* Painter */,
+			);
+			path = KLineView;
+			sourceTree = "<group>";
+		};
+		B7063BE9204AA3BF00D3585E /* Painter */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BEA204AA3BF00D3585E /* IMKLineMAPainter.swift */,
+				B7063BEB204AA3BF00D3585E /* IMKLinePainter.swift */,
+			);
+			path = Painter;
+			sourceTree = "<group>";
+		};
+		B7063BEC204AA3BF00D3585E /* RightYView */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BED204AA3BF00D3585E /* IMKLineRightYView.swift */,
+			);
+			path = RightYView;
+			sourceTree = "<group>";
+		};
+		B7063BEE204AA3BF00D3585E /* TimeView */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BEF204AA3BF00D3585E /* IMKLineTimeView.swift */,
+			);
+			path = TimeView;
+			sourceTree = "<group>";
+		};
+		B7063BF0204AA3BF00D3585E /* VolumeView */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BF1204AA3BF00D3585E /* IMKLineVolumeMAView.swift */,
+				B7063BF2204AA3BF00D3585E /* IMKLineVolumeView.swift */,
+				B7063BF3204AA3BF00D3585E /* Painter */,
+			);
+			path = VolumeView;
+			sourceTree = "<group>";
+		};
+		B7063BF3204AA3BF00D3585E /* Painter */ = {
+			isa = PBXGroup;
+			children = (
+				B7063BF4204AA3BF00D3585E /* IMKLineVolumeMAPainter.swift */,
+				B7063BF5204AA3BF00D3585E /* IMKLineVolumePainter.swift */,
+			);
+			path = Painter;
+			sourceTree = "<group>";
+		};
 		B71DCBEB1FEC361700564D09 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,158 +287,6 @@
 				B798C84C1FE94BEE00B159B6 /* UIView+Extension.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		B7308DC32047FA1E00875341 /* IMKLine */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DC42047FA1E00875341 /* Config */,
-				B7308DC82047FA1E00875341 /* Model */,
-				B7308DD12047FA1E00875341 /* Tool */,
-				B7308DD32047FA1E00875341 /* View */,
-			);
-			path = IMKLine;
-			sourceTree = "<group>";
-		};
-		B7308DC42047FA1E00875341 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DC52047FA1E00875341 /* IMKLineConfig.swift */,
-				B7308DC62047FA1E00875341 /* IMKLineParamters.swift */,
-				B7308DC72047FA1E00875341 /* IMKLineTheme.swift */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		B7308DC82047FA1E00875341 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DC92047FA1E00875341 /* BOLL介绍.md */,
-				B7308DCA2047FA1E00875341 /* IMKLine.swift */,
-				B7308DCB2047FA1E00875341 /* IMKLineCalculator.swift */,
-				B7308DCC2047FA1E00875341 /* IMKLineGroup.swift */,
-				B7308DCD2047FA1E00875341 /* IMKLineSubStruct.swift */,
-				B7308DCE2047FA1E00875341 /* KDJ介绍.md */,
-				B7308DCF2047FA1E00875341 /* MA-EMA-MACD介绍.md */,
-				B7308DD02047FA1E00875341 /* RSI介绍.md */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B7308DD12047FA1E00875341 /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DD22047FA1E00875341 /* IMKLineTool.swift */,
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
-		B7308DD32047FA1E00875341 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DD42047FA1E00875341 /* AccessoryView */,
-				B7308DD92047FA1E00875341 /* CrossLine */,
-				B7308DDB2047FA1E00875341 /* IMKLineContainerView.swift */,
-				B7308DDC2047FA1E00875341 /* IMKLineScrollView.swift */,
-				B7308DDD2047FA1E00875341 /* IndexSetView */,
-				B7308DE22047FA1E00875341 /* KLineView */,
-				B7308DE92047FA1E00875341 /* RightYView */,
-				B7308DEB2047FA1E00875341 /* TimeView */,
-				B7308DED2047FA1E00875341 /* VolumeView */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B7308DD42047FA1E00875341 /* AccessoryView */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DD52047FA1E00875341 /* IMKLineAccessoryMAView.swift */,
-				B7308DD62047FA1E00875341 /* IMKLineAccessoryView.swift */,
-				B7308DD72047FA1E00875341 /* Painter */,
-			);
-			path = AccessoryView;
-			sourceTree = "<group>";
-		};
-		B7308DD72047FA1E00875341 /* Painter */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DD82047FA1E00875341 /* IMKLineAccessoryPainter.swift */,
-			);
-			path = Painter;
-			sourceTree = "<group>";
-		};
-		B7308DD92047FA1E00875341 /* CrossLine */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DDA2047FA1E00875341 /* IMKLineCrossLine.swift */,
-			);
-			path = CrossLine;
-			sourceTree = "<group>";
-		};
-		B7308DDD2047FA1E00875341 /* IndexSetView */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DDE2047FA1E00875341 /* IMKLineAccessorySetView.swift */,
-				B7308DDF2047FA1E00875341 /* IMKLineIndexSetContainerView.swift */,
-				B7308DE02047FA1E00875341 /* IMKLineMASetView.swift */,
-				B7308DE12047FA1E00875341 /* IMKLineTimeFrameSetView.swift */,
-			);
-			path = IndexSetView;
-			sourceTree = "<group>";
-		};
-		B7308DE22047FA1E00875341 /* KLineView */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DE32047FA1E00875341 /* IMKLineMAView.swift */,
-				B7308DE42047FA1E00875341 /* IMKLineValueView.swift */,
-				B7308DE52047FA1E00875341 /* IMKLineView.swift */,
-				B7308DE62047FA1E00875341 /* Painter */,
-			);
-			path = KLineView;
-			sourceTree = "<group>";
-		};
-		B7308DE62047FA1E00875341 /* Painter */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DE72047FA1E00875341 /* IMKLineMAPainter.swift */,
-				B7308DE82047FA1E00875341 /* IMKLinePainter.swift */,
-			);
-			path = Painter;
-			sourceTree = "<group>";
-		};
-		B7308DE92047FA1E00875341 /* RightYView */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DEA2047FA1E00875341 /* IMKLineRightYView.swift */,
-			);
-			path = RightYView;
-			sourceTree = "<group>";
-		};
-		B7308DEB2047FA1E00875341 /* TimeView */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DEC2047FA1E00875341 /* IMKLineTimeView.swift */,
-			);
-			path = TimeView;
-			sourceTree = "<group>";
-		};
-		B7308DED2047FA1E00875341 /* VolumeView */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DEE2047FA1E00875341 /* IMKLineVolumeMAView.swift */,
-				B7308DEF2047FA1E00875341 /* IMKLineVolumeView.swift */,
-				B7308DF02047FA1E00875341 /* Painter */,
-			);
-			path = VolumeView;
-			sourceTree = "<group>";
-		};
-		B7308DF02047FA1E00875341 /* Painter */ = {
-			isa = PBXGroup;
-			children = (
-				B7308DF12047FA1E00875341 /* IMKLineVolumeMAPainter.swift */,
-				B7308DF22047FA1E00875341 /* IMKLineVolumePainter.swift */,
-			);
-			path = Painter;
 			sourceTree = "<group>";
 		};
 		B7737B7420463F7400F137C4 /* Utilities */ = {
@@ -326,12 +328,13 @@
 		B798C8281FE9354500B159B6 /* IMKLine */ = {
 			isa = PBXGroup;
 			children = (
-				B7308DC32047FA1E00875341 /* IMKLine */,
+				B7063BC6204AA3BF00D3585E /* IMKLine */,
 				B71DCBEB1FEC361700564D09 /* Extension */,
 				B798C8431FE93E5C00B159B6 /* Resources */,
 				B7737B7420463F7400F137C4 /* Utilities */,
 				B798C82B1FE9354500B159B6 /* ViewController.swift */,
 				B798C83E1FE9363600B159B6 /* IMKLineChartViewController.swift */,
+				B7063C17204AA42F00D3585E /* IMKLineDataParser.swift */,
 				B798C82D1FE9354500B159B6 /* Main.storyboard */,
 				B798C8411FE93E1D00B159B6 /* R.generated.swift */,
 			);
@@ -433,14 +436,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B798C8341FE9354500B159B6 /* LaunchScreen.storyboard in Resources */,
-				B7308DFD2047FA1E00875341 /* RSI介绍.md in Resources */,
-				B7308DF62047FA1E00875341 /* BOLL介绍.md in Resources */,
+				B7063C00204AA3BF00D3585E /* RSI介绍.md in Resources */,
+				B7063BF9204AA3BF00D3585E /* BOLL介绍.md in Resources */,
 				B798C8311FE9354500B159B6 /* Assets.xcassets in Resources */,
 				B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */,
 				B751C9A71FEEAAD6006025B1 /* Localizable.strings in Resources */,
 				B72A5EB21FEB5D5100FCAC37 /* data.json in Resources */,
-				B7308DFB2047FA1E00875341 /* KDJ介绍.md in Resources */,
-				B7308DFC2047FA1E00875341 /* MA-EMA-MACD介绍.md in Resources */,
+				B7063BFE204AA3BF00D3585E /* KDJ介绍.md in Resources */,
+				B7063BFF204AA3BF00D3585E /* MA-EMA-MACD介绍.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,42 +531,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7308DF72047FA1E00875341 /* IMKLine.swift in Sources */,
-				B7308DF42047FA1E00875341 /* IMKLineParamters.swift in Sources */,
-				B7308E112047FA1E00875341 /* IMKLineVolumeView.swift in Sources */,
+				B7063BFA204AA3BF00D3585E /* IMKLine.swift in Sources */,
+				B7063BF7204AA3BF00D3585E /* IMKLineParamters.swift in Sources */,
+				B7063C14204AA3BF00D3585E /* IMKLineVolumeView.swift in Sources */,
 				B798C84D1FE94BEE00B159B6 /* UIColor+Extension.swift in Sources */,
-				B7308E102047FA1E00875341 /* IMKLineVolumeMAView.swift in Sources */,
-				B7308E0A2047FA1E00875341 /* IMKLineValueView.swift in Sources */,
-				B7308E072047FA1E00875341 /* IMKLineMASetView.swift in Sources */,
-				B7308DF82047FA1E00875341 /* IMKLineCalculator.swift in Sources */,
-				B7308E052047FA1E00875341 /* IMKLineAccessorySetView.swift in Sources */,
-				B7308E0E2047FA1E00875341 /* IMKLineRightYView.swift in Sources */,
-				B7308E082047FA1E00875341 /* IMKLineTimeFrameSetView.swift in Sources */,
-				B7308E012047FA1E00875341 /* IMKLineAccessoryPainter.swift in Sources */,
+				B7063C13204AA3BF00D3585E /* IMKLineVolumeMAView.swift in Sources */,
+				B7063C0D204AA3BF00D3585E /* IMKLineValueView.swift in Sources */,
+				B7063C0A204AA3BF00D3585E /* IMKLineMASetView.swift in Sources */,
+				B7063BFB204AA3BF00D3585E /* IMKLineCalculator.swift in Sources */,
+				B7063C18204AA42F00D3585E /* IMKLineDataParser.swift in Sources */,
+				B7063C08204AA3BF00D3585E /* IMKLineAccessorySetView.swift in Sources */,
+				B7063C11204AA3BF00D3585E /* IMKLineRightYView.swift in Sources */,
+				B7063C0B204AA3BF00D3585E /* IMKLineTimeFrameSetView.swift in Sources */,
+				B7063C04204AA3BF00D3585E /* IMKLineAccessoryPainter.swift in Sources */,
 				B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */,
-				B7308E0B2047FA1E00875341 /* IMKLineView.swift in Sources */,
-				B7308E0D2047FA1E00875341 /* IMKLinePainter.swift in Sources */,
+				B7063C0E204AA3BF00D3585E /* IMKLineView.swift in Sources */,
+				B7063C10204AA3BF00D3585E /* IMKLinePainter.swift in Sources */,
 				B7737B8320463F7500F137C4 /* LangHelper.swift in Sources */,
-				B7308E122047FA1E00875341 /* IMKLineVolumeMAPainter.swift in Sources */,
+				B7063C15204AA3BF00D3585E /* IMKLineVolumeMAPainter.swift in Sources */,
 				B7737B8520463F7500F137C4 /* VerificationCodeCreator.swift in Sources */,
-				B7308E0F2047FA1E00875341 /* IMKLineTimeView.swift in Sources */,
-				B7308DF52047FA1E00875341 /* IMKLineTheme.swift in Sources */,
+				B7063C12204AA3BF00D3585E /* IMKLineTimeView.swift in Sources */,
+				B7063BF8204AA3BF00D3585E /* IMKLineTheme.swift in Sources */,
 				B7737B8420463F7500F137C4 /* Math.swift in Sources */,
-				B7308E132047FA1E00875341 /* IMKLineVolumePainter.swift in Sources */,
-				B7308DFA2047FA1E00875341 /* IMKLineSubStruct.swift in Sources */,
-				B7308DF92047FA1E00875341 /* IMKLineGroup.swift in Sources */,
-				B7308DFF2047FA1E00875341 /* IMKLineAccessoryMAView.swift in Sources */,
-				B7308DF32047FA1E00875341 /* IMKLineConfig.swift in Sources */,
+				B7063C16204AA3BF00D3585E /* IMKLineVolumePainter.swift in Sources */,
+				B7063BFD204AA3BF00D3585E /* IMKLineSubStruct.swift in Sources */,
+				B7063BFC204AA3BF00D3585E /* IMKLineGroup.swift in Sources */,
+				B7063C02204AA3BF00D3585E /* IMKLineAccessoryMAView.swift in Sources */,
+				B7063BF6204AA3BF00D3585E /* IMKLineConfig.swift in Sources */,
 				B798C84E1FE94BEE00B159B6 /* UIView+Extension.swift in Sources */,
-				B7308E022047FA1E00875341 /* IMKLineCrossLine.swift in Sources */,
-				B7308E062047FA1E00875341 /* IMKLineIndexSetContainerView.swift in Sources */,
-				B7308E092047FA1E00875341 /* IMKLineMAView.swift in Sources */,
-				B7308E0C2047FA1E00875341 /* IMKLineMAPainter.swift in Sources */,
-				B7308E002047FA1E00875341 /* IMKLineAccessoryView.swift in Sources */,
+				B7063C05204AA3BF00D3585E /* IMKLineCrossLine.swift in Sources */,
+				B7063C09204AA3BF00D3585E /* IMKLineIndexSetContainerView.swift in Sources */,
+				B7063C0C204AA3BF00D3585E /* IMKLineMAView.swift in Sources */,
+				B7063C0F204AA3BF00D3585E /* IMKLineMAPainter.swift in Sources */,
+				B7063C03204AA3BF00D3585E /* IMKLineAccessoryView.swift in Sources */,
 				B798C83F1FE9363600B159B6 /* IMKLineChartViewController.swift in Sources */,
-				B7308E042047FA1E00875341 /* IMKLineScrollView.swift in Sources */,
-				B7308E032047FA1E00875341 /* IMKLineContainerView.swift in Sources */,
-				B7308DFE2047FA1E00875341 /* IMKLineTool.swift in Sources */,
+				B7063C07204AA3BF00D3585E /* IMKLineScrollView.swift in Sources */,
+				B7063C06204AA3BF00D3585E /* IMKLineContainerView.swift in Sources */,
+				B7063C01204AA3BF00D3585E /* IMKLineTool.swift in Sources */,
 				B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */,
 				B798C8421FE93E1D00B159B6 /* R.generated.swift in Sources */,
 			);
