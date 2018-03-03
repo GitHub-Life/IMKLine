@@ -96,7 +96,6 @@
 		B7308DF12047FA1E00875341 /* IMKLineVolumeMAPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAPainter.swift; sourceTree = "<group>"; };
 		B7308DF22047FA1E00875341 /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
 		B751C9A31FEEAABD006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		B751C9A41FEEAABD006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		B751C9A81FEEAAD6006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B751C9AA1FEEAAD8006025B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7737B7820463F7400F137C4 /* LangHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangHelper.swift; sourceTree = "<group>"; };
@@ -586,7 +585,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				B798C82E1FE9354500B159B6 /* Base */,
-				B751C9A41FEEAABD006025B1 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
