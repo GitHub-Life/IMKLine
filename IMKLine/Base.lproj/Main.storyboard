@@ -190,7 +190,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                         <state key="normal" title="MACD"/>
                                         <connections>
-                                            <action selector="accessorySetBtnClickWithSender:" destination="e0s-Aa-2tL" eventType="touchUpInside" id="V8f-oW-FSI"/>
+                                            <action selector="accessorySetBtnClickWithSender:" destination="e0s-Aa-2tL" eventType="touchUpInside" id="L3b-Aw-gbr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phF-fu-anW">
@@ -213,11 +213,6 @@
                                             <action selector="back" destination="e0s-Aa-2tL" eventType="touchUpInside" id="1B2-VR-eud"/>
                                         </connections>
                                     </button>
-                                    <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K22-Uc-GLX" customClass="IMKLineIndexSetContainerView" customModule="IMKLine" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -242,14 +237,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slw-eC-lR7" customClass="IMKLineContainerView" customModule="IMKLine" customModuleProvider="target">
                                 <rect key="frame" x="50" y="0.0" width="518" height="320"/>
                             </view>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K22-Uc-GLX" customClass="IMKLineIndexSetContainerView" customModule="IMKLine" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NBI-nY-ar8" firstAttribute="trailing" secondItem="slw-eC-lR7" secondAttribute="trailing" id="65o-ZD-ZNb"/>
+                            <constraint firstItem="K22-Uc-GLX" firstAttribute="bottom" secondItem="NBI-nY-ar8" secondAttribute="bottom" id="8tr-im-jaW"/>
                             <constraint firstItem="NBI-nY-ar8" firstAttribute="bottom" secondItem="qaa-Mx-egy" secondAttribute="bottom" id="Bfh-8M-YQW"/>
+                            <constraint firstItem="K22-Uc-GLX" firstAttribute="leading" secondItem="NBI-nY-ar8" secondAttribute="leading" id="DgU-JE-cyR"/>
                             <constraint firstItem="slw-eC-lR7" firstAttribute="top" secondItem="NBI-nY-ar8" secondAttribute="top" id="Wml-MR-eiw"/>
+                            <constraint firstItem="K22-Uc-GLX" firstAttribute="top" secondItem="NBI-nY-ar8" secondAttribute="top" id="ZRb-8d-5P0"/>
                             <constraint firstItem="NBI-nY-ar8" firstAttribute="bottom" secondItem="slw-eC-lR7" secondAttribute="bottom" id="cBC-Ey-NeE"/>
                             <constraint firstItem="qaa-Mx-egy" firstAttribute="top" secondItem="NBI-nY-ar8" secondAttribute="top" id="iLw-lG-txS"/>
+                            <constraint firstItem="K22-Uc-GLX" firstAttribute="trailing" secondItem="NBI-nY-ar8" secondAttribute="trailing" id="tup-Mh-4LM"/>
                             <constraint firstItem="slw-eC-lR7" firstAttribute="leading" secondItem="qaa-Mx-egy" secondAttribute="trailing" id="uTY-GP-Pk0"/>
                             <constraint firstItem="qaa-Mx-egy" firstAttribute="leading" secondItem="NBI-nY-ar8" secondAttribute="leading" id="wCB-Kk-McA"/>
                         </constraints>
@@ -258,7 +261,7 @@
                     <size key="freeformSize" width="568" height="320"/>
                     <connections>
                         <outlet property="MASetBtn" destination="UxT-lm-cEN" id="a1R-4y-LRq"/>
-                        <outlet property="accessorySetBtn" destination="04G-PV-YZc" id="Sfa-2c-pZ9"/>
+                        <outlet property="accessorySetBtn" destination="04G-PV-YZc" id="lcb-du-PeB"/>
                         <outlet property="indexSetContainerView" destination="K22-Uc-GLX" id="6ET-vk-NMF"/>
                         <outlet property="klineContainerView" destination="slw-eC-lR7" id="oEl-7V-QYF"/>
                         <outlet property="klineStyleBtn" destination="phF-fu-anW" id="EgQ-Lp-BGc"/>

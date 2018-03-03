@@ -119,7 +119,7 @@ class IMKLineView: UIView {
     private func extractNeedDrawKlineArray() {
         let klineWidth = IMKLineConfig.KLineWidth
         let klineGap = IMKLineConfig.KLineGap
-        let needDrawCount = Int((self.superScrollView.frame.width - klineGap) / (klineWidth + klineGap))
+        let needDrawCount = Int((self.superScrollView.frame.width - klineGap) / (klineWidth + klineGap)) + 1
         //起始位置
         let needDrawKlineStartIndex: Int
         needDrawKlineStartIndex = self.needDrawStartIndex

@@ -169,7 +169,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 3 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
     /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
     struct launchScreen {
@@ -320,45 +320,6 @@ struct R: Rswift.Validatable {
       /// Locales: zh-Hans, en
       static func kline_high(_: Void = ()) -> String {
         return NSLocalizedString("kline_high", bundle: R.hostingBundle, comment: "")
-      }
-      
-      fileprivate init() {}
-    }
-    
-    /// This `R.string.main` struct is generated, and contains static references to 3 localization keys.
-    struct main {
-      /// zh-Hans translation: 1min
-      /// 
-      /// Locales: zh-Hans
-      static let rrgAiJ5ONormalTitle = Rswift.StringResource(key: "Rrg-ai-j5O.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["zh-Hans"], comment: nil)
-      /// zh-Hans translation: KDJ
-      /// 
-      /// Locales: zh-Hans
-      static let gpvyZcNormalTitle = Rswift.StringResource(key: "04G-PV-YZc.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["zh-Hans"], comment: nil)
-      /// zh-Hans translation: MA
-      /// 
-      /// Locales: zh-Hans
-      static let uxTLmCENNormalTitle = Rswift.StringResource(key: "UxT-lm-cEN.normalTitle", tableName: "Main", bundle: R.hostingBundle, locales: ["zh-Hans"], comment: nil)
-      
-      /// zh-Hans translation: 1min
-      /// 
-      /// Locales: zh-Hans
-      static func rrgAiJ5ONormalTitle(_: Void = ()) -> String {
-        return NSLocalizedString("Rrg-ai-j5O.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// zh-Hans translation: KDJ
-      /// 
-      /// Locales: zh-Hans
-      static func gpvyZcNormalTitle(_: Void = ()) -> String {
-        return NSLocalizedString("04G-PV-YZc.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
-      }
-      
-      /// zh-Hans translation: MA
-      /// 
-      /// Locales: zh-Hans
-      static func uxTLmCENNormalTitle(_: Void = ()) -> String {
-        return NSLocalizedString("UxT-lm-cEN.normalTitle", tableName: "Main", bundle: R.hostingBundle, comment: "")
       }
       
       fileprivate init() {}
