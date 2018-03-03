@@ -169,13 +169,19 @@ class IMKLineContainerView: UIView {
         }
     }
     
+    @objc func klineStyleChanged() {
+        self.scrollView.klineView.draw()
+    }
+    
     func registerOrResignNotificationObserver(isRegister: Bool) {
         if isRegister {
             NotificationCenter.default.addObserver(self, selector: #selector(klineMATypeChanged), name: IMKLineParamters.IMKLineMATypeChanged, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(accessoryTypeChanged), name: IMKLineParamters.IMKLineAccessoryTypeChanged, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(klineStyleChanged), name: IMKLineParamters.IMKLineStyleChanged, object: nil)
         } else {
             NotificationCenter.default.removeObserver(self, name: IMKLineParamters.IMKLineMATypeChanged, object: nil)
             NotificationCenter.default.removeObserver(self, name: IMKLineParamters.IMKLineAccessoryTypeChanged, object: nil)
+            NotificationCenter.default.removeObserver(self, name: IMKLineParamters.IMKLineStyleChanged, object: nil)
         }
     }
     

@@ -28,7 +28,10 @@ enum IMKLineAccessoryType: String {
 
 /// KLine 风格设置选项
 enum IMKLineStyle: Int {
-    case standard, hollow, line, curve
+    case standard = 0, hollow = 1, line = 2, curve = 3
+    static func enumValue(_ rawValue: Int) -> IMKLineStyle {
+        return IMKLineStyle.init(rawValue: rawValue)!
+    }
 }
 
 class IMKLineParamters: NSObject {
@@ -96,7 +99,7 @@ class IMKLineParamters: NSObject {
     static let IMKLineAccessoryTypeChanged = NSNotification.Name.init("IMKLineAccessoryTypeChanged")
     
     /// KLine 显示风格
-    static var KLineStyle: IMKLineStyle = .curve {
+    static var KLineStyle: IMKLineStyle = .standard {
         willSet {
             kLineStyleChanged =  newValue != KLineStyle
         }

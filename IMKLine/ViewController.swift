@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeFrameSetBtn: UIButton!
     @IBOutlet weak var MASetBtn: UIButton!
     @IBOutlet weak var accessorySetBtn: UIButton!
+    @IBOutlet weak var klineStyleBtn: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -29,6 +30,8 @@ class ViewController: UIViewController {
         self.indexSetContainerView.timeFrameSetViewOrigin = CGPoint.init(x: 0, y: 40)
         self.indexSetContainerView.maSetViewOrigin = CGPoint.init(x: 0, y: 40)
         self.indexSetContainerView.accessorySetViewOrigin = CGPoint.init(x: 0, y: 40)
+        self.klineStyleBtn.tag = IMKLineParamters.KLineStyle.rawValue
+        self.klineStyleBtn.setImage(self.klineStyleImgs[self.klineStyleBtn.tag], for: .normal)
     }
     
     func getKlineDatas() {
@@ -41,7 +44,7 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async(execute: {
                     let klineGroup = IMKLineGroup()
                     klineGroup.klineArray = IMKLineGroup.klineArray(klineJsonArray: json["data"].arrayValue)
-                    self.klineContainerView.appendData(klineArray: klineGroup.klineArray)
+                    self.klineContainerView.reloadData(klineArray: klineGroup.klineArray)
                 })
             } catch {
                 print(error)
@@ -59,6 +62,18 @@ class ViewController: UIViewController {
     
     @IBAction func accessorySetBtnClick(sender: UIButton) {
         self.indexSetContainerView.showIndexSetView(indexSetType: .Accessory, selectedIndex: sender.tag)
+    }
+    
+    let klineStyleImgs = [
+        R.image.kline_standard(),
+        R.image.kline_hollow(),
+        R.image.kline_line(),
+        R.image.kline_curve()
+    ]
+    @IBAction func klineStyleBtnClick(_ sender: UIButton) {
+        sender.tag = (sender.tag + 1) % 4
+        sender.setImage(self.klineStyleImgs[sender.tag], for: .normal)
+        IMKLineParamters.KLineStyle = IMKLineStyle.enumValue(sender.tag)
     }
     
 }

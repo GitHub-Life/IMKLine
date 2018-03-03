@@ -25,6 +25,7 @@ class IMKLineChartViewController: UIViewController {
     @IBOutlet weak var timeFrameSetBtn: UIButton!
     @IBOutlet weak var MASetBtn: UIButton!
     @IBOutlet weak var accessorySetBtn: UIButton!
+    @IBOutlet weak var klineStyleBtn: UIButton!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -36,6 +37,8 @@ class IMKLineChartViewController: UIViewController {
         self.klineContainerView.scrollView.loadMore = { [weak self] in
             self?.getKlineDatas()
         }
+        self.klineStyleBtn.tag = IMKLineParamters.KLineStyle.rawValue
+        self.klineStyleBtn.setImage(self.klineStyleImgs[self.klineStyleBtn.tag], for: .normal)
     }
     
     func getKlineDatas() {
@@ -82,6 +85,18 @@ class IMKLineChartViewController: UIViewController {
     
     @IBAction func accessorySetBtnClick(sender: UIButton) {
         self.indexSetContainerView.showIndexSetView(indexSetType: .Accessory, selectedIndex: sender.tag)
+    }
+    
+    let klineStyleImgs = [
+        R.image.kline_standard(),
+        R.image.kline_hollow(),
+        R.image.kline_line(),
+        R.image.kline_curve()
+    ]
+    @IBAction func klineStyleBtnClick(_ sender: UIButton) {
+        sender.tag = (sender.tag + 1) % 4
+        sender.setImage(self.klineStyleImgs[sender.tag], for: .normal)
+        IMKLineParamters.KLineStyle = IMKLineStyle.enumValue(sender.tag)
     }
     
     @IBAction func back() {
