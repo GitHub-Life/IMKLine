@@ -30,7 +30,7 @@ class IMKLineAccessorySetView: UIView {
     
     let NumOfRow = 5
     let BtnWidth = 50
-    let BtnHeight = 50
+    let BtnHeight = 40
     var btnClickResponse: ((Int) -> ())?
     
     func setupView() {

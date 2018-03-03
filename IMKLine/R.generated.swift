@@ -72,7 +72,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 4 images.
+  /// This `R.image` struct is generated, and contains static references to 8 images.
   struct image {
     /// Image `cancel_full_screen_blue`.
     static let cancel_full_screen_blue = Rswift.ImageResource(bundle: R.hostingBundle, name: "cancel_full_screen_blue")
@@ -82,6 +82,14 @@ struct R: Rswift.Validatable {
     static let full_screen_blue = Rswift.ImageResource(bundle: R.hostingBundle, name: "full_screen_blue")
     /// Image `full_screen_white`.
     static let full_screen_white = Rswift.ImageResource(bundle: R.hostingBundle, name: "full_screen_white")
+    /// Image `kline_curve`.
+    static let kline_curve = Rswift.ImageResource(bundle: R.hostingBundle, name: "kline_curve")
+    /// Image `kline_hollow`.
+    static let kline_hollow = Rswift.ImageResource(bundle: R.hostingBundle, name: "kline_hollow")
+    /// Image `kline_line`.
+    static let kline_line = Rswift.ImageResource(bundle: R.hostingBundle, name: "kline_line")
+    /// Image `kline_standard`.
+    static let kline_standard = Rswift.ImageResource(bundle: R.hostingBundle, name: "kline_standard")
     
     /// `UIImage(named: "cancel_full_screen_blue", bundle: ..., traitCollection: ...)`
     static func cancel_full_screen_blue(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -101,6 +109,26 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "full_screen_white", bundle: ..., traitCollection: ...)`
     static func full_screen_white(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.full_screen_white, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "kline_curve", bundle: ..., traitCollection: ...)`
+    static func kline_curve(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.kline_curve, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "kline_hollow", bundle: ..., traitCollection: ...)`
+    static func kline_hollow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.kline_hollow, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "kline_line", bundle: ..., traitCollection: ...)`
+    static func kline_line(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.kline_line, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "kline_standard", bundle: ..., traitCollection: ...)`
+    static func kline_standard(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.kline_standard, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -394,6 +422,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "cancel_full_screen_blue") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'cancel_full_screen_blue' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "full_screen_blue") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'full_screen_blue' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "kline_standard") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'kline_standard' is used in storyboard 'Main', but couldn't be loaded.") }
         if _R.storyboard.main().imkLineChartViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'imkLineChartViewController' could not be loaded from storyboard 'Main' as 'IMKLineChartViewController'.") }
         if _R.storyboard.main().viewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'viewController' could not be loaded from storyboard 'Main' as 'ViewController'.") }
       }
