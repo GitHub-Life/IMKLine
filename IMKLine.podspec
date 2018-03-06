@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT" }
   s.author       = { "iMoon" => "wantao1993@vip.qq.com" }
   s.platform     = :ios, "9.0"
-  s.source       = { :git => "https://github.com/GitHub-Life/IMKLine.git", :commit => "c5dc54e" }
+  s.source       = { :git => "https://github.com/GitHub-Life/IMKLine.git", :commit => "10d2664" }
   s.source_files = "IMKLine/IMKLine/**/*.swift"
   s.framework    = "UIKit"
   s.requires_arc = true
