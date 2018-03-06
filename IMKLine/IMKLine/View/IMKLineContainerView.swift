@@ -11,6 +11,10 @@ import SnapKit
 
 class IMKLineContainerView: UIView {
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     let scrollView = IMKLineScrollView()
     let timeView = IMKLineTimeView()
     let klineMAView = IMKLineMAView()
@@ -35,9 +39,21 @@ class IMKLineContainerView: UIView {
     // ------- 17 -----
     // --- 1x -----
     // -------- 15 ----
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.setupUI()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupUI()
+    }
+    
+    convenience init() {
+        self.init(frame: CGRect.zero)
+    }
+    
+    func setupUI() {
         self.registerOrResignNotificationObserver(isRegister: true)
         self.backgroundColor = IMKLineTheme.KLineChartBgColor
         

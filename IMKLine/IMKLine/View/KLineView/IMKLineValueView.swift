@@ -43,7 +43,7 @@ class IMKLineValueView: UIView {
         }
     }
     //
-    let valueTips = ["\(LangHelper.getString("kline_opening")) ", "\(LangHelper.getString("kline_high")) ", "\(LangHelper.getString("kline_low")) ", "\(LangHelper.getString("kline_closing")) ", "\(LangHelper.getString("kline_percent")) "]
+    let valueTips = ["Open ", "High ", "Low ", "Close ", "Percent "]
     var kline = IMKLine()
     
     func update(kline: IMKLine) {
