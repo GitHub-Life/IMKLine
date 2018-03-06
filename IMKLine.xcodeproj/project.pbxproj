@@ -44,9 +44,6 @@
 		B7063C18204AA42F00D3585E /* IMKLineDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063C17204AA42F00D3585E /* IMKLineDataParser.swift */; };
 		B72A5EB21FEB5D5100FCAC37 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B72A5EB11FEB5D5100FCAC37 /* data.json */; };
 		B751C9A71FEEAAD6006025B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B751C9A91FEEAAD6006025B1 /* Localizable.strings */; };
-		B7737B8320463F7500F137C4 /* LangHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7737B7820463F7400F137C4 /* LangHelper.swift */; };
-		B7737B8420463F7500F137C4 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7737B7920463F7400F137C4 /* Math.swift */; };
-		B7737B8520463F7500F137C4 /* VerificationCodeCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7737B7A20463F7400F137C4 /* VerificationCodeCreator.swift */; };
 		B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C8291FE9354500B159B6 /* AppDelegate.swift */; };
 		B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C82B1FE9354500B159B6 /* ViewController.swift */; };
 		B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B798C82D1FE9354500B159B6 /* Main.storyboard */; };
@@ -55,7 +52,6 @@
 		B798C83F1FE9363600B159B6 /* IMKLineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C83E1FE9363600B159B6 /* IMKLineChartViewController.swift */; };
 		B798C8421FE93E1D00B159B6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C8411FE93E1D00B159B6 /* R.generated.swift */; };
 		B798C84D1FE94BEE00B159B6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C84B1FE94BEE00B159B6 /* UIColor+Extension.swift */; };
-		B798C84E1FE94BEE00B159B6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C84C1FE94BEE00B159B6 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,9 +96,6 @@
 		B751C9A31FEEAABD006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		B751C9A81FEEAAD6006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B751C9AA1FEEAAD8006025B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B7737B7820463F7400F137C4 /* LangHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangHelper.swift; sourceTree = "<group>"; };
-		B7737B7920463F7400F137C4 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
-		B7737B7A20463F7400F137C4 /* VerificationCodeCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeCreator.swift; sourceTree = "<group>"; };
 		B798C8261FE9354500B159B6 /* IMKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B798C8291FE9354500B159B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B798C82B1FE9354500B159B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +106,6 @@
 		B798C83E1FE9363600B159B6 /* IMKLineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineChartViewController.swift; sourceTree = "<group>"; };
 		B798C8411FE93E1D00B159B6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		B798C84B1FE94BEE00B159B6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		B798C84C1FE94BEE00B159B6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +159,7 @@
 		B7063BD4204AA3BF00D3585E /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				B798C84B1FE94BEE00B159B6 /* UIColor+Extension.swift */,
 				B7063BD5204AA3BF00D3585E /* IMKLineTool.swift */,
 			);
 			path = Tool;
@@ -280,33 +273,6 @@
 			path = Painter;
 			sourceTree = "<group>";
 		};
-		B71DCBEB1FEC361700564D09 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				B798C84B1FE94BEE00B159B6 /* UIColor+Extension.swift */,
-				B798C84C1FE94BEE00B159B6 /* UIView+Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		B7737B7420463F7400F137C4 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				B7737B7520463F7400F137C4 /* Common */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		B7737B7520463F7400F137C4 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				B7737B7820463F7400F137C4 /* LangHelper.swift */,
-				B7737B7920463F7400F137C4 /* Math.swift */,
-				B7737B7A20463F7400F137C4 /* VerificationCodeCreator.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		B798C81D1FE9354500B159B6 = {
 			isa = PBXGroup;
 			children = (
@@ -329,9 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				B7063BC6204AA3BF00D3585E /* IMKLine */,
-				B71DCBEB1FEC361700564D09 /* Extension */,
 				B798C8431FE93E5C00B159B6 /* Resources */,
-				B7737B7420463F7400F137C4 /* Utilities */,
 				B798C82B1FE9354500B159B6 /* ViewController.swift */,
 				B798C83E1FE9363600B159B6 /* IMKLineChartViewController.swift */,
 				B7063C17204AA42F00D3585E /* IMKLineDataParser.swift */,
@@ -547,18 +511,14 @@
 				B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */,
 				B7063C0E204AA3BF00D3585E /* IMKLineView.swift in Sources */,
 				B7063C10204AA3BF00D3585E /* IMKLinePainter.swift in Sources */,
-				B7737B8320463F7500F137C4 /* LangHelper.swift in Sources */,
 				B7063C15204AA3BF00D3585E /* IMKLineVolumeMAPainter.swift in Sources */,
-				B7737B8520463F7500F137C4 /* VerificationCodeCreator.swift in Sources */,
 				B7063C12204AA3BF00D3585E /* IMKLineTimeView.swift in Sources */,
 				B7063BF8204AA3BF00D3585E /* IMKLineTheme.swift in Sources */,
-				B7737B8420463F7500F137C4 /* Math.swift in Sources */,
 				B7063C16204AA3BF00D3585E /* IMKLineVolumePainter.swift in Sources */,
 				B7063BFD204AA3BF00D3585E /* IMKLineSubStruct.swift in Sources */,
 				B7063BFC204AA3BF00D3585E /* IMKLineGroup.swift in Sources */,
 				B7063C02204AA3BF00D3585E /* IMKLineAccessoryMAView.swift in Sources */,
 				B7063BF6204AA3BF00D3585E /* IMKLineConfig.swift in Sources */,
-				B798C84E1FE94BEE00B159B6 /* UIView+Extension.swift in Sources */,
 				B7063C05204AA3BF00D3585E /* IMKLineCrossLine.swift in Sources */,
 				B7063C09204AA3BF00D3585E /* IMKLineIndexSetContainerView.swift in Sources */,
 				B7063C0C204AA3BF00D3585E /* IMKLineMAView.swift in Sources */,
