@@ -94,17 +94,17 @@ struct IMKLineConfig {
     
     /// KLine 时段默认设置选项
     static let KLineTimeFrames = [
-        "1 \(IMLangHelper.getString("kline_minute"))",
-        "5 \(IMLangHelper.getString("kline_minute"))",
-        "15 \(IMLangHelper.getString("kline_minute"))",
-        "30 \(IMLangHelper.getString("kline_minute"))",
-        "1 \(IMLangHelper.getString("kline_hour"))",
-        "2 \(IMLangHelper.getString("kline_hours"))",
-        "4 \(IMLangHelper.getString("kline_hours"))",
-        "1 \(IMLangHelper.getString("kline_day"))",
-        "3 \(IMLangHelper.getString("kline_days"))",
-        "5 \(IMLangHelper.getString("kline_days"))",
-        "1 \(IMLangHelper.getString("kline_week"))"
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "4h",
+        "1d",
+        "3d",
+        "5d",
+        "1w"
     ]
     
     

@@ -1,9 +1,9 @@
 //
-//  UIColor+Extension.swift
-//  Hotico
+//  IMColor.swift
+//  IMKLine
 //
-//  Created by iMoon on 2017/11/22.
-//  Copyright © 2017年 yeeyuntech. All rights reserved.
+//  Created by iMoon on 2018/3/7.
+//  Copyright © 2018年 iMoon. All rights reserved.
 //
 
 import UIKit

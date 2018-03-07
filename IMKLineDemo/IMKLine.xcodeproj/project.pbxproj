@@ -10,7 +10,6 @@
 		31A102CF4DBE37F9CD7D780C /* Pods_IMKLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 446077E43A084DC806417686 /* Pods_IMKLine.framework */; };
 		B7063C18204AA42F00D3585E /* IMKLineDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7063C17204AA42F00D3585E /* IMKLineDataParser.swift */; };
 		B72A5EB21FEB5D5100FCAC37 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B72A5EB11FEB5D5100FCAC37 /* data.json */; };
-		B751C9A71FEEAAD6006025B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B751C9A91FEEAAD6006025B1 /* Localizable.strings */; };
 		B762B1D4204F70D60077518B /* IMKLineConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1A5204F70D50077518B /* IMKLineConfig.swift */; };
 		B762B1D5204F70D60077518B /* IMKLineParamters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1A6204F70D50077518B /* IMKLineParamters.swift */; };
 		B762B1D6204F70D60077518B /* IMKLineTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1A7204F70D50077518B /* IMKLineTheme.swift */; };
@@ -23,7 +22,6 @@
 		B762B1DD204F70D60077518B /* MA-EMA-MACD介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B762B1AF204F70D50077518B /* MA-EMA-MACD介绍.md */; };
 		B762B1DE204F70D60077518B /* RSI介绍.md in Resources */ = {isa = PBXBuildFile; fileRef = B762B1B0204F70D50077518B /* RSI介绍.md */; };
 		B762B1DF204F70D60077518B /* IMKLineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1B2204F70D50077518B /* IMKLineTool.swift */; };
-		B762B1E0204F70D60077518B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1B3204F70D50077518B /* UIColor+Extension.swift */; };
 		B762B1E1204F70D60077518B /* IMKLineAccessoryMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1B6204F70D60077518B /* IMKLineAccessoryMAView.swift */; };
 		B762B1E2204F70D60077518B /* IMKLineAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1B7204F70D60077518B /* IMKLineAccessoryView.swift */; };
 		B762B1E3204F70D60077518B /* IMKLineAccessoryPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1B9204F70D60077518B /* IMKLineAccessoryPainter.swift */; };
@@ -45,7 +43,6 @@
 		B762B1F3204F70D60077518B /* IMKLineVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1D0204F70D60077518B /* IMKLineVolumeView.swift */; };
 		B762B1F4204F70D60077518B /* IMKLineVolumeMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1D2204F70D60077518B /* IMKLineVolumeMAPainter.swift */; };
 		B762B1F5204F70D60077518B /* IMKLineVolumePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1D3204F70D60077518B /* IMKLineVolumePainter.swift */; };
-		B762B1FC204F7B6B0077518B /* IMLangHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1FB204F7B6B0077518B /* IMLangHelper.swift */; };
 		B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C8291FE9354500B159B6 /* AppDelegate.swift */; };
 		B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C82B1FE9354500B159B6 /* ViewController.swift */; };
 		B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B798C82D1FE9354500B159B6 /* Main.storyboard */; };
@@ -53,6 +50,7 @@
 		B798C8341FE9354500B159B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B798C8321FE9354500B159B6 /* LaunchScreen.storyboard */; };
 		B798C83F1FE9363600B159B6 /* IMKLineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C83E1FE9363600B159B6 /* IMKLineChartViewController.swift */; };
 		B798C8421FE93E1D00B159B6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C8411FE93E1D00B159B6 /* R.generated.swift */; };
+		B7EBB0C7205018B8006F6EF5 /* IMColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EBB0C6205018B8006F6EF5 /* IMColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +59,6 @@
 		A95A2D8D8BDD9CA568483315 /* Pods-IMKLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMKLine.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMKLine/Pods-IMKLine.release.xcconfig"; sourceTree = "<group>"; };
 		B7063C17204AA42F00D3585E /* IMKLineDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineDataParser.swift; sourceTree = "<group>"; };
 		B72A5EB11FEB5D5100FCAC37 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		B751C9A81FEEAAD6006025B1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		B751C9AA1FEEAAD8006025B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B762B1A5204F70D50077518B /* IMKLineConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineConfig.swift; sourceTree = "<group>"; };
 		B762B1A6204F70D50077518B /* IMKLineParamters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineParamters.swift; sourceTree = "<group>"; };
 		B762B1A7204F70D50077518B /* IMKLineTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTheme.swift; sourceTree = "<group>"; };
@@ -75,7 +71,6 @@
 		B762B1AF204F70D50077518B /* MA-EMA-MACD介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "MA-EMA-MACD介绍.md"; sourceTree = "<group>"; };
 		B762B1B0204F70D50077518B /* RSI介绍.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "RSI介绍.md"; sourceTree = "<group>"; };
 		B762B1B2204F70D50077518B /* IMKLineTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTool.swift; sourceTree = "<group>"; };
-		B762B1B3204F70D50077518B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B762B1B6204F70D60077518B /* IMKLineAccessoryMAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryMAView.swift; sourceTree = "<group>"; };
 		B762B1B7204F70D60077518B /* IMKLineAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryView.swift; sourceTree = "<group>"; };
 		B762B1B9204F70D60077518B /* IMKLineAccessoryPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessoryPainter.swift; sourceTree = "<group>"; };
@@ -97,7 +92,6 @@
 		B762B1D0204F70D60077518B /* IMKLineVolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeView.swift; sourceTree = "<group>"; };
 		B762B1D2204F70D60077518B /* IMKLineVolumeMAPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAPainter.swift; sourceTree = "<group>"; };
 		B762B1D3204F70D60077518B /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
-		B762B1FB204F7B6B0077518B /* IMLangHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMLangHelper.swift; sourceTree = "<group>"; };
 		B798C8261FE9354500B159B6 /* IMKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B798C8291FE9354500B159B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B798C82B1FE9354500B159B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +101,7 @@
 		B798C8351FE9354500B159B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B798C83E1FE9363600B159B6 /* IMKLineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMKLineChartViewController.swift; sourceTree = "<group>"; };
 		B798C8411FE93E1D00B159B6 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		B7EBB0C6205018B8006F6EF5 /* IMColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +119,6 @@
 		B762B1A3204F70D50077518B /* IMKLine */ = {
 			isa = PBXGroup;
 			children = (
-				B762B1F8204F726D0077518B /* Resources */,
 				B762B1A4204F70D50077518B /* Config */,
 				B762B1A8204F70D50077518B /* Model */,
 				B762B1B1204F70D50077518B /* Tool */,
@@ -163,8 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				B762B1B2204F70D50077518B /* IMKLineTool.swift */,
-				B762B1B3204F70D50077518B /* UIColor+Extension.swift */,
-				B762B1FB204F7B6B0077518B /* IMLangHelper.swift */,
+				B7EBB0C6205018B8006F6EF5 /* IMColor.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -275,14 +268,6 @@
 				B762B1D3204F70D60077518B /* IMKLineVolumePainter.swift */,
 			);
 			path = Painter;
-			sourceTree = "<group>";
-		};
-		B762B1F8204F726D0077518B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B751C9A91FEEAAD6006025B1 /* Localizable.strings */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		B798C81D1FE9354500B159B6 = {
@@ -415,7 +400,6 @@
 				B762B1D7204F70D60077518B /* BOLL介绍.md in Resources */,
 				B798C8311FE9354500B159B6 /* Assets.xcassets in Resources */,
 				B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */,
-				B751C9A71FEEAAD6006025B1 /* Localizable.strings in Resources */,
 				B72A5EB21FEB5D5100FCAC37 /* data.json in Resources */,
 				B762B1DC204F70D60077518B /* KDJ介绍.md in Resources */,
 				B762B1DD204F70D60077518B /* MA-EMA-MACD介绍.md in Resources */,
@@ -518,7 +502,6 @@
 				B762B1E6204F70D60077518B /* IMKLineScrollView.swift in Sources */,
 				B762B1E3204F70D60077518B /* IMKLineAccessoryPainter.swift in Sources */,
 				B762B1EF204F70D60077518B /* IMKLinePainter.swift in Sources */,
-				B762B1FC204F7B6B0077518B /* IMLangHelper.swift in Sources */,
 				B762B1EB204F70D60077518B /* IMKLineMAView.swift in Sources */,
 				B762B1E7204F70D60077518B /* IMKLineAccessorySetView.swift in Sources */,
 				B762B1F0204F70D60077518B /* IMKLineRightYView.swift in Sources */,
@@ -531,7 +514,6 @@
 				B762B1F3204F70D60077518B /* IMKLineVolumeView.swift in Sources */,
 				B762B1DB204F70D60077518B /* IMKLineSubStruct.swift in Sources */,
 				B762B1DF204F70D60077518B /* IMKLineTool.swift in Sources */,
-				B762B1E0204F70D60077518B /* UIColor+Extension.swift in Sources */,
 				B762B1F5204F70D60077518B /* IMKLineVolumePainter.swift in Sources */,
 				B798C83F1FE9363600B159B6 /* IMKLineChartViewController.swift in Sources */,
 				B762B1EA204F70D60077518B /* IMKLineTimeFrameSetView.swift in Sources */,
@@ -541,6 +523,7 @@
 				B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */,
 				B798C8421FE93E1D00B159B6 /* R.generated.swift in Sources */,
 				B762B1F2204F70D60077518B /* IMKLineVolumeMAView.swift in Sources */,
+				B7EBB0C7205018B8006F6EF5 /* IMColor.swift in Sources */,
 				B762B1D8204F70D60077518B /* IMKLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,15 +531,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B751C9A91FEEAAD6006025B1 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B751C9A81FEEAAD6006025B1 /* zh-Hans */,
-				B751C9AA1FEEAAD8006025B1 /* en */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		B798C82D1FE9354500B159B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
