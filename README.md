@@ -1,7 +1,6 @@
 # IMKLine -- Swift K线图
 ### 欢迎加群讨论更多：83766186😊
 ---
-由于项目赶紧，所以Dome出来先做项目了，后面再慢慢完善文档，下图是一些预览截图
 
 ## 普通K线 + MA线 + 成交量柱状图 + MACD
 ![普通K线 + MA线 + 成交量柱状图 + MACD](https://github.com/GitHub-Life/IMKLine/raw/imoon/picture/screen_shot0.png)
