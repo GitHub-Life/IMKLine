@@ -2,7 +2,7 @@
 //  IMKLineDataParser.swift
 //  X-Token
 //
-//  Created by 万涛 on 2018/3/3.
+//  Created by iMoon on 2018/3/3.
 //  Copyright © 2018年 iMoon. All rights reserved.
 //
 

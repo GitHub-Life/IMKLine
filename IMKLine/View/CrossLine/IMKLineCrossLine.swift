@@ -2,7 +2,7 @@
 //  IMKLineCrossLine.swift
 //  IMKLine
 //
-//  Created by 万涛 on 2017/12/21.
+//  Created by iMoon on 2017/12/21.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 

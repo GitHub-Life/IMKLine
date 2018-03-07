@@ -2,7 +2,7 @@
 //  IMKLineAccessoryPainter.swift
 //  IMKLine
 //
-//  Created by 万涛 on 2017/12/23.
+//  Created by iMoon on 2017/12/23.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 

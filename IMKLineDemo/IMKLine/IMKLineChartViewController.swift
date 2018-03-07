@@ -2,7 +2,7 @@
 //  IMKLineChartViewController.swift
 //  IMKLine
 //
-//  Created by 万涛 on 2017/12/19.
+//  Created by iMoon on 2017/12/19.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 

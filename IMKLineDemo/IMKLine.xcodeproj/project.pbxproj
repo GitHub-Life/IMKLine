@@ -45,7 +45,7 @@
 		B762B1F3204F70D60077518B /* IMKLineVolumeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1D0204F70D60077518B /* IMKLineVolumeView.swift */; };
 		B762B1F4204F70D60077518B /* IMKLineVolumeMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1D2204F70D60077518B /* IMKLineVolumeMAPainter.swift */; };
 		B762B1F5204F70D60077518B /* IMKLineVolumePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1D3204F70D60077518B /* IMKLineVolumePainter.swift */; };
-		B762B1F7204F71E20077518B /* LangHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1F6204F71E20077518B /* LangHelper.swift */; };
+		B762B1FC204F7B6B0077518B /* IMLangHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1FB204F7B6B0077518B /* IMLangHelper.swift */; };
 		B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C8291FE9354500B159B6 /* AppDelegate.swift */; };
 		B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C82B1FE9354500B159B6 /* ViewController.swift */; };
 		B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B798C82D1FE9354500B159B6 /* Main.storyboard */; };
@@ -97,7 +97,7 @@
 		B762B1D0204F70D60077518B /* IMKLineVolumeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeView.swift; sourceTree = "<group>"; };
 		B762B1D2204F70D60077518B /* IMKLineVolumeMAPainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumeMAPainter.swift; sourceTree = "<group>"; };
 		B762B1D3204F70D60077518B /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
-		B762B1F6204F71E20077518B /* LangHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangHelper.swift; sourceTree = "<group>"; };
+		B762B1FB204F7B6B0077518B /* IMLangHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMLangHelper.swift; sourceTree = "<group>"; };
 		B798C8261FE9354500B159B6 /* IMKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B798C8291FE9354500B159B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B798C82B1FE9354500B159B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 			children = (
 				B762B1B2204F70D50077518B /* IMKLineTool.swift */,
 				B762B1B3204F70D50077518B /* UIColor+Extension.swift */,
-				B762B1F6204F71E20077518B /* LangHelper.swift */,
+				B762B1FB204F7B6B0077518B /* IMLangHelper.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -515,10 +515,10 @@
 				B762B1D9204F70D60077518B /* IMKLineCalculator.swift in Sources */,
 				B762B1D6204F70D60077518B /* IMKLineTheme.swift in Sources */,
 				B762B1EE204F70D60077518B /* IMKLineMAPainter.swift in Sources */,
-				B762B1F7204F71E20077518B /* LangHelper.swift in Sources */,
 				B762B1E6204F70D60077518B /* IMKLineScrollView.swift in Sources */,
 				B762B1E3204F70D60077518B /* IMKLineAccessoryPainter.swift in Sources */,
 				B762B1EF204F70D60077518B /* IMKLinePainter.swift in Sources */,
+				B762B1FC204F7B6B0077518B /* IMLangHelper.swift in Sources */,
 				B762B1EB204F70D60077518B /* IMKLineMAView.swift in Sources */,
 				B762B1E7204F70D60077518B /* IMKLineAccessorySetView.swift in Sources */,
 				B762B1F0204F70D60077518B /* IMKLineRightYView.swift in Sources */,

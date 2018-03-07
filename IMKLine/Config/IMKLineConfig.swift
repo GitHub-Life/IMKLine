@@ -2,7 +2,7 @@
 //  IMKLineGolbalParameters.swift
 //  IMKLine
 //
-//  Created by 万涛 on 2017/12/20.
+//  Created by iMoon on 2017/12/20.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 
@@ -94,17 +94,17 @@ struct IMKLineConfig {
     
     /// KLine 时段默认设置选项
     static let KLineTimeFrames = [
-        "1 \(LangHelper.getString("kline_minute"))",
-        "5 \(LangHelper.getString("kline_minute"))",
-        "15 \(LangHelper.getString("kline_minute"))",
-        "30 \(LangHelper.getString("kline_minute"))",
-        "1 \(LangHelper.getString("kline_hour"))",
-        "2 \(LangHelper.getString("kline_hours"))",
-        "4 \(LangHelper.getString("kline_hours"))",
-        "1 \(LangHelper.getString("kline_day"))",
-        "3 \(LangHelper.getString("kline_days"))",
-        "5 \(LangHelper.getString("kline_days"))",
-        "1 \(LangHelper.getString("kline_week"))"
+        "1 \(IMLangHelper.getString("kline_minute"))",
+        "5 \(IMLangHelper.getString("kline_minute"))",
+        "15 \(IMLangHelper.getString("kline_minute"))",
+        "30 \(IMLangHelper.getString("kline_minute"))",
+        "1 \(IMLangHelper.getString("kline_hour"))",
+        "2 \(IMLangHelper.getString("kline_hours"))",
+        "4 \(IMLangHelper.getString("kline_hours"))",
+        "1 \(IMLangHelper.getString("kline_day"))",
+        "3 \(IMLangHelper.getString("kline_days"))",
+        "5 \(IMLangHelper.getString("kline_days"))",
+        "1 \(IMLangHelper.getString("kline_week"))"
     ]
     
     

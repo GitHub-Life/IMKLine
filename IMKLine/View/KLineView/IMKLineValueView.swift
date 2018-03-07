@@ -2,7 +2,7 @@
 //  IMKLineValueView.swift
 //  IMKLine
 //
-//  Created by 万涛 on 2017/12/20.
+//  Created by iMoon on 2017/12/20.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 
@@ -43,7 +43,7 @@ class IMKLineValueView: UIView {
         }
     }
     //
-    let valueTips = ["\(LangHelper.getString("kline_opening")) ", "\(LangHelper.getString("kline_high")) ", "\(LangHelper.getString("kline_low")) ", "\(LangHelper.getString("kline_closing")) ", "\(LangHelper.getString("kline_percent")) "]
+    let valueTips = ["\(IMLangHelper.getString("kline_opening")) ", "\(IMLangHelper.getString("kline_high")) ", "\(IMLangHelper.getString("kline_low")) ", "\(IMLangHelper.getString("kline_closing")) ", "\(IMLangHelper.getString("kline_percent")) "]
     var kline = IMKLine()
     
     func update(kline: IMKLine) {

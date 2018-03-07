@@ -2,7 +2,7 @@
 //  IMKLineVolumeMAView.swift
 //  IMKLine
 //
-//  Created by 万涛 on 2017/12/20.
+//  Created by iMoon on 2017/12/20.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ class IMKLineVolumeMAView: UIView {
             subv.removeFromSuperview()
         }
         
-        let volumeText = String.init(format: "\(LangHelper.getString("kline_volume")):%.\(IMKLineParamters.VolumeDataDecimals)f", kline.volume)
+        let volumeText = String.init(format: "\(IMLangHelper.getString("kline_volume")):%.\(IMKLineParamters.VolumeDataDecimals)f", kline.volume)
         self.addLabel(index: 0, text: volumeText)
         
         var index = 1

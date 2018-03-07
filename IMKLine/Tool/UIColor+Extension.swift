@@ -2,7 +2,7 @@
 //  UIColor+Extension.swift
 //  Hotico
 //
-//  Created by 万涛 on 2017/11/22.
+//  Created by iMoon on 2017/11/22.
 //  Copyright © 2017年 yeeyuntech. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  IMKLineIndexSetContainerView.swift
 //  IMKLine
 //
-//  Created by 万涛 on 2017/12/25.
+//  Created by iMoon on 2017/12/25.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  IMKLineTool.swift
 //  XToken
 //
-//  Created by 万涛 on 2017/12/30.
+//  Created by iMoon on 2017/12/30.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 

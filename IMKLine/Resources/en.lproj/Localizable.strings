@@ -2,13 +2,13 @@
   Localizable.strings
   IMKLine
 
-  Created by 万涛 on 2017/12/23.
+  Created by iMoon on 2017/12/23.
   Copyright © 2017年 iMoon. All rights reserved.
 */
 
 // KLine
-"kline_opening" = "Opening";
-"kline_closing" = "Closing";
+"kline_opening" = "Open";
+"kline_closing" = "Close";
 "kline_low" = "Low";
 "kline_high" = "High";
 "kline_percent" = "Percent";

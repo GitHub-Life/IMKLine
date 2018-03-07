@@ -2,7 +2,7 @@
 //  IMKLineVolumeMAPainter.swift
 //  IMKLine
 //
-//  Created by 万涛 on 2017/12/22.
+//  Created by iMoon on 2017/12/22.
 //  Copyright © 2017年 iMoon. All rights reserved.
 //
 
