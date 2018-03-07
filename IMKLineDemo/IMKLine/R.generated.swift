@@ -169,13 +169,8 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.string` struct is generated, and contains static references to 2 localization tables.
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.launchScreen` struct is generated, and contains static references to 0 localization keys.
-    struct launchScreen {
-      fileprivate init() {}
-    }
-    
     /// This `R.string.localizable` struct is generated, and contains static references to 13 localization keys.
     struct localizable {
       /// zh-Hans translation: 低
