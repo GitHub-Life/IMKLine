@@ -56,7 +56,7 @@ class IMKLineMAPainter: NSObject {
     }
     */
     
-    func draw(context: CGContext, klineArray: [IMKLine]) {
+    public func draw(context: CGContext, klineArray: [IMKLine]) {
         if IMKLineParamters.KLineStyle == .curve || klineArray.count == 0 {
             return
         }

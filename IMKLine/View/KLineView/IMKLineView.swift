@@ -9,14 +9,14 @@
 import UIKit
 import SnapKit
 
-protocol IMKLineViewUpdateDelegate: NSObjectProtocol {
+public protocol IMKLineViewUpdateDelegate: NSObjectProtocol {
     func updateKlineRightYRange(min: Double, max: Double)
     func updateTimeRange(beginTimeStamp: TimeInterval, endTimeStamp: TimeInterval)
 }
 
-class IMKLineView: UIView {
+public class IMKLineView: UIView {
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -24,16 +24,16 @@ class IMKLineView: UIView {
         super.init(frame: frame)
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: CGRect.zero)
         self.layer.isOpaque = false
     }
     
-    weak var superScrollView: IMKLineScrollView!
+    public weak var superScrollView: IMKLineScrollView!
     
-    weak var updateDelegate: IMKLineViewUpdateDelegate?
+    public weak var updateDelegate: IMKLineViewUpdateDelegate?
 
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         let context = UIGraphicsGetCurrentContext()!
         context.clear(rect)
@@ -91,8 +91,8 @@ class IMKLineView: UIView {
     
     private var klineGroup = IMKLineGroup()
     
-    var viewWidth = CGFloat(0)
-    func updateViewWidth() {
+    public var viewWidth = CGFloat(0)
+    public func updateViewWidth() {
         let klineViewWidth = CGFloat(self.klineGroup.klineArray.count) * (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth) + IMKLineConfig.KLineGap
         self.viewWidth = klineViewWidth
         self.snp.updateConstraints { (maker) in
@@ -100,22 +100,22 @@ class IMKLineView: UIView {
         }
     }
     
-    var needDrawKlineArray = [IMKLine]()
+    public var needDrawKlineArray = [IMKLine]()
     
-    func draw() {
+    public func draw() {
         self.extractNeedDrawKlineArray()
         self.setKlinePosition()
         self.setNeedsDisplay()
     }
     
-    var needDrawStartIndex: Int {
+    public var needDrawStartIndex: Int {
         get {
             let scrollViewOffsetX = self.superScrollView.contentOffset.x < 0 ? 0 : self.superScrollView.contentOffset.x;
             return Int(abs((scrollViewOffsetX - IMKLineConfig.KLineGap) / (IMKLineConfig.KLineWidth + IMKLineConfig.KLineGap)))
         }
     }
     
-    var startXPosition: CGFloat {
+    public var startXPosition: CGFloat {
         return CGFloat(self.needDrawStartIndex + 1) * IMKLineConfig.KLineGap + CGFloat(self.needDrawStartIndex) * IMKLineConfig.KLineWidth + IMKLineConfig.KLineWidth / 2
     }
     
@@ -140,8 +140,8 @@ class IMKLineView: UIView {
         }
     }
     
-    var minKline = IMKLine()
-    var maxKline = IMKLine()
+    public var minKline = IMKLine()
+    public var maxKline = IMKLine()
     
     // MARK: - 设置数据在画布上的Position
     private func setKlinePosition() {
@@ -293,7 +293,7 @@ class IMKLineView: UIView {
 // MARK: - 数据管理
 extension IMKLineView {
     
-    func getSelectedKline(touchPoint: CGPoint) -> IMKLine? {
+    public func getSelectedKline(touchPoint: CGPoint) -> IMKLine? {
         var index = Int((touchPoint.x - IMKLineConfig.KLineGap) / (IMKLineConfig.KLineGap + IMKLineConfig.KLineWidth))
         if index < 0 {
             index = 0
@@ -308,11 +308,11 @@ extension IMKLineView {
         return selectedKline
     }
     
-    func getKlineGroup() -> IMKLineGroup {
+    public func getKlineGroup() -> IMKLineGroup {
         return klineGroup
     }
     
-    func appendData(klineArray: [IMKLine]) {
+    public func appendData(klineArray: [IMKLine]) {
         let isFirst = self.klineGroup.klineArray.count == 0
         self.klineGroup.insert(klineArray: klineArray)
         let offsetX = self.superScrollView.contentOffset.x
@@ -330,7 +330,7 @@ extension IMKLineView {
         self.draw()
     }
     
-    func reloadData(klineArray: [IMKLine]) {
+    public func reloadData(klineArray: [IMKLine]) {
         if klineArray.count > 0 {
             self.klineGroup.klineArray.removeAll()
             self.appendData(klineArray: klineArray)
@@ -342,7 +342,7 @@ extension IMKLineView {
         }
     }
     
-    func removeAllData() {
+    public func removeAllData() {
         self.klineGroup.klineArray.removeAll()
     }
     

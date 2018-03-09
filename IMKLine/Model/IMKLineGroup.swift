@@ -8,9 +8,9 @@
 
 import UIKit
 
-class IMKLineGroup: NSObject {
+public class IMKLineGroup: NSObject {
 
-    var klineArray = [IMKLine]()
+    public var klineArray = [IMKLine]()
     
     /* 此方法在项目中根据返回的数据结构实现
     static func klineArray(klineJsonArray: [JSON]) -> [IMKLine] {
@@ -23,17 +23,17 @@ class IMKLineGroup: NSObject {
     }
      */
     
-    func insert(klineArray: [IMKLine]) {
+    public func insert(klineArray: [IMKLine]) {
         self.klineArray = klineArray + self.klineArray
         self.enumerateKlines()
     }
     
-    func insert(klineGroup: IMKLineGroup) {
+    public func insert(klineGroup: IMKLineGroup) {
         self.klineArray = klineGroup.klineArray + self.klineArray
         self.enumerateKlines()
     }
     
-    func enumerateKlines() {
+    public func enumerateKlines() {
         if self.klineArray.count == 0 {
             return
         }
@@ -46,7 +46,7 @@ class IMKLineGroup: NSObject {
         }
     }
     
-    func minTimeStamp() -> Double {
+    public func minTimeStamp() -> Double {
         if self.klineArray.count > 0 {
             return self.klineArray.first!.timeStamp
         }

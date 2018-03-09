@@ -8,17 +8,17 @@
 
 import UIKit
 
-enum IndexSetType: Int {
+public enum IndexSetType: Int {
     case TimeFrame, MA, Accessory
 }
 
-protocol IMKLineIndexSetContainerViewDelegate: NSObjectProtocol {
+public protocol IMKLineIndexSetContainerViewDelegate: NSObjectProtocol {
     func setBtnClick(indexSetType: IndexSetType, selectedIndex: Int)
 }
 
-class IMKLineIndexSetContainerView: UIView {
+public class IMKLineIndexSetContainerView: UIView {
     
-    var timeFrameSetViewOrigin = CGPoint.zero {
+    public var timeFrameSetViewOrigin = CGPoint.zero {
         didSet {
             self.timeFrameSetView.snp.updateConstraints { (maker) in
                 maker.top.equalTo(self.timeFrameSetViewOrigin.y)
@@ -26,7 +26,7 @@ class IMKLineIndexSetContainerView: UIView {
             }
         }
     }
-    var maSetViewOrigin = CGPoint.zero {
+    public var maSetViewOrigin = CGPoint.zero {
         didSet {
             self.maSetView.snp.updateConstraints { (maker) in
                 maker.top.equalTo(self.maSetViewOrigin.y)
@@ -34,7 +34,7 @@ class IMKLineIndexSetContainerView: UIView {
             }
         }
     }
-    var accessorySetViewOrigin = CGPoint.zero {
+    public var accessorySetViewOrigin = CGPoint.zero {
         didSet {
             self.accessorySetView.snp.updateConstraints { (maker) in
                 maker.top.equalTo(self.accessorySetViewOrigin.y)
@@ -43,13 +43,13 @@ class IMKLineIndexSetContainerView: UIView {
         }
     }
     
-    weak var delegate: IMKLineIndexSetContainerViewDelegate?
+    public weak var delegate: IMKLineIndexSetContainerViewDelegate?
     
-    let timeFrameSetView = IMKLineTimeFrameSetView()
-    let maSetView = IMKLineMASetView()
-    let accessorySetView = IMKLineAccessorySetView()
+    public let timeFrameSetView = IMKLineTimeFrameSetView()
+    public let maSetView = IMKLineMASetView()
+    public let accessorySetView = IMKLineAccessorySetView()
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         self.addSubview(self.timeFrameSetView)
         self.timeFrameSetView.snp.makeConstraints { (maker) in
@@ -88,8 +88,8 @@ class IMKLineIndexSetContainerView: UIView {
         }
     }
     
-    var currentIndexSetType: IndexSetType = .TimeFrame
-    func showIndexSetView(indexSetType: IndexSetType, selectedIndex: Int) {
+    public var currentIndexSetType: IndexSetType = .TimeFrame
+    public func showIndexSetView(indexSetType: IndexSetType, selectedIndex: Int) {
         self.currentIndexSetType = indexSetType
         self.alpha = 1
         switch indexSetType {
@@ -111,11 +111,11 @@ class IMKLineIndexSetContainerView: UIView {
         }
     }
     
-    func hide() {
+    public func hide() {
         self.alpha = 0
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.hide()
     }
  

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class IMKLineTimeView: UIView {
+public class IMKLineTimeView: UIView {
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: CGRect.zero)
     }
     
@@ -23,8 +23,8 @@ class IMKLineTimeView: UIView {
         self.setupView()
     }
     
-    let beginTimeLabel = UILabel()
-    let endTimeLabel = UILabel()
+    public let beginTimeLabel = UILabel()
+    public let endTimeLabel = UILabel()
     private func setupView() {
         self.addSubview(self.beginTimeLabel)
         self.beginTimeLabel.textColor = IMKLineTheme.AccessoryTextColor
@@ -45,7 +45,7 @@ class IMKLineTimeView: UIView {
         }
     }
     
-    func update(beginTimeStamp: TimeInterval, endTimeStamp: TimeInterval) {
+    public func update(beginTimeStamp: TimeInterval, endTimeStamp: TimeInterval) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd HH:mm"
         self.beginTimeLabel.text = dateFormatter.string(from: Date.init(timeIntervalSince1970: beginTimeStamp))

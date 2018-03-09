@@ -8,46 +8,46 @@
 
 import UIKit
 
-struct IMKLinePosition {
-    var openPoint = CGPoint.zero
-    var closePoint = CGPoint.zero
-    var highPoint = CGPoint.zero
-    var lowPoint = CGPoint.zero
+public struct IMKLinePosition {
+    public var openPoint = CGPoint.zero
+    public var closePoint = CGPoint.zero
+    public var highPoint = CGPoint.zero
+    public var lowPoint = CGPoint.zero
 }
 
-struct IMKLineVolumePosition {
+public struct IMKLineVolumePosition {
     var zeroPoint = CGPoint.zero
     var volumePoint = CGPoint.zero
 }
 
-struct IMKLineBoll {
-    var MB = Double(0)
-    var UP = Double(0)
-    var DN = Double(0)
-    var MBPoint = CGPoint.zero
-    var UPPoint = CGPoint.zero
-    var DNPoint = CGPoint.zero
+public struct IMKLineBoll {
+    public var MB = Double(0)
+    public var UP = Double(0)
+    public var DN = Double(0)
+    public var MBPoint = CGPoint.zero
+    public var UPPoint = CGPoint.zero
+    public var DNPoint = CGPoint.zero
     
-    init(MB: Double, UP: Double, DN: Double) {
+    public init(MB: Double, UP: Double, DN: Double) {
         self.MB = MB
         self.UP = UP
         self.DN = DN
     }
 }
 
-struct IMKLineMACD {
-    var EMA1 = Double(0)
-    var EMA2 = Double(0)
-    var DIFF = Double(0)
-    var DEA = Double(0)
-    var BAR = Double(0)
-    var zeroPoint = CGPoint.zero
-    var DIFFPoint = CGPoint.zero
-    var DEAPoint = CGPoint.zero
-    var BARPoint = CGPoint.zero
+public struct IMKLineMACD {
+    public var EMA1 = Double(0)
+    public var EMA2 = Double(0)
+    public var DIFF = Double(0)
+    public var DEA = Double(0)
+    public var BAR = Double(0)
+    public var zeroPoint = CGPoint.zero
+    public var DIFFPoint = CGPoint.zero
+    public var DEAPoint = CGPoint.zero
+    public var BARPoint = CGPoint.zero
 }
 
-struct IMKLineKDJ {
+public struct IMKLineKDJ {
     var k = Double(50)
     var d = Double(50)
     var j = Double(0)
@@ -56,7 +56,7 @@ struct IMKLineKDJ {
     var jPoint = CGPoint.zero
 }
 
-struct IMKLineRSI {
+public struct IMKLineRSI {
     var klineRSIs = [Int : Double]()
     var bothRSI: (low: Double, high: Double)?
     var klineRSIPositions = [Int : CGPoint]()

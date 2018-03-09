@@ -9,11 +9,11 @@
 import UIKit
 import SnapKit
 
-enum LineOrientation: Int {
+public enum LineOrientation: Int {
     case portrait, landscape
 }
 
-class IMKLineCrossLine: UIView {
+public class IMKLineCrossLine: UIView {
     
     lazy var label: UILabel = {
         let label = UILabel()
@@ -31,7 +31,7 @@ class IMKLineCrossLine: UIView {
     
     private var orientation: LineOrientation!
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -39,7 +39,7 @@ class IMKLineCrossLine: UIView {
         self.init(frame: CGRect.zero)
     }
     
-    convenience init(orientation: LineOrientation) {
+    public convenience init(orientation: LineOrientation) {
         self.init(frame: CGRect.zero)
         self.orientation = orientation
         self.setupView()
@@ -49,7 +49,7 @@ class IMKLineCrossLine: UIView {
         super.init(frame: frame)
     }
     
-    func setupView() {
+    public func setupView() {
         self.addSubview(self.label)
         self.addSubview(self.line)
         if self.orientation == .portrait {
@@ -81,7 +81,7 @@ class IMKLineCrossLine: UIView {
         }
     }
     
-    func update(value: String) {
+    public func update(value: String) {
         self.label.text = " \(value) "
     }
     

@@ -9,29 +9,29 @@
 import UIKit
 import SnapKit
 
-protocol IMKLineVolumeViewUpdateDelegate: NSObjectProtocol {
+public protocol IMKLineVolumeViewUpdateDelegate: NSObjectProtocol {
     func updateVolumeRightYRange(min: Double, max: Double)
 }
 
-class IMKLineVolumeView: UIView {
+public class IMKLineVolumeView: UIView {
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    weak var updateDelegate: IMKLineVolumeViewUpdateDelegate?
-    weak var klineView: IMKLineView!
+    public weak var updateDelegate: IMKLineVolumeViewUpdateDelegate?
+    public weak var klineView: IMKLineView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: CGRect.zero)
         self.layer.isOpaque = false
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         
         let context = UIGraphicsGetCurrentContext()!
@@ -67,9 +67,9 @@ class IMKLineVolumeView: UIView {
         self.klineView.superScrollView.accessoryView.draw(klineArray: self.klineArray)
     }
     
-    var klineArray = [IMKLine]()
+    public var klineArray = [IMKLine]()
     
-    func draw(klineArray: [IMKLine]) {
+    public func draw(klineArray: [IMKLine]) {
         self.klineArray = klineArray
         self.setKlineVolumePosition()
         self.setNeedsDisplay()

@@ -10,7 +10,7 @@ import UIKit
 
 class IMKLinePainter: NSObject {
     
-    func draw(context: CGContext, klineArray: [IMKLine], size: CGSize) {
+    public func draw(context: CGContext, klineArray: [IMKLine], size: CGSize) {
         if klineArray.count == 0 {
             return
         }

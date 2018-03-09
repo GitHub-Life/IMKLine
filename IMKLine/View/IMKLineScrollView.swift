@@ -9,25 +9,25 @@
 import UIKit
 import SnapKit
 
-protocol IMKLineScrollViewDelegate: NSObjectProtocol {
+public protocol IMKLineScrollViewDelegate: NSObjectProtocol {
     func selectedKline(kline: IMKLine)
     func hideKlineInfo(lastKline: IMKLine)
 }
 
-class IMKLineScrollView: UIScrollView {
+public class IMKLineScrollView: UIScrollView {
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    weak var imDelegate: IMKLineScrollViewDelegate?
-    var loadMore: (()->())?
+    public weak var imDelegate: IMKLineScrollViewDelegate?
+    public var loadMore: (()->())?
     
-    let klineView = IMKLineView()
-    let volumeView = IMKLineVolumeView()
-    let accessoryView = IMKLineAccessoryView()
+    public let klineView = IMKLineView()
+    public let volumeView = IMKLineVolumeView()
+    public let accessoryView = IMKLineAccessoryView()
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: CGRect.zero)
     }
     
@@ -88,7 +88,7 @@ class IMKLineScrollView: UIScrollView {
         self.addGestureRecognizer(pinchGr)
     }
     
-    var showAccessory: Bool = IMKLineParamters.AccessoryType != .NONE {
+    public var showAccessory: Bool = IMKLineParamters.AccessoryType != .NONE {
         didSet {
             self.klineView.snp.remakeConstraints { [weak self] (maker) in
                 self?.setKLineViewConstraint(maker: maker)
@@ -118,7 +118,7 @@ class IMKLineScrollView: UIScrollView {
     
 }
 
-extension IMKLineScrollView {
+public extension IMKLineScrollView {
     
     private func setKLineViewConstraint(maker: ConstraintMaker) {
         maker.top.equalToSuperview()
@@ -149,7 +149,7 @@ extension IMKLineScrollView {
 
 extension IMKLineScrollView: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.klineView.draw()
         if self.klineView.getKlineGroup().klineArray.count > 0 {
             self.imDelegate?.hideKlineInfo(lastKline: self.klineView.getKlineGroup().klineArray.last!)
@@ -164,7 +164,7 @@ extension IMKLineScrollView: UIScrollViewDelegate {
 
 extension IMKLineScrollView {
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let point = touches.first!.location(in: self.klineView)
         if let selectedKline = self.klineView.getSelectedKline(touchPoint: point) {
             self.imDelegate?.selectedKline(kline: selectedKline)

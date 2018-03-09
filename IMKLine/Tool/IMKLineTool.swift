@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct IMKLineTool {
+public struct IMKLineTool {
     
-    static func dataDecimals(_ v1: Double, _ v2: Double) -> Int {
+    public static func dataDecimals(_ v1: Double, _ v2: Double) -> Int {
         let mv = (v1 + v2) / 2
         if mv < 1 {
             return IMKLineConfig.DataDecimals

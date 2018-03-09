@@ -8,14 +8,14 @@
 
 import UIKit
 
-class IMKLine: NSObject {
+public class IMKLine: NSObject {
     
-    var timeStamp: Double = Double(0)
-    var open: Double = Double(0)
-    var close: Double = Double(0)
-    var low: Double = Double(0)
-    var high: Double = Double(0)
-    var volume: Double = Double(0)
+    public var timeStamp: Double = Double(0)
+    public var open: Double = Double(0)
+    public var close: Double = Double(0)
+    public var low: Double = Double(0)
+    public var high: Double = Double(0)
+    public var volume: Double = Double(0)
     
     /* 此方法在项目中根据返回的数据结构实现
     convenience init(json: JSON) {
@@ -29,28 +29,28 @@ class IMKLine: NSObject {
     }
      */
     
-    var prevKline: IMKLine!
-    var index = 0
-    weak var klineGroup: IMKLineGroup!
+    public var prevKline: IMKLine!
+    public var index = 0
+    public weak var klineGroup: IMKLineGroup!
     
-    var sumLastClose = Double(0)
-    var sumLastVolume = Double(0)
-    var klineMAs = [Int : Double]()
-    var volumeMAs = [Int : Double]()
-    var klineEMAs = [Int : Double]()
+    public var sumLastClose = Double(0)
+    public var sumLastVolume = Double(0)
+    public var klineMAs = [Int : Double]()
+    public var volumeMAs = [Int : Double]()
+    public var klineEMAs = [Int : Double]()
     
-    var klinePosition = IMKLinePosition()
-    var volumePosition = IMKLineVolumePosition()
-    var klineMAPositions = [Int : CGPoint]()
-    var volumeMAPositions = [Int : CGPoint]()
-    var klineEMAPositions = [Int : CGPoint]()
+    public var klinePosition = IMKLinePosition()
+    public var volumePosition = IMKLineVolumePosition()
+    public var klineMAPositions = [Int : CGPoint]()
+    public var volumeMAPositions = [Int : CGPoint]()
+    public var klineEMAPositions = [Int : CGPoint]()
     
-    var klineBoll: IMKLineBoll?
-    var sumC_MA_Square = Double(0)
+    public var klineBoll: IMKLineBoll?
+    public var sumC_MA_Square = Double(0)
     
-    var klineMACD = IMKLineMACD()
+    public var klineMACD = IMKLineMACD()
     
-    var klineKDJ = IMKLineKDJ()
+    public var klineKDJ = IMKLineKDJ()
     
-    var klineRSI = IMKLineRSI()
+    public var klineRSI = IMKLineRSI()
 }

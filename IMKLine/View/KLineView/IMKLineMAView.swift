@@ -8,9 +8,9 @@
 
 import UIKit
 
-class IMKLineMAView: UIView {
+public class IMKLineMAView: UIView {
     
-    func update(kline: IMKLine) {
+    public func update(kline: IMKLine) {
         for subv in self.subviews {
             subv.removeFromSuperview()
         }
@@ -44,7 +44,7 @@ class IMKLineMAView: UIView {
         }
     }
     
-    func addLabel(index: Int, text: String, offset: Int = 0) {
+    private func addLabel(index: Int, text: String, offset: Int = 0) {
         let label = UILabel()
         label.textColor = IMKLineTheme.MAColors[index + offset]
         label.font = UIFont.systemFont(ofSize: IMKLineTheme.AccessoryTextFontSize)

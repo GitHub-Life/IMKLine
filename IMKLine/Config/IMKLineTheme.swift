@@ -8,37 +8,37 @@
 
 import UIKit
 
-struct IMKLineTheme {
+public struct IMKLineTheme {
     
-    static let KLineChartBgColor = UIColor.init(white: 0, alpha: 0)
+    public static let KLineChartBgColor = UIColor.init(white: 0, alpha: 0)
     
-    static let LineColor = UIColor.blue
+    public static let LineColor = UIColor.blue
     
-    static let BorderColor = UIColor.init(rgbHex: 0x444444)
+    public static let BorderColor = UIColor.init(rgbHex: 0x444444)
     
-    static let KLineValueBgColor = UIColor.init(rgbaHex: 0x1E1E1EAA)
+    public static let KLineValueBgColor = UIColor.init(rgbaHex: 0x1E1E1EAA)
     
-    static let AccessoryTextColor = UIColor.init(rgbHex: 0x9A9A9A)
+    public static let AccessoryTextColor = UIColor.init(rgbHex: 0x9A9A9A)
     
-    static let AccessoryTextFontSize = CGFloat(10)
+    public static let AccessoryTextFontSize = CGFloat(10)
     
-    static let TipTextColor = UIColor.init(rgbHex: 0xFFFFFF)
+    public static let TipTextColor = UIColor.init(rgbHex: 0xFFFFFF)
     
-    static let TipBgColor = UIColor.init(rgbHex: 0x1E1E1E)
+    public static let TipBgColor = UIColor.init(rgbHex: 0x1E1E1E)
     
-    static let TipTextFontSize = CGFloat(10)
+    public static let TipTextFontSize = CGFloat(10)
     
-    static let HLTextColor = UIColor.init(rgbHex: 0xFFFFFF)
+    public static let HLTextColor = UIColor.init(rgbHex: 0xFFFFFF)
     
-    static let IndexSetBgColor = UIColor.init(rgbHex: 0x101010)
+    public static let IndexSetBgColor = UIColor.init(rgbHex: 0x101010)
     
-    static let BtnNormalColor = UIColor.init(rgbHex: 0x888888)
+    public static let BtnNormalColor = UIColor.init(rgbHex: 0x888888)
     
-    static let BtnSelectedColor = UIColor.init(rgbHex: 0x2880F0)
+    public static let BtnSelectedColor = UIColor.init(rgbHex: 0x2880F0)
     
-    static let BtnFontSize = CGFloat(10)
+    public static let BtnFontSize = CGFloat(10)
     
-    static let MAColors = [
+    public static let MAColors = [
         UIColor.init(rgbHex: 0xFFFFFF),
         UIColor.init(rgbHex: 0x9A9A9A),
         UIColor.init(rgbHex: 0xF09632),
@@ -63,11 +63,11 @@ struct IMKLineTheme {
 //        }
 //    }
     
-    static let RiseColor = UIColor.red
+    public static let RiseColor = UIColor.red
 
-    static let DownColor = UIColor.green
+    public static let DownColor = UIColor.green
     
-    static var CrossLineColor = UIColor.init(rgbHex: 0x888888)
+    public static var CrossLineColor = UIColor.init(rgbHex: 0x888888)
     
     
 }

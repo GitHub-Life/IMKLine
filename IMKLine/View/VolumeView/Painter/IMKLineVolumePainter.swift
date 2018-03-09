@@ -10,7 +10,7 @@ import UIKit
 
 class IMKLineVolumePainter: NSObject {
     
-    func draw(context: CGContext, kline: IMKLine) {
+    public func draw(context: CGContext, kline: IMKLine) {
         let paintColor = kline.close < kline.open ? IMKLineTheme.DownColor : IMKLineTheme.RiseColor
         context.setStrokeColor(paintColor.cgColor)
         context.setLineWidth(IMKLineConfig.KLineWidth)

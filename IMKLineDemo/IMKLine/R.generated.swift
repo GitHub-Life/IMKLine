@@ -149,17 +149,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
   struct storyboard {
-    /// Storyboard `LaunchScreen`.
-    static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
-    
-    /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
-    static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
     
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
@@ -199,15 +192,6 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try main.validate()
-    }
-    
-    struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = UIKit.UIViewController
-      
-      let bundle = R.hostingBundle
-      let name = "LaunchScreen"
-      
-      fileprivate init() {}
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

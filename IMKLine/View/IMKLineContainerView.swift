@@ -9,21 +9,21 @@
 import UIKit
 import SnapKit
 
-class IMKLineContainerView: UIView {
+public class IMKLineContainerView: UIView {
     
-    let scrollView = IMKLineScrollView()
-    let timeView = IMKLineTimeView()
-    let klineMAView = IMKLineMAView()
-    let klineValueView = IMKLineValueView()
-    let klineRightYView = IMKLineRightYView()
-    let volumeMAView = IMKLineVolumeMAView()
-    let volumeRightYView = IMKLineRightYView()
-    let accessoryMAView = IMKLineAccessoryMAView()
-    let accessoryRightYView = IMKLineRightYView()
-    let verticlalLine = IMKLineCrossLine.init(orientation: .portrait)
-    let horizontalLine = IMKLineCrossLine.init(orientation: .landscape)
+    public let scrollView = IMKLineScrollView()
+    public let timeView = IMKLineTimeView()
+    public let klineMAView = IMKLineMAView()
+    public let klineValueView = IMKLineValueView()
+    public let klineRightYView = IMKLineRightYView()
+    public let volumeMAView = IMKLineVolumeMAView()
+    public let volumeRightYView = IMKLineRightYView()
+    public let accessoryMAView = IMKLineAccessoryMAView()
+    public let accessoryRightYView = IMKLineRightYView()
+    public let verticlalLine = IMKLineCrossLine.init(orientation: .portrait)
+    public let horizontalLine = IMKLineCrossLine.init(orientation: .landscape)
     
-    var currentShowKline: IMKLine?
+    public var currentShowKline: IMKLine?
     
     // 子视图 纵向 高度布局
     // ------- 15 -----
@@ -35,7 +35,7 @@ class IMKLineContainerView: UIView {
     // ------- 17 -----
     // --- 1x -----
     // -------- 15 ----
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         self.setupUI()
     }
@@ -142,7 +142,7 @@ class IMKLineContainerView: UIView {
         }
     }
     
-    var showAccessory: Bool = IMKLineParamters.AccessoryType != .NONE {
+    public var showAccessory: Bool = IMKLineParamters.AccessoryType != .NONE {
         didSet {
             self.klineRightYView.snp.remakeConstraints { [weak self] (maker) in
                 self?.setKLineRightYViewConstraint(maker: maker)
@@ -193,7 +193,7 @@ class IMKLineContainerView: UIView {
     }
 }
 
-extension IMKLineContainerView {
+public extension IMKLineContainerView {
     
     private func setKLineRightYViewConstraint(maker: ConstraintMaker) {
         maker.top.equalTo(self.klineMAView.snp.bottom)
@@ -209,7 +209,7 @@ extension IMKLineContainerView {
         maker.height.equalToSuperview().multipliedBy(IMKLineConfig.VolumeViewHeightRate()).offset(-IMKLineConfig.VolumeViewHeightRate() * self.showMAViewHeight)
     }
     
-    var showMAViewHeight: CGFloat {
+    public var showMAViewHeight: CGFloat {
         get {
             if showAccessory {
                 return CGFloat(66)
@@ -222,11 +222,11 @@ extension IMKLineContainerView {
 
 extension IMKLineContainerView: IMKLineViewUpdateDelegate {
     
-    func updateKlineRightYRange(min: Double, max: Double) {
+    public func updateKlineRightYRange(min: Double, max: Double) {
         self.klineRightYView.set(max: max, min: min, segment: IMKLineConfig.KLineViewRightYCount, decimals: IMKLineParamters.KLineDataDecimals)
     }
     
-    func updateTimeRange(beginTimeStamp: TimeInterval, endTimeStamp: TimeInterval) {
+    public func updateTimeRange(beginTimeStamp: TimeInterval, endTimeStamp: TimeInterval) {
         self.timeView.update(beginTimeStamp: beginTimeStamp, endTimeStamp: endTimeStamp)
     }
     
@@ -234,7 +234,7 @@ extension IMKLineContainerView: IMKLineViewUpdateDelegate {
 
 extension IMKLineContainerView: IMKLineVolumeViewUpdateDelegate {
     
-    func updateVolumeRightYRange(min: Double, max: Double) {
+    public func updateVolumeRightYRange(min: Double, max: Double) {
         self.volumeRightYView.set(max: max, min: min, segment: IMKLineConfig.VolumeViewRightYCount, decimals: IMKLineParamters.VolumeDataDecimals)
     }
     
@@ -242,7 +242,7 @@ extension IMKLineContainerView: IMKLineVolumeViewUpdateDelegate {
 
 extension IMKLineContainerView: IMKLineAccessoryViewUpdateDelegate {
     
-    func updateAccessoryRightYRange(min: Double, max: Double) {
+    public func updateAccessoryRightYRange(min: Double, max: Double) {
         self.accessoryRightYView.set(max: max, min: min, segment: IMKLineConfig.VolumeViewRightYCount, decimals: IMKLineParamters.AccessoryDataDecimals)
     }
     
@@ -250,11 +250,11 @@ extension IMKLineContainerView: IMKLineAccessoryViewUpdateDelegate {
 
 extension IMKLineContainerView: IMKLineScrollViewDelegate {
     
-    func selectedKline(kline: IMKLine) {
+    public func selectedKline(kline: IMKLine) {
         self.showSelectedKlineInfo(kline: kline)
     }
     
-    func hideKlineInfo(lastKline: IMKLine) {
+    public func hideKlineInfo(lastKline: IMKLine) {
         self.klineValueView.alpha = 0
         self.horizontalLine.alpha = 0
         self.verticlalLine.alpha = 0
@@ -264,7 +264,7 @@ extension IMKLineContainerView: IMKLineScrollViewDelegate {
     
 }
 
-extension IMKLineContainerView {
+public extension IMKLineContainerView {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let selectedKline = self.scrollView.klineView.getSelectedKline(touchPoint: touches.first!.location(in: self.scrollView.klineView)) {
@@ -272,7 +272,7 @@ extension IMKLineContainerView {
         }
     }
     
-    func showSelectedKlineInfo(kline: IMKLine) {
+    public func showSelectedKlineInfo(kline: IMKLine) {
         self.klineValueView.alpha = 1
         self.klineValueView.update(kline: kline)
         let point = self.scrollView.klineView.convert(kline.klinePosition.closePoint, to: self)
@@ -294,7 +294,7 @@ extension IMKLineContainerView {
     }
     
     
-    func showMA(kline: IMKLine) {
+    public func showMA(kline: IMKLine) {
         self.currentShowKline = kline
         self.klineMAView.update(kline: kline)
         self.volumeMAView.update(kline: kline)
@@ -303,29 +303,29 @@ extension IMKLineContainerView {
 }
 
 // 对外公开的方法
-extension IMKLineContainerView {
+public extension IMKLineContainerView {
     
-    func minTimeStamp() -> Double {
+    public func minTimeStamp() -> Double {
         return self.scrollView.klineView.getKlineGroup().minTimeStamp()
     }
     
-    func appendData(klineArray: [IMKLine]) {
+    public func appendData(klineArray: [IMKLine]) {
         self.scrollView.klineView.appendData(klineArray: klineArray)
     }
     
-    func reloadData(klineArray: [IMKLine]) {
+    public func reloadData(klineArray: [IMKLine]) {
         self.scrollView.klineView.reloadData(klineArray: klineArray)
     }
     
-    func removeAllData() {
+    public func removeAllData() {
         self.scrollView.klineView.removeAllData()
     }
     
-    func getKlineArray() -> [IMKLine] {
+    public func getKlineArray() -> [IMKLine] {
         return self.scrollView.klineView.getKlineGroup().klineArray
     }
     
-    func redraw() {
+    public func redraw() {
         self.scrollView.klineView.draw()
     }
     

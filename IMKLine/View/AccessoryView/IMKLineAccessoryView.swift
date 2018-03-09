@@ -9,29 +9,29 @@
 import UIKit
 import SnapKit
 
-protocol IMKLineAccessoryViewUpdateDelegate: NSObjectProtocol {
+public protocol IMKLineAccessoryViewUpdateDelegate: NSObjectProtocol {
     func updateAccessoryRightYRange(min: Double, max: Double)
 }
 
-class IMKLineAccessoryView: UIView {
+public class IMKLineAccessoryView: UIView {
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    weak var updateDelegate: IMKLineAccessoryViewUpdateDelegate?
-    weak var klineView: IMKLineView!
+    public weak var updateDelegate: IMKLineAccessoryViewUpdateDelegate?
+    public weak var klineView: IMKLineView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: CGRect.zero)
         self.layer.isOpaque = false
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         
         let context = UIGraphicsGetCurrentContext()!
@@ -56,9 +56,9 @@ class IMKLineAccessoryView: UIView {
         accessoryPainter.draw(context: context, klineArray: self.klineArray)
     }
     
-    var klineArray = [IMKLine]()
+    public var klineArray = [IMKLine]()
     
-    func draw(klineArray: [IMKLine]) {
+    public func draw(klineArray: [IMKLine]) {
         self.klineArray = klineArray
         self.setKlineAccesstoryPosition()
         self.setNeedsDisplay()

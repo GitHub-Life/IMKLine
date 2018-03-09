@@ -27,7 +27,7 @@ class IMKLineVolumeMAPainter: NSObject {
     }
  */
     
-    func draw(context: CGContext, klineArray: [IMKLine]) {
+    public func draw(context: CGContext, klineArray: [IMKLine]) {
         if klineArray.count == 0 {
             return
         }

@@ -8,13 +8,13 @@
 
 import UIKit
 
-class IMKLineMASetView: UIView {
+public class IMKLineMASetView: UIView {
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: CGRect.zero)
     }
     
@@ -28,12 +28,12 @@ class IMKLineMASetView: UIView {
 //        self.setupView()
 //    }
     
-    let NumOfRow = 5
-    let BtnWidth = 50
-    let BtnHeight = 40
-    var btnClickResponse: ((Int) -> ())?
+    public let NumOfRow = 5
+    public let BtnWidth = 50
+    public let BtnHeight = 40
+    public var btnClickResponse: ((Int) -> ())?
     
-    func setupView() {
+    private func setupView() {
         var index = 0
         for text in IMKLineMAType.RawValues {
             let btn = UIButton()
@@ -59,7 +59,7 @@ class IMKLineMASetView: UIView {
         self.btnClickResponse?(btn.tag)
     }
     
-    func show(selectedIndex: Int) {
+    public func show(selectedIndex: Int) {
         if selectedIndex < 0 || selectedIndex > self.subviews.count {
             self.alpha = 0
         } else {

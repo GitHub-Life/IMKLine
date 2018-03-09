@@ -8,13 +8,13 @@
 
 import UIKit
 
-class IMKLineValueView: UIView {
+public class IMKLineValueView: UIView {
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(frame: CGRect.zero)
     }
     
@@ -43,10 +43,10 @@ class IMKLineValueView: UIView {
         }
     }
     //
-    let valueTips = ["Open ", "High ", "Low ", "Close ", "Percent "]
-    var kline = IMKLine()
+    public let valueTips = ["Open ", "High ", "Low ", "Close ", "Percent "]
+    public var kline = IMKLine()
     
-    func update(kline: IMKLine) {
+    public func update(kline: IMKLine) {
         self.kline = kline
         
         (self.subviews[0] as! UILabel).text = String.init(format: "\(self.valueTips[0])%.\(IMKLineParamters.KLineDataDecimals)f", kline.open)

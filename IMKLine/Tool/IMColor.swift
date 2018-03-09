@@ -8,21 +8,21 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
-    convenience init(rgbaHex: UInt) {
+    public convenience init(rgbaHex: UInt) {
         self.init(red: CGFloat(((rgbaHex & 0xff000000) >> 16) >> 8) / 255.0, green: CGFloat((rgbaHex & 0xff0000) >> 16) / 255.0, blue: CGFloat((rgbaHex & 0xff00) >> 8) / 255.0, alpha: CGFloat(rgbaHex & 0xff) / 255.0)
     }
     
-    convenience init(rgbHex: UInt, alpha: CGFloat = 1.0) {
+    public convenience init(rgbHex: UInt, alpha: CGFloat = 1.0) {
         self.init(red: CGFloat((rgbHex & 0xff0000) >> 16) / 255.0, green: CGFloat((rgbHex & 0xff00) >> 8) / 255.0, blue: CGFloat(rgbHex & 0xff) / 255.0, alpha: alpha)
     }
     
-    convenience init(red: Int, green: Int, blue: Int, alpha: Int = 255) {
+    public convenience init(red: Int, green: Int, blue: Int, alpha: Int = 255) {
         self.init(red: CGFloat(red) / 255, green: CGFloat(green) / 255, blue: CGFloat(blue) / 255, alpha: CGFloat(alpha) / 255)
     }
     
-    convenience init(rgbaHexStr: String) {
+    public convenience init(rgbaHexStr: String) {
         var rgba = rgbaHexStr.replacingOccurrences(of: "0x", with: "")
         rgba = rgba.replacingOccurrences(of: "0X", with: "")
         rgba = rgba.replacingOccurrences(of: "#", with: "")

@@ -9,9 +9,9 @@
 import UIKit
 import SnapKit
 
-class IMKLineRightYView: UIView {
+public class IMKLineRightYView: UIView {
     
-    func set(max: Double, min: Double, segment: Int, decimals: Int) {
+    public func set(max: Double, min: Double, segment: Int, decimals: Int) {
         for subV in self.subviews {
             subV.removeFromSuperview()
         }

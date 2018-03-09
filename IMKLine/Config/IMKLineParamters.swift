@@ -9,7 +9,7 @@
 import UIKit
 
 /// KLine MA 类型设置选项
-enum IMKLineMAType: String {
+public enum IMKLineMAType: String {
     case NONE = "Close", MA = "MA", EMA = "EMA", BOLL = "BOLL"
     static let RawValues = ["MA", "EMA", "BOLL", "Close"]
     static func enumValue(index: Int) -> IMKLineMAType {
@@ -18,7 +18,7 @@ enum IMKLineMAType: String {
 }
 
 /// KLine 底部MACD/KDJ图 类型设置选项
-enum IMKLineAccessoryType: String {
+public enum IMKLineAccessoryType: String {
     case NONE = "Close", MACD = "MACD", KDJ = "KDJ", RSI = "RSI"
     static let RawValues = ["MACD", "KDJ", "RSI", "Close"]
     static func enumValue(index: Int) -> IMKLineAccessoryType {
@@ -27,32 +27,32 @@ enum IMKLineAccessoryType: String {
 }
 
 /// KLine 风格设置选项
-enum IMKLineStyle: Int {
+public enum IMKLineStyle: Int {
     case standard = 0, hollow = 1, line = 2, curve = 3
     static func enumValue(_ rawValue: Int) -> IMKLineStyle {
         return IMKLineStyle.init(rawValue: rawValue)!
     }
 }
 
-class IMKLineParamters: NSObject {
+public class IMKLineParamters: NSObject {
     
     /// 需要显示的 MA值
-    static var KLineMAs = [7, 15, 30]
+    public static var KLineMAs = [7, 15, 30]
     /// 需要显示的 EMS值
-    static var KLineEMAs = [7, 25, 99]
+    public static var KLineEMAs = [7, 25, 99]
     /// 需要显示的 BOLL线的参数值
-    static var KLineBollPramas = ["N":20, "P":2]
+    public static var KLineBollPramas = ["N":20, "P":2]
     /// 需要显示的 MACD图的参数值
-    static var KLineMACDPramas = [12, 26, 9]
+    public static var KLineMACDPramas = [12, 26, 9]
     /// 需要显示的 KDJ图的参数值
-    static var KLineKDJPramas = [3, 3, 9]
+    public static var KLineKDJPramas = [3, 3, 9]
     /// 需要显示的 RSI图的参数值
-    static var KLineRSIPramas = [6, 12, 24]
+    public static var KLineRSIPramas = [6, 12, 24]
     
     // MARK: - 缩放比
     /// KLine 缩放比
     private static var ZoomScale = CGFloat(1)
-    static func changeZoomScale(changeScale: CGFloat) -> Bool {
+    public static func changeZoomScale(changeScale: CGFloat) -> Bool {
         let zoomScale = ZoomScale + changeScale
         if zoomScale > IMKLineConfig.ZoomScaleUpperLimit || zoomScale < IMKLineConfig.ZoomScaleLowerLimit {
             return false
@@ -60,18 +60,18 @@ class IMKLineParamters: NSObject {
         ZoomScale = zoomScale
         return true
     }
-    static func setZoomScale(scale: CGFloat) {
+    public static func setZoomScale(scale: CGFloat) {
         if scale > IMKLineConfig.ZoomScaleUpperLimit || scale < IMKLineConfig.ZoomScaleLowerLimit {
             return
         }
         ZoomScale = scale
     }
-    static func getZoomScale() -> CGFloat {
+    public static func getZoomScale() -> CGFloat {
         return ZoomScale
     }
     
     /// KLine 显示的 MA 类型
-    static var KLineMAType: IMKLineMAType = .MA {
+    public static var KLineMAType: IMKLineMAType = .MA {
         willSet {
             klineMATypeChanged =  newValue != KLineMAType
         }
@@ -82,10 +82,10 @@ class IMKLineParamters: NSObject {
         }
     }
     private static var klineMATypeChanged = false
-    static let IMKLineMATypeChanged = NSNotification.Name.init("IMKLineMATypeChanged")
+    public static let IMKLineMATypeChanged = NSNotification.Name.init("IMKLineMATypeChanged")
     
     /// KLine 底部MACD/KDJ图 显示类型
-    static var AccessoryType: IMKLineAccessoryType = .MACD {
+    public static var AccessoryType: IMKLineAccessoryType = .MACD {
         willSet {
             accessoryTypeChanged =  newValue != AccessoryType
         }
@@ -96,10 +96,10 @@ class IMKLineParamters: NSObject {
         }
     }
     private static var accessoryTypeChanged = false
-    static let IMKLineAccessoryTypeChanged = NSNotification.Name.init("IMKLineAccessoryTypeChanged")
+    public static let IMKLineAccessoryTypeChanged = NSNotification.Name.init("IMKLineAccessoryTypeChanged")
     
     /// KLine 显示风格
-    static var KLineStyle: IMKLineStyle = .standard {
+    public static var KLineStyle: IMKLineStyle = .standard {
         willSet {
             kLineStyleChanged =  newValue != KLineStyle
         }
@@ -110,29 +110,29 @@ class IMKLineParamters: NSObject {
         }
     }
     private static var kLineStyleChanged = false
-    static let IMKLineStyleChanged = NSNotification.Name.init("IMKLineStyleChanged")
+    public static let IMKLineStyleChanged = NSNotification.Name.init("IMKLineStyleChanged")
     
     /// 时间帧 集合 【用于显示】
-    static var KLineTimeFrames = [String]()
+    public static var KLineTimeFrames = [String]()
     
     /// KLine 数据保留的小数位数
-    static var KLineDataDecimals = 6
-    static func setKLineDataDecimals(_ v1: Double, _ v2: Double) {
+    public static var KLineDataDecimals = 6
+    public static func setKLineDataDecimals(_ v1: Double, _ v2: Double) {
         KLineDataDecimals = IMKLineTool.dataDecimals(v1, v2)
     }
     /// KLine Volume 数据保留的小数位数
-    static var VolumeDataDecimals = 6
-    static func setVolumeDataDecimals(_ v1: Double, _ v2: Double) {
+    public static var VolumeDataDecimals = 6
+    public static func setVolumeDataDecimals(_ v1: Double, _ v2: Double) {
         VolumeDataDecimals = IMKLineTool.dataDecimals(v1, v2)
     }
     /// KLine 底部MACD/KDJ图 数据保留的小数位数
-    static var AccessoryDataDecimals = 6
-    static func setAccessoryDataDecimals(_ v1: Double, _ v2: Double) {
+    public static var AccessoryDataDecimals = 6
+    public static func setAccessoryDataDecimals(_ v1: Double, _ v2: Double) {
         AccessoryDataDecimals = IMKLineTool.dataDecimals(v1, v2)
     }
     
     // MARK: - 复位
-    static func reset() {
+    public static func reset() {
         ZoomScale = CGFloat(1)
         KLineMAType = .MA
         AccessoryType = .MACD
