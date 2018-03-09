@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F19B7B98ACED0FEC74B1BAE2F83CAC91'
-               BlueprintName = 'SwiftyBeaver'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyBeaver.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C2A9C208966DB4299C0F342811C38166"
+               BlueprintName = "SwiftyBeaver"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "SwiftyBeaver.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

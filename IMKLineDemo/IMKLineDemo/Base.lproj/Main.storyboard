@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s7q-Rp-m7q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Line Chart View Controller-->
+        <scene sceneID="RbN-dL-R0Z">
+            <objects>
+                <viewController storyboardIdentifier="IMKLineChartViewController" id="s7q-Rp-m7q" customClass="IMKLineChartViewController" customModule="IMKLineDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQB-KA-wMt">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7v-BO-Ous">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="320"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvZ-dO-pGS">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xww-GZ-uaK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <state key="normal" title="1min"/>
+                                        <connections>
+                                            <action selector="timeFrameSetBtnClickWithSender:" destination="s7q-Rp-m7q" eventType="touchUpInside" id="KqT-dA-nlX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTq-cL-cpF">
+                                        <rect key="frame" x="0.0" y="40" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="l5l-4Z-4CW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <state key="normal" title="MA"/>
+                                        <connections>
+                                            <action selector="MASetBtnClickWithSender:" destination="s7q-Rp-m7q" eventType="touchUpInside" id="XBN-YM-Ngx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usg-GB-mnn">
+                                        <rect key="frame" x="0.0" y="80" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="vLi-mg-N4q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                        <state key="normal" title="MACD"/>
+                                        <connections>
+                                            <action selector="accessorySetBtnClickWithSender:" destination="s7q-Rp-m7q" eventType="touchUpInside" id="GdW-f3-Yc8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8J-SU-imA">
+                                        <rect key="frame" x="0.0" y="120" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="kqc-Rm-dgE"/>
+                                        </constraints>
+                                        <state key="normal" image="kline_standard"/>
+                                        <connections>
+                                            <action selector="klineStyleBtnClick:" destination="s7q-Rp-m7q" eventType="touchUpInside" id="tjd-bo-TQk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jTq-cL-cpF" firstAttribute="top" secondItem="zvZ-dO-pGS" secondAttribute="bottom" id="4Vo-6x-auU"/>
+                                    <constraint firstItem="Usg-GB-mnn" firstAttribute="leading" secondItem="s7v-BO-Ous" secondAttribute="leading" id="68b-gx-Smh"/>
+                                    <constraint firstItem="jTq-cL-cpF" firstAttribute="leading" secondItem="s7v-BO-Ous" secondAttribute="leading" id="6Uu-2s-91H"/>
+                                    <constraint firstAttribute="trailing" secondItem="jTq-cL-cpF" secondAttribute="trailing" id="7e4-tJ-AKu"/>
+                                    <constraint firstItem="zvZ-dO-pGS" firstAttribute="top" secondItem="s7v-BO-Ous" secondAttribute="top" id="9B6-LB-rJf"/>
+                                    <constraint firstItem="f8J-SU-imA" firstAttribute="leading" secondItem="s7v-BO-Ous" secondAttribute="leading" id="9la-qJ-58x"/>
+                                    <constraint firstAttribute="trailing" secondItem="f8J-SU-imA" secondAttribute="trailing" id="JR0-TE-ARd"/>
+                                    <constraint firstItem="zvZ-dO-pGS" firstAttribute="leading" secondItem="s7v-BO-Ous" secondAttribute="leading" id="Ovl-RS-CiG"/>
+                                    <constraint firstItem="Usg-GB-mnn" firstAttribute="top" secondItem="jTq-cL-cpF" secondAttribute="bottom" id="cF5-mi-ahv"/>
+                                    <constraint firstAttribute="trailing" secondItem="Usg-GB-mnn" secondAttribute="trailing" id="d8R-fE-829"/>
+                                    <constraint firstItem="f8J-SU-imA" firstAttribute="top" secondItem="Usg-GB-mnn" secondAttribute="bottom" id="foz-c7-j0z"/>
+                                    <constraint firstAttribute="width" constant="50" id="qYH-Bf-bD3"/>
+                                    <constraint firstAttribute="trailing" secondItem="zvZ-dO-pGS" secondAttribute="trailing" id="xhz-tY-VgA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRM-PB-hMR" customClass="IMKLineContainerView" customModule="IMKLine">
+                                <rect key="frame" x="50" y="0.0" width="518" height="320"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s7v-BO-Ous" firstAttribute="top" secondItem="bew-LM-Hul" secondAttribute="top" id="UPk-9T-da1"/>
+                            <constraint firstItem="TRM-PB-hMR" firstAttribute="top" secondItem="bew-LM-Hul" secondAttribute="top" id="VOv-Rp-DQv"/>
+                            <constraint firstItem="bew-LM-Hul" firstAttribute="bottom" secondItem="s7v-BO-Ous" secondAttribute="bottom" id="iLD-TZ-L5s"/>
+                            <constraint firstItem="TRM-PB-hMR" firstAttribute="leading" secondItem="s7v-BO-Ous" secondAttribute="trailing" id="kCX-Pa-wzh"/>
+                            <constraint firstItem="bew-LM-Hul" firstAttribute="bottom" secondItem="TRM-PB-hMR" secondAttribute="bottom" id="lKC-sO-Ycj"/>
+                            <constraint firstItem="s7v-BO-Ous" firstAttribute="leading" secondItem="bew-LM-Hul" secondAttribute="leading" id="qGr-IG-ssD"/>
+                            <constraint firstItem="bew-LM-Hul" firstAttribute="trailing" secondItem="TRM-PB-hMR" secondAttribute="trailing" id="zfi-KU-cfl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bew-LM-Hul"/>
+                    </view>
+                    <size key="freeformSize" width="568" height="320"/>
+                    <connections>
+                        <outlet property="MASetBtn" destination="jTq-cL-cpF" id="Wfn-lv-7v9"/>
+                        <outlet property="accessorySetBtn" destination="Usg-GB-mnn" id="6Jk-fi-0X2"/>
+                        <outlet property="klineContainerView" destination="TRM-PB-hMR" id="zMh-ni-4II"/>
+                        <outlet property="klineStyleBtn" destination="f8J-SU-imA" id="Vja-xm-69i"/>
+                        <outlet property="timeFrameSetBtn" destination="zvZ-dO-pGS" id="No6-hr-r9h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdY-yH-Mno" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1169.5999999999999" y="33.283358320839582"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kline_standard" width="20" height="20"/>
+    </resources>
+</document>

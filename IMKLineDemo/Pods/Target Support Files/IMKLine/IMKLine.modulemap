@@ -1,0 +1,6 @@
+framework module IMKLine {
+  umbrella header "IMKLine-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,14 +1,12 @@
 platform :ios, '9.0'
 inhibit_all_warnings!
 
-target 'IMKLine' do
-	use_frameworks!
-	
-	pod 'Reveal-SDK', :configurations => ['Debug']
+target 'IMKLineDemo' do
+use_frameworks!
+
+	pod 'IMKLine'
+	pod 'R.swift'
     pod 'SwiftyJSON'
-    pod 'Alamofire'
-    pod 'R.swift'
-    pod 'SnapKit'
     pod 'SwiftyBeaver'
 
 end

@@ -1,30 +1,27 @@
 PODS:
-  - Alamofire (4.5.1)
+  - IMKLine (1.0.2):
+    - SnapKit
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
-  - Reveal-SDK (12)
   - SnapKit (4.0.0)
-  - SwiftyBeaver (1.4.3)
+  - SwiftyBeaver (1.5.1)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - IMKLine
   - R.swift
-  - Reveal-SDK
-  - SnapKit
   - SwiftyBeaver
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  IMKLine: bc73bab39380c8fb24b542ee378a2ace9c2563fb
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  Reveal-SDK: 58517b2a4d5d69dcb98e62aa4a5e62c84b5e0061
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SwiftyBeaver: e10b1668e0512229c36c34769b97eed3dfae2ca3
+  SwiftyBeaver: 4f74563624b2c1e821c522c54142b5dd5ebb0f30
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 1da142e1c42376abb7e5a6599fdca428e828698f
+PODFILE CHECKSUM: 53d324947d314d0d7e97dae15ddc86675f6c4fb4
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0
