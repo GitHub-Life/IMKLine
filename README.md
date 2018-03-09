@@ -20,8 +20,9 @@
 #### 导入项目方法：
 1. git clone此项目到本机，将根目录下的 IMKLine 文件夹导入至项目即可使用；
 2. 使用CocoaPods
-        pod 'IMKLine'
----
+```ruby
+    pod 'IMKLine'
+```
 #### k线的使用：
 由于鄙人项目赶紧，暂时无法脱身写文档，后续会补上，可以参考 IMKLineDemo 中的使用方法使用。
 
