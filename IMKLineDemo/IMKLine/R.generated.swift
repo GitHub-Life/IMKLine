@@ -195,27 +195,20 @@ struct _R: Rswift.Validatable {
     }
     
     struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
+      typealias InitialController = IMKLineChartViewController
       
       let bundle = R.hostingBundle
       let imkLineChartViewController = StoryboardViewControllerResource<IMKLineChartViewController>(identifier: "IMKLineChartViewController")
       let name = "Main"
-      let viewController = StoryboardViewControllerResource<ViewController>(identifier: "ViewController")
       
       func imkLineChartViewController(_: Void = ()) -> IMKLineChartViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: imkLineChartViewController)
       }
       
-      func viewController(_: Void = ()) -> ViewController? {
-        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: viewController)
-      }
-      
       static func validate() throws {
         if UIKit.UIImage(named: "cancel_full_screen_blue") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'cancel_full_screen_blue' is used in storyboard 'Main', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "full_screen_blue") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'full_screen_blue' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "kline_standard") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'kline_standard' is used in storyboard 'Main', but couldn't be loaded.") }
         if _R.storyboard.main().imkLineChartViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'imkLineChartViewController' could not be loaded from storyboard 'Main' as 'IMKLineChartViewController'.") }
-        if _R.storyboard.main().viewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'viewController' could not be loaded from storyboard 'Main' as 'ViewController'.") }
       }
       
       fileprivate init() {}

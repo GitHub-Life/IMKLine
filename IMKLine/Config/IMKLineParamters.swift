@@ -11,8 +11,8 @@ import UIKit
 /// KLine MA 类型设置选项
 public enum IMKLineMAType: String {
     case NONE = "Close", MA = "MA", EMA = "EMA", BOLL = "BOLL"
-    static let RawValues = ["MA", "EMA", "BOLL", "Close"]
-    static func enumValue(index: Int) -> IMKLineMAType {
+    public static let RawValues = ["MA", "EMA", "BOLL", "Close"]
+    public static func enumValue(index: Int) -> IMKLineMAType {
         return IMKLineMAType.init(rawValue: RawValues[index])!
     }
 }
@@ -20,8 +20,8 @@ public enum IMKLineMAType: String {
 /// KLine 底部MACD/KDJ图 类型设置选项
 public enum IMKLineAccessoryType: String {
     case NONE = "Close", MACD = "MACD", KDJ = "KDJ", RSI = "RSI"
-    static let RawValues = ["MACD", "KDJ", "RSI", "Close"]
-    static func enumValue(index: Int) -> IMKLineAccessoryType {
+    public static let RawValues = ["MACD", "KDJ", "RSI", "Close"]
+    public static func enumValue(index: Int) -> IMKLineAccessoryType {
         return IMKLineAccessoryType.init(rawValue: RawValues[index])!
     }
 }
@@ -29,7 +29,7 @@ public enum IMKLineAccessoryType: String {
 /// KLine 风格设置选项
 public enum IMKLineStyle: Int {
     case standard = 0, hollow = 1, line = 2, curve = 3
-    static func enumValue(_ rawValue: Int) -> IMKLineStyle {
+    public static func enumValue(_ rawValue: Int) -> IMKLineStyle {
         return IMKLineStyle.init(rawValue: rawValue)!
     }
 }

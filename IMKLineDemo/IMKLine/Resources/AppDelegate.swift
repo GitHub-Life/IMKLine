@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var interfaceOrientation = UIInterfaceOrientationMask.portrait
+    var interfaceOrientation = UIInterfaceOrientationMask.landscape
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return self.interfaceOrientation

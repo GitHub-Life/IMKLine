@@ -21,7 +21,6 @@ class IMKLineChartViewController: UIViewController {
     }
     
     @IBOutlet weak var klineContainerView: IMKLineContainerView!
-    @IBOutlet weak var indexSetContainerView: IMKLineIndexSetContainerView!
     @IBOutlet weak var timeFrameSetBtn: UIButton!
     @IBOutlet weak var MASetBtn: UIButton!
     @IBOutlet weak var accessorySetBtn: UIButton!
@@ -30,10 +29,6 @@ class IMKLineChartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.getKlineDatas()
-        self.indexSetContainerView.delegate = self
-        self.indexSetContainerView.timeFrameSetViewOrigin = CGPoint.init(x: 50, y: 0)
-        self.indexSetContainerView.maSetViewOrigin = CGPoint.init(x: 50, y: 40)
-        self.indexSetContainerView.accessorySetViewOrigin = CGPoint.init(x: 50, y: 80)
         self.klineContainerView.scrollView.loadMore = { [weak self] in
             self?.getKlineDatas()
         }
@@ -42,22 +37,6 @@ class IMKLineChartViewController: UIViewController {
     }
     
     func getKlineDatas() {
-//        let params = ["symbol":"btcusdt", "period":"1min","size":"60"]
-//        Alamofire.request("https://api.huobi.pro/market/history/kline", parameters: params).responseData { [weak self] (response) in
-//            let result = response.result
-//            if result.isSuccess {
-//                do {
-//                    let jsonObj = try JSONSerialization.jsonObject(with: result.value!, options: .mutableLeaves)
-//                    let json = JSON(jsonObj)
-//                    if json["status"].stringValue == "ok" {
-//                        self?.klineGroup = IMKLineGroup.init(datas: json)
-//                        self?.showKline()
-//                    }
-//                } catch {
-//                    print(error)
-//                }
-//            }
-//        }
         DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
             let dataJsonPath = Bundle.main.path(forResource: "data", ofType: "json")!
             let data = FileManager.default.contents(atPath: dataJsonPath)!
@@ -76,15 +55,18 @@ class IMKLineChartViewController: UIViewController {
     }
     
     @IBAction func timeFrameSetBtnClick(sender: UIButton) {
-        self.indexSetContainerView.showIndexSetView(indexSetType: .TimeFrame, selectedIndex: sender.tag)
     }
     
     @IBAction func MASetBtnClick(sender: UIButton) {
-        self.indexSetContainerView.showIndexSetView(indexSetType: .MA, selectedIndex: sender.tag)
+        self.MASetBtn.tag = (self.MASetBtn.tag + 1) % IMKLineMAType.RawValues.count
+        self.MASetBtn.setTitle(IMKLineMAType.RawValues[self.MASetBtn.tag], for: .normal)
+        IMKLineParamters.KLineMAType = IMKLineMAType.enumValue(index: self.MASetBtn.tag)
     }
     
     @IBAction func accessorySetBtnClick(sender: UIButton) {
-        self.indexSetContainerView.showIndexSetView(indexSetType: .Accessory, selectedIndex: sender.tag)
+        self.accessorySetBtn.tag = (self.accessorySetBtn.tag + 1) % IMKLineAccessoryType.RawValues.count
+        self.accessorySetBtn.setTitle(IMKLineAccessoryType.RawValues[self.accessorySetBtn.tag], for: .normal)
+        IMKLineParamters.AccessoryType = IMKLineAccessoryType.enumValue(index: self.accessorySetBtn.tag)
     }
     
     let klineStyleImgs = [
@@ -102,26 +84,6 @@ class IMKLineChartViewController: UIViewController {
     @IBAction func back() {
         (UIApplication.shared.delegate as! AppDelegate).interfaceOrientation = .portrait
         self.dismiss(animated: true, completion: nil)
-    }
-    
-}
-
-extension IMKLineChartViewController: IMKLineIndexSetContainerViewDelegate {
-    
-    func setBtnClick(indexSetType: IndexSetType, selectedIndex: Int) {
-        switch indexSetType {
-        case .TimeFrame:
-            self.timeFrameSetBtn.tag = selectedIndex
-            self.timeFrameSetBtn.setTitle(IMKLineParamters.KLineTimeFrames[selectedIndex], for: .normal)
-        case .MA:
-            self.MASetBtn.tag = selectedIndex
-            self.MASetBtn.setTitle(IMKLineMAType.RawValues[selectedIndex], for: .normal)
-            IMKLineParamters.KLineMAType = IMKLineMAType.enumValue(index: selectedIndex)
-        case .Accessory:
-            self.accessorySetBtn.tag = selectedIndex
-            self.accessorySetBtn.setTitle(IMKLineAccessoryType.RawValues[selectedIndex], for: .normal)
-            IMKLineParamters.AccessoryType = IMKLineAccessoryType.enumValue(index: selectedIndex)
-        }
     }
     
 }

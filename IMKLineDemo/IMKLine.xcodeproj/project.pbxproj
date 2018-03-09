@@ -28,10 +28,6 @@
 		B762B1E4204F70D60077518B /* IMKLineCrossLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1BB204F70D60077518B /* IMKLineCrossLine.swift */; };
 		B762B1E5204F70D60077518B /* IMKLineContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1BC204F70D60077518B /* IMKLineContainerView.swift */; };
 		B762B1E6204F70D60077518B /* IMKLineScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1BD204F70D60077518B /* IMKLineScrollView.swift */; };
-		B762B1E7204F70D60077518B /* IMKLineAccessorySetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1BF204F70D60077518B /* IMKLineAccessorySetView.swift */; };
-		B762B1E8204F70D60077518B /* IMKLineIndexSetContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1C0204F70D60077518B /* IMKLineIndexSetContainerView.swift */; };
-		B762B1E9204F70D60077518B /* IMKLineMASetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1C1204F70D60077518B /* IMKLineMASetView.swift */; };
-		B762B1EA204F70D60077518B /* IMKLineTimeFrameSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1C2204F70D60077518B /* IMKLineTimeFrameSetView.swift */; };
 		B762B1EB204F70D60077518B /* IMKLineMAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1C4204F70D60077518B /* IMKLineMAView.swift */; };
 		B762B1EC204F70D60077518B /* IMKLineValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1C5204F70D60077518B /* IMKLineValueView.swift */; };
 		B762B1ED204F70D60077518B /* IMKLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1C6204F70D60077518B /* IMKLineView.swift */; };
@@ -44,7 +40,6 @@
 		B762B1F4204F70D60077518B /* IMKLineVolumeMAPainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1D2204F70D60077518B /* IMKLineVolumeMAPainter.swift */; };
 		B762B1F5204F70D60077518B /* IMKLineVolumePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B762B1D3204F70D60077518B /* IMKLineVolumePainter.swift */; };
 		B798C82A1FE9354500B159B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C8291FE9354500B159B6 /* AppDelegate.swift */; };
-		B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C82B1FE9354500B159B6 /* ViewController.swift */; };
 		B798C82F1FE9354500B159B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B798C82D1FE9354500B159B6 /* Main.storyboard */; };
 		B798C8311FE9354500B159B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B798C8301FE9354500B159B6 /* Assets.xcassets */; };
 		B798C83F1FE9363600B159B6 /* IMKLineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798C83E1FE9363600B159B6 /* IMKLineChartViewController.swift */; };
@@ -76,10 +71,6 @@
 		B762B1BB204F70D60077518B /* IMKLineCrossLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineCrossLine.swift; sourceTree = "<group>"; };
 		B762B1BC204F70D60077518B /* IMKLineContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineContainerView.swift; sourceTree = "<group>"; };
 		B762B1BD204F70D60077518B /* IMKLineScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineScrollView.swift; sourceTree = "<group>"; };
-		B762B1BF204F70D60077518B /* IMKLineAccessorySetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineAccessorySetView.swift; sourceTree = "<group>"; };
-		B762B1C0204F70D60077518B /* IMKLineIndexSetContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineIndexSetContainerView.swift; sourceTree = "<group>"; };
-		B762B1C1204F70D60077518B /* IMKLineMASetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineMASetView.swift; sourceTree = "<group>"; };
-		B762B1C2204F70D60077518B /* IMKLineTimeFrameSetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineTimeFrameSetView.swift; sourceTree = "<group>"; };
 		B762B1C4204F70D60077518B /* IMKLineMAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineMAView.swift; sourceTree = "<group>"; };
 		B762B1C5204F70D60077518B /* IMKLineValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineValueView.swift; sourceTree = "<group>"; };
 		B762B1C6204F70D60077518B /* IMKLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineView.swift; sourceTree = "<group>"; };
@@ -93,7 +84,6 @@
 		B762B1D3204F70D60077518B /* IMKLineVolumePainter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMKLineVolumePainter.swift; sourceTree = "<group>"; };
 		B798C8261FE9354500B159B6 /* IMKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B798C8291FE9354500B159B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B798C82B1FE9354500B159B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B798C82E1FE9354500B159B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B798C8301FE9354500B159B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B798C8351FE9354500B159B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,7 +157,6 @@
 				B762B1BA204F70D60077518B /* CrossLine */,
 				B762B1BC204F70D60077518B /* IMKLineContainerView.swift */,
 				B762B1BD204F70D60077518B /* IMKLineScrollView.swift */,
-				B762B1BE204F70D60077518B /* IndexSetView */,
 				B762B1C3204F70D60077518B /* KLineView */,
 				B762B1CA204F70D60077518B /* RightYView */,
 				B762B1CC204F70D60077518B /* TimeView */,
@@ -200,17 +189,6 @@
 				B762B1BB204F70D60077518B /* IMKLineCrossLine.swift */,
 			);
 			path = CrossLine;
-			sourceTree = "<group>";
-		};
-		B762B1BE204F70D60077518B /* IndexSetView */ = {
-			isa = PBXGroup;
-			children = (
-				B762B1BF204F70D60077518B /* IMKLineAccessorySetView.swift */,
-				B762B1C0204F70D60077518B /* IMKLineIndexSetContainerView.swift */,
-				B762B1C1204F70D60077518B /* IMKLineMASetView.swift */,
-				B762B1C2204F70D60077518B /* IMKLineTimeFrameSetView.swift */,
-			);
-			path = IndexSetView;
 			sourceTree = "<group>";
 		};
 		B762B1C3204F70D60077518B /* KLineView */ = {
@@ -291,7 +269,6 @@
 			children = (
 				B762B1A3204F70D50077518B /* IMKLine */,
 				B798C8431FE93E5C00B159B6 /* Resources */,
-				B798C82B1FE9354500B159B6 /* ViewController.swift */,
 				B798C83E1FE9363600B159B6 /* IMKLineChartViewController.swift */,
 				B7063C17204AA42F00D3585E /* IMKLineDataParser.swift */,
 				B798C82D1FE9354500B159B6 /* Main.storyboard */,
@@ -486,7 +463,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B762B1E9204F70D60077518B /* IMKLineMASetView.swift in Sources */,
 				B762B1E4204F70D60077518B /* IMKLineCrossLine.swift in Sources */,
 				B762B1DA204F70D60077518B /* IMKLineGroup.swift in Sources */,
 				B7063C18204AA42F00D3585E /* IMKLineDataParser.swift in Sources */,
@@ -499,12 +475,9 @@
 				B762B1E3204F70D60077518B /* IMKLineAccessoryPainter.swift in Sources */,
 				B762B1EF204F70D60077518B /* IMKLinePainter.swift in Sources */,
 				B762B1EB204F70D60077518B /* IMKLineMAView.swift in Sources */,
-				B762B1E7204F70D60077518B /* IMKLineAccessorySetView.swift in Sources */,
 				B762B1F0204F70D60077518B /* IMKLineRightYView.swift in Sources */,
 				B762B1EC204F70D60077518B /* IMKLineValueView.swift in Sources */,
-				B762B1E8204F70D60077518B /* IMKLineIndexSetContainerView.swift in Sources */,
 				B762B1E5204F70D60077518B /* IMKLineContainerView.swift in Sources */,
-				B798C82C1FE9354500B159B6 /* ViewController.swift in Sources */,
 				B762B1E2204F70D60077518B /* IMKLineAccessoryView.swift in Sources */,
 				B762B1E1204F70D60077518B /* IMKLineAccessoryMAView.swift in Sources */,
 				B762B1F3204F70D60077518B /* IMKLineVolumeView.swift in Sources */,
@@ -512,7 +485,6 @@
 				B762B1DF204F70D60077518B /* IMKLineTool.swift in Sources */,
 				B762B1F5204F70D60077518B /* IMKLineVolumePainter.swift in Sources */,
 				B798C83F1FE9363600B159B6 /* IMKLineChartViewController.swift in Sources */,
-				B762B1EA204F70D60077518B /* IMKLineTimeFrameSetView.swift in Sources */,
 				B762B1F1204F70D60077518B /* IMKLineTimeView.swift in Sources */,
 				B762B1D5204F70D60077518B /* IMKLineParamters.swift in Sources */,
 				B762B1D4204F70D60077518B /* IMKLineConfig.swift in Sources */,
