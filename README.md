@@ -32,3 +32,4 @@
 有什么问题或建议，咱们可以随时@我，咱们一起交流学习😊
 
 #### 这次K线的学习，我是参考同事的[OC版K线](https://github.com/WillkYang/Y_KLine)学习着绘制的，非常感谢他，和他一起同事，我学习到了很多东西😊
+有兴趣的朋友还可以看看我的[OC版趋势图](https://github.com/GitHub-Life/IMChart)、[OC版饼状图](https://github.com/GitHub-Life/IMPieChart)
